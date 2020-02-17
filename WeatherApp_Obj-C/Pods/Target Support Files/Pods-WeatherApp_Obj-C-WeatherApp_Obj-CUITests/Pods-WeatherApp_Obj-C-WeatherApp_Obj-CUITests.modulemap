@@ -1,6 +1,0 @@
-framework module Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests {
-  umbrella header "Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
