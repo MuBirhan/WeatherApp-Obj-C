@@ -13,5 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextField *userInput;
-
+@property (nonatomic) IBInspectable NSString *labelName;
+@property (nonatomic) IBInspectable NSString *inputPlaceholder;
+@property (weak, nonatomic) IBOutlet UILabel *errorMessage;
 @end

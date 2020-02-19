@@ -7,6 +7,7 @@
 //
 
 #import "SecondScreenViewController.h"
+#import "UIColor+CustomColors.h"
 
 @interface SecondScreenViewController ()
 
@@ -16,9 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.signInButton.backgroundColor = [UIColor colorWithRed:76/255.0 green:217/255.0 blue:100/255.0 alpha:1.0f];
+    self.signInButton.backgroundColor = [UIColor greenButton];
     self.signInButton.layer.cornerRadius = 25;
-    self.signUpButton.backgroundColor = [UIColor colorWithRed:0/255.0 green:111/255.0 blue:255/255.0 alpha:1.0f];
+    self.signUpButton.backgroundColor = [UIColor blueButton];
     self.signUpButton.layer.cornerRadius = 25;    
 }
 

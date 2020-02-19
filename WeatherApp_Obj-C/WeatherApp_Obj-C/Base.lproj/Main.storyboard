@@ -158,7 +158,90 @@
                     <view key="view" contentMode="scaleToFill" id="vB4-Ru-pJj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVL-kT-d9N">
+                                <rect key="frame" x="16" y="74" width="74" height="27"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Black" family="SF UI Display" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aW4-YE-q2K" customClass="CustomInputView">
+                                <rect key="frame" x="16" y="137" width="383" height="84"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="383" id="Uyb-oS-Dpp"/>
+                                    <constraint firstAttribute="height" constant="84" id="oKp-6x-xSR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="inputPlaceholder" value="Email"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eem-DW-TGp" customClass="CustomInputView">
+                                <rect key="frame" x="16" y="244" width="383" height="84"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="xbN-hh-RZu"/>
+                                    <constraint firstAttribute="width" constant="383" id="zwN-sD-fVc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="inputPlaceholder" value="Password"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iV-LX-ZRz">
+                                <rect key="frame" x="16" y="355" width="382" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="2g6-Em-TSr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vbi-Qm-Cwu">
+                                <rect key="frame" x="30" y="436" width="353" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I do not have an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqL-8w-keP">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="17"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I forgot password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odB-u5-ktf">
+                                        <rect key="frame" x="245.33333333333329" y="0.0" width="107.66666666666666" height="17"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="27W-wO-u53"/>
+                                    <constraint firstItem="QqL-8w-keP" firstAttribute="leading" secondItem="Vbi-Qm-Cwu" secondAttribute="leading" id="CeP-nW-SKj"/>
+                                    <constraint firstItem="QqL-8w-keP" firstAttribute="top" secondItem="Vbi-Qm-Cwu" secondAttribute="top" id="K1g-LC-SI1"/>
+                                    <constraint firstItem="odB-u5-ktf" firstAttribute="top" secondItem="Vbi-Qm-Cwu" secondAttribute="top" id="QgJ-BL-Sxh"/>
+                                    <constraint firstAttribute="trailing" secondItem="odB-u5-ktf" secondAttribute="trailing" id="Vae-r9-ogc"/>
+                                    <constraint firstItem="odB-u5-ktf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QqL-8w-keP" secondAttribute="trailing" constant="8" symbolic="YES" id="mnD-C5-SVD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vbi-Qm-Cwu" firstAttribute="leading" secondItem="W1X-KX-1LA" secondAttribute="leading" constant="30" id="9aH-CM-Xg9"/>
+                            <constraint firstItem="aW4-YE-q2K" firstAttribute="leading" secondItem="W1X-KX-1LA" secondAttribute="leading" constant="16" id="AVg-HY-fxB"/>
+                            <constraint firstItem="PVL-kT-d9N" firstAttribute="leading" secondItem="W1X-KX-1LA" secondAttribute="leading" constant="16" id="EOU-9u-QB9"/>
+                            <constraint firstItem="eem-DW-TGp" firstAttribute="leading" secondItem="W1X-KX-1LA" secondAttribute="leading" constant="16" id="IEi-jR-YMm"/>
+                            <constraint firstItem="W1X-KX-1LA" firstAttribute="trailing" secondItem="1iV-LX-ZRz" secondAttribute="trailing" constant="16" id="MYx-dY-72t"/>
+                            <constraint firstItem="W1X-KX-1LA" firstAttribute="trailing" secondItem="Vbi-Qm-Cwu" secondAttribute="trailing" constant="31" id="NWK-C4-nxA"/>
+                            <constraint firstItem="Vbi-Qm-Cwu" firstAttribute="top" secondItem="1iV-LX-ZRz" secondAttribute="bottom" constant="26" id="UmD-c8-z3Q"/>
+                            <constraint firstItem="W1X-KX-1LA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PVL-kT-d9N" secondAttribute="trailing" symbolic="YES" id="Yv8-NV-Ce5"/>
+                            <constraint firstItem="aW4-YE-q2K" firstAttribute="top" secondItem="PVL-kT-d9N" secondAttribute="bottom" constant="36" id="aDl-RQ-s1U"/>
+                            <constraint firstItem="eem-DW-TGp" firstAttribute="top" secondItem="aW4-YE-q2K" secondAttribute="bottom" constant="23" id="bp0-eY-rqp"/>
+                            <constraint firstItem="1iV-LX-ZRz" firstAttribute="top" secondItem="eem-DW-TGp" secondAttribute="bottom" constant="27" id="i9I-ob-Nkp"/>
+                            <constraint firstItem="PVL-kT-d9N" firstAttribute="top" secondItem="W1X-KX-1LA" secondAttribute="top" constant="30" id="mDS-x8-vce"/>
+                            <constraint firstItem="1iV-LX-ZRz" firstAttribute="leading" secondItem="W1X-KX-1LA" secondAttribute="leading" constant="16" id="qTN-uk-fUu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W1X-KX-1LA"/>
                     </view>
                     <toolbarItems/>
@@ -171,6 +254,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailInput" destination="aW4-YE-q2K" id="gQy-74-gAI"/>
+                        <outlet property="passwordInput" destination="eem-DW-TGp" id="uls-lc-JUT"/>
+                        <outlet property="signInButton" destination="1iV-LX-ZRz" id="mwP-JJ-Yry"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6H-sV-tUy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,26 +278,69 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hp-fg-RGm">
-                                <rect key="frame" x="184" y="764" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hp-fg-RGm">
+                                <rect key="frame" x="16" y="461.66666666666669" width="382" height="55.000000000000057"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Ehm-Yp-lTH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Next step">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpButtonClicked:" destination="aha-EL-cXz" eventType="touchUpInside" id="1y8-CL-v7t"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9K-ff-gSO" customClass="CustomInputView">
                                 <rect key="frame" x="16" y="135.66666666666666" width="383" height="84"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="MWr-QX-Jju"/>
-                                    <constraint firstAttribute="width" constant="383" id="RZL-PJ-yJM"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="inputPlaceholder" value="Email"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5u-rk-qWg" customClass="CustomInputView">
+                                <rect key="frame" x="16" y="241.66666666666663" width="383" height="84"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="FnO-U6-Y8D"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="inputPlaceholder" value="Password"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMa-xW-AgG" customClass="CustomInputView">
+                                <rect key="frame" x="16" y="347.66666666666669" width="383" height="84"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="jAT-aE-IS8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Confirm Password"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="inputPlaceholder" value="Confirm Password"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="T1u-dw-sWW" firstAttribute="top" secondItem="1JG-0d-srN" secondAttribute="top" constant="30" id="670-GN-reD"/>
                             <constraint firstItem="Y9K-ff-gSO" firstAttribute="top" secondItem="T1u-dw-sWW" secondAttribute="bottom" constant="36" id="DQ6-Bj-FnZ"/>
+                            <constraint firstItem="1JG-0d-srN" firstAttribute="trailing" secondItem="Y9K-ff-gSO" secondAttribute="trailing" constant="15" id="GLF-lx-g2P"/>
                             <constraint firstItem="T1u-dw-sWW" firstAttribute="leading" secondItem="1JG-0d-srN" secondAttribute="leading" constant="16" id="Hkf-9X-0r3"/>
+                            <constraint firstItem="1JG-0d-srN" firstAttribute="trailing" secondItem="TMa-xW-AgG" secondAttribute="trailing" constant="15" id="IFb-rz-nUQ"/>
                             <constraint firstItem="Y9K-ff-gSO" firstAttribute="leading" secondItem="1JG-0d-srN" secondAttribute="leading" constant="16" id="Jfz-S2-o9K"/>
+                            <constraint firstItem="4hp-fg-RGm" firstAttribute="leading" secondItem="1JG-0d-srN" secondAttribute="leading" constant="16" id="L3A-n3-63f"/>
+                            <constraint firstItem="1JG-0d-srN" firstAttribute="trailing" secondItem="Y5u-rk-qWg" secondAttribute="trailing" constant="15" id="MmF-N0-TXb"/>
+                            <constraint firstItem="TMa-xW-AgG" firstAttribute="leading" secondItem="1JG-0d-srN" secondAttribute="leading" constant="16" id="RXp-SL-bQk"/>
+                            <constraint firstItem="Y5u-rk-qWg" firstAttribute="leading" secondItem="1JG-0d-srN" secondAttribute="leading" constant="16" id="SLW-Or-1hH"/>
+                            <constraint firstItem="TMa-xW-AgG" firstAttribute="top" secondItem="Y5u-rk-qWg" secondAttribute="bottom" constant="22" id="SSf-Gx-xpP"/>
+                            <constraint firstItem="1JG-0d-srN" firstAttribute="trailing" secondItem="4hp-fg-RGm" secondAttribute="trailing" constant="16" id="hRQ-20-ACy"/>
+                            <constraint firstItem="4hp-fg-RGm" firstAttribute="top" secondItem="TMa-xW-AgG" secondAttribute="bottom" constant="30" id="m6q-lK-eNz"/>
+                            <constraint firstItem="Y5u-rk-qWg" firstAttribute="top" secondItem="Y9K-ff-gSO" secondAttribute="bottom" constant="22" id="wJH-0K-Jkn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1JG-0d-srN"/>
                     </view>
@@ -221,10 +352,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmPasswordInput" destination="TMa-xW-AgG" id="if5-xo-fw8"/>
+                        <outlet property="emailInput" destination="Y9K-ff-gSO" id="T5q-3M-3Gp"/>
+                        <outlet property="nextStepButton" destination="4hp-fg-RGm" id="GTx-gF-kS1"/>
+                        <outlet property="passwordInput" destination="Y5u-rk-qWg" id="779-xj-lBf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqA-rr-ijh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2190" y="864"/>
+            <point key="canvasLocation" x="2189.8550724637685" y="863.83928571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7hU-Ie-k0G">

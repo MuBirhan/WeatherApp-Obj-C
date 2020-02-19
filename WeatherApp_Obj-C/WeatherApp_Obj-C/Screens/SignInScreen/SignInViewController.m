@@ -7,6 +7,7 @@
 //
 
 #import "SignInViewController.h"
+#import "UIColor+CustomColors.h"
 
 @interface SignInViewController ()
 
@@ -16,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.signInButton.backgroundColor = [UIColor greenButton];
+    self.signInButton.layer.cornerRadius = 25;
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -10,6 +10,8 @@
 		61BF4E58DE6B6ADCC7784C2B /* Pods_WeatherApp_Obj_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BA093A2CABFB95B41AD563 /* Pods_WeatherApp_Obj_C.framework */; };
 		6BECB2081485E5271B87A50B /* Pods_WeatherApp_Obj_CTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8609748516870B00F839D37B /* Pods_WeatherApp_Obj_CTests.framework */; };
 		6D1776C8191D3A81916AAA9E /* Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB3C662AA49342BFD5DD8EF /* Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework */; };
+		8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83A723FBF0980080821C /* ErrorHandler.m */; };
+		8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83B923FC1D790080821C /* BaseViewController.m */; };
 		8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EBA23F59E020051CF1C /* AppDelegate.m */; };
 		8E702EBE23F59E020051CF1C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EBD23F59E020051CF1C /* SceneDelegate.m */; };
 		8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EC023F59E020051CF1C /* SplashViewController.m */; };
@@ -25,6 +27,12 @@
 		8E702F1F23F6CFD80051CF1C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F1E23F6CFD80051CF1C /* SignUpViewController.m */; };
 		8E702F2123FA791D0051CF1C /* CustomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E702F2023FA791D0051CF1C /* CustomInputView.xib */; };
 		8E702F2423FA79590051CF1C /* CustomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2323FA79590051CF1C /* CustomInputView.m */; };
+		8E702F2723FADD890051CF1C /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2623FADD890051CF1C /* UIColor+CustomColors.m */; };
+		8E702F2A23FBC8120051CF1C /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2923FBC8120051CF1C /* CustomTextField.m */; };
+		8E702F2C23FBE4AF0051CF1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */; };
+		8E702F2F23FBE8A70051CF1C /* UserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2E23FBE8A70051CF1C /* UserRepository.m */; };
+		8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */; };
+		8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB52B2F23FD255F004B45C0 /* LoadingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +60,10 @@
 		3DB3C662AA49342BFD5DD8EF /* Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7823981CF36DAFE0DA8FC2B6 /* Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests/Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8609748516870B00F839D37B /* Pods_WeatherApp_Obj_CTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_Obj_CTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E2A83A623FBF0980080821C /* ErrorHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorHandler.h; sourceTree = "<group>"; };
+		8E2A83A723FBF0980080821C /* ErrorHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorHandler.m; sourceTree = "<group>"; };
+		8E2A83B823FC1D790080821C /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8E2A83B923FC1D790080821C /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8E702EB623F59E020051CF1C /* WeatherApp_Obj-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherApp_Obj-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E702EB923F59E020051CF1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E702EBA23F59E020051CF1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +100,16 @@
 		8E702F2023FA791D0051CF1C /* CustomInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInputView.xib; sourceTree = "<group>"; };
 		8E702F2223FA79590051CF1C /* CustomInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomInputView.h; sourceTree = "<group>"; };
 		8E702F2323FA79590051CF1C /* CustomInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomInputView.m; sourceTree = "<group>"; };
+		8E702F2523FADD890051CF1C /* UIColor+CustomColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		8E702F2623FADD890051CF1C /* UIColor+CustomColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		8E702F2823FBC8120051CF1C /* CustomTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		8E702F2923FBC8120051CF1C /* CustomTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
+		8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E702F2D23FBE8A70051CF1C /* UserRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRepository.h; sourceTree = "<group>"; };
+		8E702F2E23FBE8A70051CF1C /* UserRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRepository.m; sourceTree = "<group>"; };
+		8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		8EB52B2E23FD255F004B45C0 /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		8EB52B2F23FD255F004B45C0 /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		CEDDF18AE5280A5DB8AA0856 /* Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests/Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3EDC177A5131761C32C9FB9 /* Pods-WeatherApp_Obj-CTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_Obj-CTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp_Obj-CTests/Pods-WeatherApp_Obj-CTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +152,116 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E2A83AA23FBF5900080821C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8E2A83AB23FC05040080821C /* CustomInputView */ = {
+			isa = PBXGroup;
+			children = (
+				8E702F2023FA791D0051CF1C /* CustomInputView.xib */,
+				8E702F2223FA79590051CF1C /* CustomInputView.h */,
+				8E702F2323FA79590051CF1C /* CustomInputView.m */,
+			);
+			path = CustomInputView;
+			sourceTree = "<group>";
+		};
+		8E2A83AC23FC05300080821C /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				8E702F2823FBC8120051CF1C /* CustomTextField.h */,
+				8E702F2923FBC8120051CF1C /* CustomTextField.m */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		8E2A83AD23FC05600080821C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A83AE23FC05680080821C /* UserRepository */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8E2A83AE23FC05680080821C /* UserRepository */ = {
+			isa = PBXGroup;
+			children = (
+				8E702F2D23FBE8A70051CF1C /* UserRepository.h */,
+				8E702F2E23FBE8A70051CF1C /* UserRepository.m */,
+			);
+			path = UserRepository;
+			sourceTree = "<group>";
+		};
+		8E2A83AF23FC05910080821C /* SignUpScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E702F1D23F6CFD80051CF1C /* SignUpViewController.h */,
+				8E702F1E23F6CFD80051CF1C /* SignUpViewController.m */,
+			);
+			path = SignUpScreen;
+			sourceTree = "<group>";
+		};
+		8E2A83B023FC05A30080821C /* SignInScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E702F1A23F6CFC20051CF1C /* SignInViewController.h */,
+				8E702F1B23F6CFC20051CF1C /* SignInViewController.m */,
+			);
+			path = SignInScreen;
+			sourceTree = "<group>";
+		};
+		8E2A83B123FC05BA0080821C /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E702EBF23F59E020051CF1C /* SplashViewController.h */,
+				8E702EC023F59E020051CF1C /* SplashViewController.m */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		8E2A83B223FC05CD0080821C /* SecondScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E702EF123F6A5EC0051CF1C /* SecondScreenViewController.h */,
+				8E702EF223F6A5EC0051CF1C /* SecondScreenViewController.m */,
+			);
+			path = SecondScreen;
+			sourceTree = "<group>";
+		};
+		8E2A83B323FC07110080821C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A83B723FC1A750080821C /* BaseScreen */,
+				8E2A83B223FC05CD0080821C /* SecondScreen */,
+				8E2A83B123FC05BA0080821C /* SplashScreen */,
+				8E2A83B023FC05A30080821C /* SignInScreen */,
+				8E2A83AF23FC05910080821C /* SignUpScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8E2A83B423FC07430080821C /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */,
+				8EB52B2E23FD255F004B45C0 /* LoadingView.h */,
+				8EB52B2F23FD255F004B45C0 /* LoadingView.m */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		8E2A83B723FC1A750080821C /* BaseScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A83B823FC1D790080821C /* BaseViewController.h */,
+				8E2A83B923FC1D790080821C /* BaseViewController.m */,
+			);
+			path = BaseScreen;
+			sourceTree = "<group>";
+		};
 		8E702EAD23F59E020051CF1C = {
 			isa = PBXGroup;
 			children = (
@@ -155,28 +287,22 @@
 		8E702EB823F59E020051CF1C /* WeatherApp_Obj-C */ = {
 			isa = PBXGroup;
 			children = (
+				8E2A83B323FC07110080821C /* Screens */,
+				8E2A83AD23FC05600080821C /* Repository */,
+				8E2A83AA23FBF5900080821C /* model */,
+				8E702F3023FBEB6F0051CF1C /* utils */,
+				8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */,
 				8E702F1023F6BFD80051CF1C /* fonts */,
 				8E702EB923F59E020051CF1C /* AppDelegate.h */,
 				8E702EBA23F59E020051CF1C /* AppDelegate.m */,
 				8E702EBC23F59E020051CF1C /* SceneDelegate.h */,
 				8E702EBD23F59E020051CF1C /* SceneDelegate.m */,
-				8E702EBF23F59E020051CF1C /* SplashViewController.h */,
-				8E702EC023F59E020051CF1C /* SplashViewController.m */,
 				8E702EC223F59E020051CF1C /* Main.storyboard */,
 				8E702EC823F59E050051CF1C /* Assets.xcassets */,
 				8E702ECA23F59E050051CF1C /* LaunchScreen.storyboard */,
 				8E702ECD23F59E050051CF1C /* Info.plist */,
 				8E702ECE23F59E050051CF1C /* main.m */,
 				8E702EC523F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodeld */,
-				8E702EF123F6A5EC0051CF1C /* SecondScreenViewController.h */,
-				8E702EF223F6A5EC0051CF1C /* SecondScreenViewController.m */,
-				8E702F1A23F6CFC20051CF1C /* SignInViewController.h */,
-				8E702F1B23F6CFC20051CF1C /* SignInViewController.m */,
-				8E702F1D23F6CFD80051CF1C /* SignUpViewController.h */,
-				8E702F1E23F6CFD80051CF1C /* SignUpViewController.m */,
-				8E702F2023FA791D0051CF1C /* CustomInputView.xib */,
-				8E702F2223FA79590051CF1C /* CustomInputView.h */,
-				8E702F2323FA79590051CF1C /* CustomInputView.m */,
 			);
 			path = "WeatherApp_Obj-C";
 			sourceTree = "<group>";
@@ -212,6 +338,20 @@
 				8E702F1723F6BFF00051CF1C /* sf-ui-display-ultralight-58646b19bf205.otf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		8E702F3023FBEB6F0051CF1C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A83B423FC07430080821C /* LoadingView */,
+				8E702F2523FADD890051CF1C /* UIColor+CustomColors.h */,
+				8E702F2623FADD890051CF1C /* UIColor+CustomColors.m */,
+				8E2A83AC23FC05300080821C /* CustomTextField */,
+				8E2A83AB23FC05040080821C /* CustomInputView */,
+				8E2A83A623FBF0980080821C /* ErrorHandler.h */,
+				8E2A83A723FBF0980080821C /* ErrorHandler.m */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		F4467394D29AEAFFB1DFC650 /* Pods */ = {
@@ -337,6 +477,8 @@
 			files = (
 				8E702ECC23F59E050051CF1C /* LaunchScreen.storyboard in Resources */,
 				8E702EC923F59E050051CF1C /* Assets.xcassets in Resources */,
+				8E702F2C23FBE4AF0051CF1C /* GoogleService-Info.plist in Resources */,
+				8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */,
 				8E702F2123FA791D0051CF1C /* CustomInputView.xib in Resources */,
 				8E702EC423F59E020051CF1C /* Main.storyboard in Resources */,
 			);
@@ -467,7 +609,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E702F1C23F6CFC20051CF1C /* SignInViewController.m in Sources */,
+				8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */,
 				8E702ECF23F59E050051CF1C /* main.m in Sources */,
+				8E702F2F23FBE8A70051CF1C /* UserRepository.m in Sources */,
+				8E702F2A23FBC8120051CF1C /* CustomTextField.m in Sources */,
+				8E702F2723FADD890051CF1C /* UIColor+CustomColors.m in Sources */,
+				8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */,
+				8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */,
 				8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */,
 				8E702EF323F6A5EC0051CF1C /* SecondScreenViewController.m in Sources */,
 				8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */,
@@ -579,7 +727,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -631,7 +779,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

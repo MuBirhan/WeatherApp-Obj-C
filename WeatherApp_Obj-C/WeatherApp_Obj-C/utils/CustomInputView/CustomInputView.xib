@@ -14,6 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomInputView">
             <connections>
+                <outlet property="errorMessage" destination="nju-P9-xUu" id="1nx-Qq-CO6"/>
                 <outlet property="label" destination="Ncy-VZ-d2Z" id="rDr-17-wHx"/>
                 <outlet property="userInput" destination="PlQ-EG-lnL" id="TV7-wD-HXR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="DMD-Vv-dwL"/>
@@ -30,16 +31,24 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PlQ-EG-lnL">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PlQ-EG-lnL" customClass="CustomTextField">
                     <rect key="frame" x="0.0" y="32" width="344" height="52"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nju-P9-xUu">
+                    <rect key="frame" x="20" y="84" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="10"/>
+                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="PlQ-EG-lnL" firstAttribute="top" secondItem="Ncy-VZ-d2Z" secondAttribute="bottom" constant="15" id="5lr-dh-1sN"/>
                 <constraint firstItem="Ncy-VZ-d2Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HDH-hc-WJc"/>
+                <constraint firstAttribute="bottom" secondItem="nju-P9-xUu" secondAttribute="bottom" id="Tj6-cc-wNB"/>
+                <constraint firstItem="nju-P9-xUu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="XcA-nN-OR3"/>
                 <constraint firstItem="Ncy-VZ-d2Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jOw-Kh-K5I"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PlQ-EG-lnL" secondAttribute="trailing" id="sFJ-63-K9v"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PlQ-EG-lnL" secondAttribute="bottom" id="scg-aZ-xx5"/>

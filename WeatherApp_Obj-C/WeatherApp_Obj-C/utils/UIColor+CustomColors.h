@@ -1,8 +1,8 @@
 //
-//  SignUpViewController.h
+//  UIColor+CustomColors.h
 //  WeatherApp_Obj-C
 //
-//  Created by Muradasil Birhan on 14/02/2020.
+//  Created by Muradasil Birhan on 17/02/2020.
 //  Copyright © 2020 RodeApps. All rights reserved.
 //
 
@@ -10,8 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SignUpViewController : UIViewController
-
+@interface UIColor (CustomColors)
++(UIColor *)greenButton;
++(UIColor *)blueButton;
 @end
 
 NS_ASSUME_NONNULL_END
