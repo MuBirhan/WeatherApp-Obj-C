@@ -23,6 +23,19 @@
     }];
 }
 
+- (void) loginUser:(NSString *)userEmail
+      withPassword:(NSString *)password
+           success:(void (^)(void))success
+             error:(void (^)(NSString * _Nullable))errorHandler {
+    [[FIRAuth auth] signInWithEmail:userEmail password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+        if (error) {
+            errorHandler(error.localizedDescription);
+        } else {
+            success();
+        }
+    }];
+}
+
 - (void) getCurrentUser:(void(^_Nullable)(FIRUser *_Nullable))success
                   error:(void(^_Nullable)(NSString *_Nullable)) errorHandler {
     FIRUser *user = [[FIRAuth auth] currentUser];

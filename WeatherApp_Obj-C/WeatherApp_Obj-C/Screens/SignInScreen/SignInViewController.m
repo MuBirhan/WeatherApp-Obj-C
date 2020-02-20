@@ -32,6 +32,37 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)signInButtonClicked:(id)sender {
+    [self resetErrors];
+    if ([self validateFields]) {
+        [self showLoading];
+        [[UserRepository new] loginUser:self.emailInput.userInput.text withPassword:self.passwordInput.userInput.text success:^{
+            [self hideLoading];
+            [self performSegueWithIdentifier:@"GoToHomeScreen" sender:nil];
+        } error:^(NSString * _Nullable error) {
+            [self hideLoading];
+            NSLog(@"%@", error);
+            [self showError:error];
+        }];
+    }
+}
+
+- (BOOL)validateFields {
+    BOOL isValid = YES;
+    if ([self.emailInput.userInput.text isEqual:@""]) {
+        self.emailInput.errorMessage.text = NSLocalizedString(@"Field cannot be empty", @"");
+        isValid = NO;
+    } else if ([self.passwordInput.userInput.text isEqual:@""]) {
+        self.passwordInput.errorMessage.text = NSLocalizedString(@"Field cannot be empty", @"");
+        isValid = NO;
+    }
+    return isValid;
+}
+
+- (void)resetErrors {
+    self.emailInput.errorMessage.text = @"";
+    self.passwordInput.errorMessage.text = @"";
+}
 /*
 #pragma mark - Navigation
 

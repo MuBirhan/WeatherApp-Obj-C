@@ -18,6 +18,11 @@
               success:(void(^_Nullable)(void))success
                 error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 
+- (void) loginUser:(NSString *_Nullable) userEmail
+      withPassword:(NSString *_Nullable) password
+           success:(void(^_Nullable)(void))success
+             error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
+
 - (void) getCurrentUser:(void(^_Nullable)(FIRUser *_Nullable))success
                   error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 

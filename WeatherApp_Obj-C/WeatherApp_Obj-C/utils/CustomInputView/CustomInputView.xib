@@ -21,9 +21,8 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="344" height="84"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncy-VZ-d2Z">
                     <rect key="frame" x="0.0" y="0.0" width="34" height="17"/>
@@ -33,6 +32,10 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PlQ-EG-lnL" customClass="CustomTextField">
                     <rect key="frame" x="0.0" y="32" width="344" height="52"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="rAg-wg-JHa"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -43,16 +46,16 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="PlQ-EG-lnL" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="4GE-Kb-G1X"/>
                 <constraint firstItem="PlQ-EG-lnL" firstAttribute="top" secondItem="Ncy-VZ-d2Z" secondAttribute="bottom" constant="15" id="5lr-dh-1sN"/>
                 <constraint firstItem="Ncy-VZ-d2Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HDH-hc-WJc"/>
                 <constraint firstAttribute="bottom" secondItem="nju-P9-xUu" secondAttribute="bottom" id="Tj6-cc-wNB"/>
                 <constraint firstItem="nju-P9-xUu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="XcA-nN-OR3"/>
                 <constraint firstItem="Ncy-VZ-d2Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jOw-Kh-K5I"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PlQ-EG-lnL" secondAttribute="trailing" id="sFJ-63-K9v"/>
+                <constraint firstItem="PlQ-EG-lnL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rZx-7Z-yP2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PlQ-EG-lnL" secondAttribute="bottom" id="scg-aZ-xx5"/>
-                <constraint firstItem="PlQ-EG-lnL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yIq-Pg-1QU"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

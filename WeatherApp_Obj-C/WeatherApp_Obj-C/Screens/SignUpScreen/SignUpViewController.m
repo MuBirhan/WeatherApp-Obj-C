@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -28,6 +30,9 @@
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     self.nextStepButton.backgroundColor = [UIColor greenButton];
     self.nextStepButton.layer.cornerRadius = 25;
+    [self.emailInput layoutIfNeeded];
+    
+    
 }
 
 - (IBAction)back:(id)sender {
@@ -40,10 +45,10 @@
         [self showLoading];
         [[UserRepository new] registerUser:self.emailInput.userInput.text withPassword:self.passwordInput.userInput.text success:^{
             [self hideLoading];
-            NSLog(NSLocalizedString(@"Success", @""));
+            [self.navigationController popViewControllerAnimated:YES];
+            [self performSegueWithIdentifier:@"GoToLogin" sender:nil];
         } error:^(NSString * _Nullable error) {
             [self hideLoading];
-            NSLog(@"%@", error);
             [self showError:error];
         }];
     }

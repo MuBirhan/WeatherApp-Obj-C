@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *userInput;
 @property (nonatomic) IBInspectable NSString *labelName;
 @property (nonatomic) IBInspectable NSString *inputPlaceholder;
+@property (nonatomic) IBInspectable BOOL isPassword;
 @property (weak, nonatomic) IBOutlet UILabel *errorMessage;
 @end

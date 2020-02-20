@@ -10,6 +10,7 @@
 		61BF4E58DE6B6ADCC7784C2B /* Pods_WeatherApp_Obj_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BA093A2CABFB95B41AD563 /* Pods_WeatherApp_Obj_C.framework */; };
 		6BECB2081485E5271B87A50B /* Pods_WeatherApp_Obj_CTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8609748516870B00F839D37B /* Pods_WeatherApp_Obj_CTests.framework */; };
 		6D1776C8191D3A81916AAA9E /* Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB3C662AA49342BFD5DD8EF /* Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework */; };
+		8E26E0BE23FE95A3009B9B60 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E26E0BD23FE95A2009B9B60 /* HomeScreenViewController.m */; };
 		8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83A723FBF0980080821C /* ErrorHandler.m */; };
 		8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83B923FC1D790080821C /* BaseViewController.m */; };
 		8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EBA23F59E020051CF1C /* AppDelegate.m */; };
@@ -60,6 +61,8 @@
 		3DB3C662AA49342BFD5DD8EF /* Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7823981CF36DAFE0DA8FC2B6 /* Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests/Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8609748516870B00F839D37B /* Pods_WeatherApp_Obj_CTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_Obj_CTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E26E0BC23FE95A2009B9B60 /* HomeScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
+		8E26E0BD23FE95A2009B9B60 /* HomeScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
 		8E2A83A623FBF0980080821C /* ErrorHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorHandler.h; sourceTree = "<group>"; };
 		8E2A83A723FBF0980080821C /* ErrorHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorHandler.m; sourceTree = "<group>"; };
 		8E2A83B823FC1D790080821C /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -152,6 +155,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E26E0BF23FE95BA009B9B60 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E26E0BC23FE95A2009B9B60 /* HomeScreenViewController.h */,
+				8E26E0BD23FE95A2009B9B60 /* HomeScreenViewController.m */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
 		8E2A83AA23FBF5900080821C /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +246,7 @@
 		8E2A83B323FC07110080821C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8E26E0BF23FE95BA009B9B60 /* HomeScreen */,
 				8E2A83B723FC1A750080821C /* BaseScreen */,
 				8E2A83B223FC05CD0080821C /* SecondScreen */,
 				8E2A83B123FC05BA0080821C /* SplashScreen */,
@@ -621,6 +634,7 @@
 				8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */,
 				8E702F2423FA79590051CF1C /* CustomInputView.m in Sources */,
 				8E702EC723F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodeld in Sources */,
+				8E26E0BE23FE95A3009B9B60 /* HomeScreenViewController.m in Sources */,
 				8E702F1F23F6CFD80051CF1C /* SignUpViewController.m in Sources */,
 				8E702EBE23F59E020051CF1C /* SceneDelegate.m in Sources */,
 			);
