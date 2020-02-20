@@ -13,7 +13,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeScreenViewController : BaseViewController
-@property (weak, nonatomic) IBOutlet UILabel *user;
 
 @end
 

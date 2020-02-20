@@ -19,7 +19,7 @@
     [self showLoading];
     [[UserRepository new] getCurrentUser:^(FIRUser * _Nullable user) {
         [self hideLoading];
-        self.user.text = user.email;
+        NSLog(@"%@", user.email);
     } error:^(NSString * _Nullable error) {
         [self hideLoading];
         [self showError:error];
