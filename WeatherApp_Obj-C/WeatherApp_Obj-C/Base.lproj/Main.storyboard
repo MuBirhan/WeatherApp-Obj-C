@@ -169,7 +169,6 @@
                                 <rect key="frame" x="16" y="137" width="383" height="84"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="383" id="Uyb-oS-Dpp"/>
                                     <constraint firstAttribute="height" constant="84" id="oKp-6x-xSR"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -183,7 +182,6 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="xbN-hh-RZu"/>
-                                    <constraint firstAttribute="width" constant="383" id="zwN-sD-fVc"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Password"/>
@@ -233,6 +231,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="W1X-KX-1LA" firstAttribute="trailing" secondItem="eem-DW-TGp" secondAttribute="trailing" constant="15" id="5bM-hE-As6"/>
                             <constraint firstItem="Vbi-Qm-Cwu" firstAttribute="leading" secondItem="W1X-KX-1LA" secondAttribute="leading" constant="30" id="9aH-CM-Xg9"/>
                             <constraint firstItem="aW4-YE-q2K" firstAttribute="leading" secondItem="W1X-KX-1LA" secondAttribute="leading" constant="16" id="AVg-HY-fxB"/>
                             <constraint firstItem="PVL-kT-d9N" firstAttribute="leading" secondItem="W1X-KX-1LA" secondAttribute="leading" constant="16" id="EOU-9u-QB9"/>
@@ -243,6 +242,7 @@
                             <constraint firstItem="W1X-KX-1LA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PVL-kT-d9N" secondAttribute="trailing" symbolic="YES" id="Yv8-NV-Ce5"/>
                             <constraint firstItem="aW4-YE-q2K" firstAttribute="top" secondItem="PVL-kT-d9N" secondAttribute="bottom" constant="36" id="aDl-RQ-s1U"/>
                             <constraint firstItem="eem-DW-TGp" firstAttribute="top" secondItem="aW4-YE-q2K" secondAttribute="bottom" constant="23" id="bp0-eY-rqp"/>
+                            <constraint firstItem="W1X-KX-1LA" firstAttribute="trailing" secondItem="aW4-YE-q2K" secondAttribute="trailing" constant="15" id="i2K-op-8vE"/>
                             <constraint firstItem="1iV-LX-ZRz" firstAttribute="top" secondItem="eem-DW-TGp" secondAttribute="bottom" constant="27" id="i9I-ob-Nkp"/>
                             <constraint firstItem="PVL-kT-d9N" firstAttribute="top" secondItem="W1X-KX-1LA" secondAttribute="top" constant="30" id="mDS-x8-vce"/>
                             <constraint firstItem="1iV-LX-ZRz" firstAttribute="leading" secondItem="W1X-KX-1LA" secondAttribute="leading" constant="16" id="qTN-uk-fUu"/>
