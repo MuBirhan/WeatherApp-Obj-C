@@ -1,5 +1,5 @@
 //
-//  HomeScreenViewController.h
+//  ProfileViewController.h
 //  WeatherApp_Obj-C
 //
 //  Created by Muradasil Birhan on 20/02/2020.
@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import "UserRepository.h"
 
-@interface HomeScreenViewController : BaseViewController
+NS_ASSUME_NONNULL_BEGIN
+
+@interface ProfileViewController : BaseViewController
+- (IBAction)logoutButtonPressed:(id)sender;
 
 @end
+
+NS_ASSUME_NONNULL_END

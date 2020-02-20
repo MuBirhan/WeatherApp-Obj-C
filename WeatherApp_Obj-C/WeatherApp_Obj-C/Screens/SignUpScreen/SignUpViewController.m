@@ -45,7 +45,6 @@
         [self showLoading];
         [[UserRepository new] registerUser:self.emailInput.userInput.text withPassword:self.passwordInput.userInput.text success:^{
             [self hideLoading];
-            [self.navigationController popViewControllerAnimated:YES];
             [self performSegueWithIdentifier:@"GoToLogin" sender:nil];
         } error:^(NSString * _Nullable error) {
             [self hideLoading];

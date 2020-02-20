@@ -1,5 +1,5 @@
 //
-//  HomeScreenViewController.h
+//  TabBarController.h
 //  WeatherApp_Obj-C
 //
 //  Created by Muradasil Birhan on 20/02/2020.
@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
-#import "UserRepository.h"
 
-@interface HomeScreenViewController : BaseViewController
+
+@interface TabBarController : UITabBarController
 
 @end
+

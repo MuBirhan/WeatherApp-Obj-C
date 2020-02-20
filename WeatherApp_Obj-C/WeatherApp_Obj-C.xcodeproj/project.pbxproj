@@ -11,6 +11,8 @@
 		6BECB2081485E5271B87A50B /* Pods_WeatherApp_Obj_CTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8609748516870B00F839D37B /* Pods_WeatherApp_Obj_CTests.framework */; };
 		6D1776C8191D3A81916AAA9E /* Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB3C662AA49342BFD5DD8EF /* Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework */; };
 		8E26E0BE23FE95A3009B9B60 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E26E0BD23FE95A2009B9B60 /* HomeScreenViewController.m */; };
+		8E26E0C323FEB770009B9B60 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E26E0C223FEB770009B9B60 /* TabBarController.m */; };
+		8E26E0C723FEC762009B9B60 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E26E0C623FEC762009B9B60 /* ProfileViewController.m */; };
 		8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83A723FBF0980080821C /* ErrorHandler.m */; };
 		8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83B923FC1D790080821C /* BaseViewController.m */; };
 		8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EBA23F59E020051CF1C /* AppDelegate.m */; };
@@ -63,6 +65,10 @@
 		8609748516870B00F839D37B /* Pods_WeatherApp_Obj_CTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_Obj_CTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E26E0BC23FE95A2009B9B60 /* HomeScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
 		8E26E0BD23FE95A2009B9B60 /* HomeScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
+		8E26E0C123FEB770009B9B60 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		8E26E0C223FEB770009B9B60 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		8E26E0C523FEC762009B9B60 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		8E26E0C623FEC762009B9B60 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		8E2A83A623FBF0980080821C /* ErrorHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorHandler.h; sourceTree = "<group>"; };
 		8E2A83A723FBF0980080821C /* ErrorHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorHandler.m; sourceTree = "<group>"; };
 		8E2A83B823FC1D790080821C /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -164,6 +170,24 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
+		8E26E0C023FEB74D009B9B60 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				8E26E0C123FEB770009B9B60 /* TabBarController.h */,
+				8E26E0C223FEB770009B9B60 /* TabBarController.m */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		8E26E0C423FEC746009B9B60 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E26E0C523FEC762009B9B60 /* ProfileViewController.h */,
+				8E26E0C623FEC762009B9B60 /* ProfileViewController.m */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
 		8E2A83AA23FBF5900080821C /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +270,8 @@
 		8E2A83B323FC07110080821C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8E26E0C423FEC746009B9B60 /* ProfileScreen */,
+				8E26E0C023FEB74D009B9B60 /* TabBarController */,
 				8E26E0BF23FE95BA009B9B60 /* HomeScreen */,
 				8E2A83B723FC1A750080821C /* BaseScreen */,
 				8E2A83B223FC05CD0080821C /* SecondScreen */,
@@ -300,21 +326,21 @@
 		8E702EB823F59E020051CF1C /* WeatherApp_Obj-C */ = {
 			isa = PBXGroup;
 			children = (
-				8E2A83B323FC07110080821C /* Screens */,
-				8E2A83AD23FC05600080821C /* Repository */,
-				8E2A83AA23FBF5900080821C /* model */,
-				8E702F3023FBEB6F0051CF1C /* utils */,
-				8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */,
-				8E702F1023F6BFD80051CF1C /* fonts */,
 				8E702EB923F59E020051CF1C /* AppDelegate.h */,
 				8E702EBA23F59E020051CF1C /* AppDelegate.m */,
+				8E702EC823F59E050051CF1C /* Assets.xcassets */,
+				8E702F1023F6BFD80051CF1C /* fonts */,
+				8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */,
+				8E702ECD23F59E050051CF1C /* Info.plist */,
+				8E702ECA23F59E050051CF1C /* LaunchScreen.storyboard */,
+				8E702ECE23F59E050051CF1C /* main.m */,
+				8E702EC223F59E020051CF1C /* Main.storyboard */,
+				8E2A83AA23FBF5900080821C /* model */,
+				8E2A83AD23FC05600080821C /* Repository */,
 				8E702EBC23F59E020051CF1C /* SceneDelegate.h */,
 				8E702EBD23F59E020051CF1C /* SceneDelegate.m */,
-				8E702EC223F59E020051CF1C /* Main.storyboard */,
-				8E702EC823F59E050051CF1C /* Assets.xcassets */,
-				8E702ECA23F59E050051CF1C /* LaunchScreen.storyboard */,
-				8E702ECD23F59E050051CF1C /* Info.plist */,
-				8E702ECE23F59E050051CF1C /* main.m */,
+				8E2A83B323FC07110080821C /* Screens */,
+				8E702F3023FBEB6F0051CF1C /* utils */,
 				8E702EC523F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodeld */,
 			);
 			path = "WeatherApp_Obj-C";
@@ -631,10 +657,12 @@
 				8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */,
 				8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */,
 				8E702EF323F6A5EC0051CF1C /* SecondScreenViewController.m in Sources */,
+				8E26E0C723FEC762009B9B60 /* ProfileViewController.m in Sources */,
 				8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */,
 				8E702F2423FA79590051CF1C /* CustomInputView.m in Sources */,
 				8E702EC723F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodeld in Sources */,
 				8E26E0BE23FE95A3009B9B60 /* HomeScreenViewController.m in Sources */,
+				8E26E0C323FEB770009B9B60 /* TabBarController.m in Sources */,
 				8E702F1F23F6CFD80051CF1C /* SignUpViewController.m in Sources */,
 				8E702EBE23F59E020051CF1C /* SceneDelegate.m in Sources */,
 			);
