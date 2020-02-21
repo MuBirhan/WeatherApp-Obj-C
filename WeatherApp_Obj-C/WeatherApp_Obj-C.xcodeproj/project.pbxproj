@@ -34,6 +34,8 @@
 		8E702F2A23FBC8120051CF1C /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2923FBC8120051CF1C /* CustomTextField.m */; };
 		8E702F2C23FBE4AF0051CF1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */; };
 		8E702F2F23FBE8A70051CF1C /* UserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2E23FBE8A70051CF1C /* UserRepository.m */; };
+		8E99606723FFF6710088549E /* NewLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99606623FFF6710088549E /* NewLocationViewController.m */; };
+		8E99606B240024D80088549E /* WeatherRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99606A240024D80088549E /* WeatherRepository.m */; };
 		8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */; };
 		8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB52B2F23FD255F004B45C0 /* LoadingView.m */; };
 /* End PBXBuildFile section */
@@ -116,6 +118,10 @@
 		8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E702F2D23FBE8A70051CF1C /* UserRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRepository.h; sourceTree = "<group>"; };
 		8E702F2E23FBE8A70051CF1C /* UserRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRepository.m; sourceTree = "<group>"; };
+		8E99606523FFF6710088549E /* NewLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewLocationViewController.h; sourceTree = "<group>"; };
+		8E99606623FFF6710088549E /* NewLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewLocationViewController.m; sourceTree = "<group>"; };
+		8E996069240024D80088549E /* WeatherRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherRepository.h; sourceTree = "<group>"; };
+		8E99606A240024D80088549E /* WeatherRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherRepository.m; sourceTree = "<group>"; };
 		8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		8EB52B2E23FD255F004B45C0 /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		8EB52B2F23FD255F004B45C0 /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 		8E2A83AD23FC05600080821C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				8E996068240024B60088549E /* WeatherRepository */,
 				8E2A83AE23FC05680080821C /* UserRepository */,
 			);
 			path = Repository;
@@ -270,6 +277,7 @@
 		8E2A83B323FC07110080821C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8E99606423FFF6370088549E /* NewLocationScreen */,
 				8E26E0C423FEC746009B9B60 /* ProfileScreen */,
 				8E26E0C023FEB74D009B9B60 /* TabBarController */,
 				8E26E0BF23FE95BA009B9B60 /* HomeScreen */,
@@ -391,6 +399,24 @@
 				8E2A83A723FBF0980080821C /* ErrorHandler.m */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		8E99606423FFF6370088549E /* NewLocationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E99606523FFF6710088549E /* NewLocationViewController.h */,
+				8E99606623FFF6710088549E /* NewLocationViewController.m */,
+			);
+			path = NewLocationScreen;
+			sourceTree = "<group>";
+		};
+		8E996068240024B60088549E /* WeatherRepository */ = {
+			isa = PBXGroup;
+			children = (
+				8E996069240024D80088549E /* WeatherRepository.h */,
+				8E99606A240024D80088549E /* WeatherRepository.m */,
+			);
+			path = WeatherRepository;
 			sourceTree = "<group>";
 		};
 		F4467394D29AEAFFB1DFC650 /* Pods */ = {
@@ -651,7 +677,9 @@
 				8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */,
 				8E702ECF23F59E050051CF1C /* main.m in Sources */,
 				8E702F2F23FBE8A70051CF1C /* UserRepository.m in Sources */,
+				8E99606723FFF6710088549E /* NewLocationViewController.m in Sources */,
 				8E702F2A23FBC8120051CF1C /* CustomTextField.m in Sources */,
+				8E99606B240024D80088549E /* WeatherRepository.m in Sources */,
 				8E702F2723FADD890051CF1C /* UIColor+CustomColors.m in Sources */,
 				8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */,
 				8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */,
