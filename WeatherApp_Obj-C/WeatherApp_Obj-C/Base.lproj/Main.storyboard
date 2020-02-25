@@ -633,7 +633,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cvp-NT-vp1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Tth-qV-w66"/>
+                    <navigationItem key="navigationItem" id="Tth-qV-w66">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="back_arrow" id="Gft-nS-HkJ">
+                            <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="back:" destination="nZI-Vc-vu7" id="5dU-4F-ne8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addbutton" destination="fef-7W-GvU" id="Rt9-nc-baP"/>
                         <outlet property="locationInfo" destination="Pdd-YO-IJn" id="bDb-Ff-tpt"/>

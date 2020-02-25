@@ -24,5 +24,5 @@
 @property(nonatomic, assign)double dt;
 @property(nonatomic, assign)int id;
 @property(nonatomic, copy)NSString* name;
-@property(nonatomic, assign)double cod;
+@property(nonatomic, assign)double code;
 @end

@@ -20,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *locationInfo;
 - (IBAction)centerToCurrentLocation:(id)sender;
 - (IBAction)addLocation:(id)sender;
+- (IBAction)back:(id)sender;
 
 @end

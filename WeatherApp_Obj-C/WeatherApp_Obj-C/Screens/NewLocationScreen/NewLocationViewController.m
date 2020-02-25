@@ -8,6 +8,7 @@
 
 #import "NewLocationViewController.h"
 #import "UIColor+CustomColors.h"
+#import "WeatherRepository.h"
 @import MapKit;
 
 
@@ -27,6 +28,14 @@
     UIPanGestureRecognizer* panRec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didDragMap:)];
     [panRec setDelegate:self];
     [self.mapView addGestureRecognizer:panRec];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 -(void) setupAddButton {
@@ -73,7 +82,19 @@
 }
 
 - (IBAction)addLocation:(id)sender {
+    CLLocationCoordinate2D location = [self.mapView convertPoint:CGPointMake(self.mapPointer.frame.size.width/2, self.mapPointer.frame.size.height/2) toCoordinateFromView:self.mapPointer];
+    NSLog(@"Location Lat:%f", location.latitude);
+    NSLog(@"Location Lon%f", location.longitude);
     
+    [[WeatherRepository new] fetchWeatherFromProvider:^(WeatherAPIModel * _Nullable success) {
+        NSLog(@"%@", success.city.country);
+    } error:^(NSString * _Nullable error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) showLocation {
@@ -110,5 +131,4 @@
         [self showLocation];
     }
 }
-
 @end

@@ -45,6 +45,7 @@
 		8E9960812403F0020088549E /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9960802403F0020088549E /* Forecast.m */; };
 		8E9960842403F0450088549E /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9960832403F0450088549E /* Weather.m */; };
 		8E9960872403F26E0088549E /* WeatherResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9960862403F26E0088549E /* WeatherResponse.m */; };
+		8E99608A240540C00088549E /* WeatherAPIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E996089240540C00088549E /* WeatherAPIModel.m */; };
 		8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */; };
 		8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB52B2F23FD255F004B45C0 /* LoadingView.m */; };
 /* End PBXBuildFile section */
@@ -149,6 +150,8 @@
 		8E9960832403F0450088549E /* Weather.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		8E9960852403F26E0088549E /* WeatherResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherResponse.h; sourceTree = "<group>"; };
 		8E9960862403F26E0088549E /* WeatherResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherResponse.m; sourceTree = "<group>"; };
+		8E996088240540C00088549E /* WeatherAPIModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherAPIModel.h; sourceTree = "<group>"; };
+		8E996089240540C00088549E /* WeatherAPIModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherAPIModel.m; sourceTree = "<group>"; };
 		8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		8EB52B2E23FD255F004B45C0 /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		8EB52B2F23FD255F004B45C0 /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
@@ -468,6 +471,8 @@
 				8E9960832403F0450088549E /* Weather.m */,
 				8E9960852403F26E0088549E /* WeatherResponse.h */,
 				8E9960862403F26E0088549E /* WeatherResponse.m */,
+				8E996088240540C00088549E /* WeatherAPIModel.h */,
+				8E996089240540C00088549E /* WeatherAPIModel.m */,
 			);
 			path = WeatherModel;
 			sourceTree = "<group>";
@@ -739,6 +744,7 @@
 				8E702F2723FADD890051CF1C /* UIColor+CustomColors.m in Sources */,
 				8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */,
 				8E99607B2403EF400088549E /* Coord.m in Sources */,
+				8E99608A240540C00088549E /* WeatherAPIModel.m in Sources */,
 				8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */,
 				8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */,
 				8E702EF323F6A5EC0051CF1C /* SecondScreenViewController.m in Sources */,

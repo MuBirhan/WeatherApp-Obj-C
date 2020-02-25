@@ -28,4 +28,9 @@
     self.locationButton.backgroundColor = [UIColor greenButton];
     self.locationButton.layer.cornerRadius = 20;
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 @end
