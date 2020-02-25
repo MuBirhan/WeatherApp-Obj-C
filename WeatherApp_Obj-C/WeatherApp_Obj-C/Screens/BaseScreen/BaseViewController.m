@@ -57,5 +57,4 @@
     [indicator stopLoading];
     [indicator removeFromSuperview];
 }
-
 @end

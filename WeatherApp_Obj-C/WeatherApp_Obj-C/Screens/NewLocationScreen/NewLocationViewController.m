@@ -22,7 +22,11 @@
     [self setupAddButton];
     [self setupInput];
     [self setupBlueButton];
-    self.modalView.layer.cornerRadius = 15;
+    [self setupModalView];
+    
+    UIPanGestureRecognizer* panRec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didDragMap:)];
+    [panRec setDelegate:self];
+    [self.mapView addGestureRecognizer:panRec];
 }
 
 -(void) setupAddButton {
@@ -41,8 +45,18 @@
     self.useMyLocationButton.layer.shadowColor = [[UIColor blueShadow] CGColor];
     self.useMyLocationButton.layer.shadowOpacity = 1.0f;
     self.useMyLocationButton.layer.shadowOffset = CGSizeZero;
-    self.useMyLocationButton.layer.shadowPath = [[UIBezierPath bezierPathWithRoundedRect:self.useMyLocationButton.bounds cornerRadius:self.addbutton.layer.cornerRadius] CGPath];
+    self.useMyLocationButton.layer.shadowPath = [[UIBezierPath bezierPathWithRoundedRect:self.useMyLocationButton.bounds cornerRadius:self.useMyLocationButton.layer.cornerRadius] CGPath];
     self.useMyLocationButton.layer.rasterizationScale = UIScreen.mainScreen.scale;
+}
+
+-(void) setupModalView {
+    self.modalView.layer.cornerRadius = 15;
+    self.modalView.layer.shadowColor = [[UIColor greyShadow] CGColor];
+    self.modalView.layer.shadowOpacity = 1.0f;
+    self.modalView.layer.shadowOffset = CGSizeZero;
+    self.modalView.layer.shadowPath = [[UIBezierPath bezierPathWithRoundedRect:self.modalView.bounds
+                                                                  cornerRadius:self.modalView.layer.cornerRadius] CGPath];
+    self.modalView.layer.rasterizationScale = UIScreen.mainScreen.scale;
 }
 
 -(void) setupInput {
@@ -59,7 +73,42 @@
 }
 
 - (IBAction)addLocation:(id)sender {
-    CLLocationCoordinate2D ceva = [self.mapView convertPoint:CGPointMake(self.mapPointer.frame.size.width/2, self.mapPointer.frame.size.height/2) toCoordinateFromView:self.mapPointer];
     
 }
+
+- (void) showLocation {
+    CLLocationCoordinate2D location = [self.mapView convertPoint:CGPointMake(self.mapPointer.frame.size.width/2, self.mapPointer.frame.size.height/2) toCoordinateFromView:self.mapPointer];
+    CLLocation *loc = [[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude];
+    CLGeocoder *geo = [[CLGeocoder alloc] init];
+    [geo reverseGeocodeLocation:loc completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        CLPlacemark *placemark = [placemarks objectAtIndex:0];
+        if (placemark) {
+            NSString *name = @"";
+            NSString *locality = @"";
+            NSString *country = @"";
+
+            if (placemark.name) {
+                name = [NSString stringWithFormat:@"%@, ", placemark.name];
+            }
+            if (placemark.locality) {
+                locality = [NSString stringWithFormat:@"%@, ", placemark.locality];
+            }
+            if (placemark.country) {
+                country = placemark.country;
+            }
+            self.locationInfo.text = [NSString stringWithFormat:@"%@%@%@", name, locality, country];
+        }
+    }];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
+- (void)didDragMap:(UIGestureRecognizer*)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded){
+        [self showLocation];
+    }
+}
+
 @end

@@ -583,9 +583,9 @@
                                             <action selector="centerToCurrentLocation:" destination="nZI-Vc-vu7" eventType="touchUpInside" id="hvf-I8-H1w"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdd-YO-IJn">
-                                        <rect key="frame" x="170" y="115" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdd-YO-IJn">
+                                        <rect key="frame" x="169" y="121.66666666666661" width="44.333333333333343" height="14.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="12"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -604,6 +604,7 @@
                                     <constraint firstItem="fef-7W-GvU" firstAttribute="top" secondItem="Pdd-YO-IJn" secondAttribute="bottom" constant="8" symbolic="YES" id="1Pt-Ti-lXS"/>
                                     <constraint firstItem="SRx-g7-Zeg" firstAttribute="top" secondItem="dwt-qu-DqO" secondAttribute="top" constant="22" id="2B1-gq-mdK"/>
                                     <constraint firstItem="fef-7W-GvU" firstAttribute="leading" secondItem="dwt-qu-DqO" secondAttribute="leading" constant="10" id="7lA-je-CHE"/>
+                                    <constraint firstItem="Pdd-YO-IJn" firstAttribute="top" secondItem="C5A-q3-lwD" secondAttribute="bottom" constant="16.666666666666615" id="CoC-f3-vZV"/>
                                     <constraint firstAttribute="trailing" secondItem="s0n-JW-tjc" secondAttribute="trailing" constant="10" id="DKo-ZS-EqH"/>
                                     <constraint firstAttribute="trailing" secondItem="C5A-q3-lwD" secondAttribute="trailing" constant="10" id="GAb-kt-vNX"/>
                                     <constraint firstItem="C5A-q3-lwD" firstAttribute="leading" secondItem="dwt-qu-DqO" secondAttribute="leading" constant="10" id="HfQ-ui-8Lc"/>
@@ -612,7 +613,6 @@
                                     <constraint firstItem="Pdd-YO-IJn" firstAttribute="centerX" secondItem="C5A-q3-lwD" secondAttribute="centerX" id="aPS-73-928"/>
                                     <constraint firstAttribute="height" constant="272" id="ddj-nc-s8u"/>
                                     <constraint firstAttribute="bottom" secondItem="s0n-JW-tjc" secondAttribute="bottom" constant="10" id="e7j-UD-7z1"/>
-                                    <constraint firstItem="Pdd-YO-IJn" firstAttribute="top" secondItem="C5A-q3-lwD" secondAttribute="bottom" constant="10" id="rFB-gN-2VF"/>
                                     <constraint firstItem="s0n-JW-tjc" firstAttribute="top" secondItem="fef-7W-GvU" secondAttribute="bottom" constant="8" id="sPS-8b-TfE"/>
                                     <constraint firstAttribute="trailing" secondItem="fef-7W-GvU" secondAttribute="trailing" constant="10" id="tJO-lX-uJE"/>
                                 </constraints>
@@ -636,6 +636,7 @@
                     <navigationItem key="navigationItem" id="Tth-qV-w66"/>
                     <connections>
                         <outlet property="addbutton" destination="fef-7W-GvU" id="Rt9-nc-baP"/>
+                        <outlet property="locationInfo" destination="Pdd-YO-IJn" id="bDb-Ff-tpt"/>
                         <outlet property="locationNameInput" destination="C5A-q3-lwD" id="cgj-CC-bVl"/>
                         <outlet property="mapPointer" destination="5HX-M0-XX9" id="Qwr-Xl-DQC"/>
                         <outlet property="mapView" destination="toq-Lc-dyX" id="ugc-aB-qIn"/>

@@ -28,5 +28,4 @@
     self.locationButton.backgroundColor = [UIColor greenButton];
     self.locationButton.layer.cornerRadius = 20;
 }
-
 @end

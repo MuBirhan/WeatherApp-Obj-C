@@ -28,4 +28,10 @@
     UIColor *customBlueShadow = [UIColor colorWithRed:0/255.0 green:144/255.0 blue:255/255.0 alpha:0.5f];
     return customBlueShadow;
 }
+
++ (UIColor *) greyShadow {
+    UIColor *customGreyShadow = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.16f];
+    return customGreyShadow;
+}
+
 @end

@@ -10,13 +10,14 @@
 @import MapKit;
 
 
-@interface NewLocationViewController : UIViewController
+@interface NewLocationViewController : UIViewController <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *locationNameInput;
 @property (weak, nonatomic) IBOutlet UIButton *addbutton;
 @property (weak, nonatomic) IBOutlet UIButton *useMyLocationButton;
 @property (weak, nonatomic) IBOutlet UIView *modalView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIImageView *mapPointer;
+@property (weak, nonatomic) IBOutlet UILabel *locationInfo;
 - (IBAction)centerToCurrentLocation:(id)sender;
 - (IBAction)addLocation:(id)sender;
 

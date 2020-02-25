@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(UIColor *)blueButton;
 +(UIColor *)greenShadow;
 +(UIColor *)blueShadow;
++(UIColor *)greyShadow;
 @end
 
 NS_ASSUME_NONNULL_END

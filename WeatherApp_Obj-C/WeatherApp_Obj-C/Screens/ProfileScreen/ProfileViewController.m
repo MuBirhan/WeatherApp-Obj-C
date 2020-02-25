@@ -8,8 +8,6 @@
 
 #import "ProfileViewController.h"
 #import "UserRepository.h"
-@import OpenWeatherMapAPI;
-#import "OWMWeatherAPI.h"
 
 @interface ProfileViewController ()
 
