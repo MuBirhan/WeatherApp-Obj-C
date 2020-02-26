@@ -13,11 +13,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface City : NSObject
 @property(nonatomic, assign)int id;
-@property(nonatomic, copy)NSString* name;
-@property(nonatomic, assign)Coord* coord;
-@property(nonatomic, copy)NSString* country;
+@property(nonatomic, strong)NSString* name;
+@property(nonatomic, strong)Coord* coord;
+@property(nonatomic, strong)NSString* country;
 @property(nonatomic, assign)int population;
-@property(nonatomic, assign)int timeZone;
+@property(nonatomic, assign)int timezone;
+@property(nonatomic, assign)long sunset;
+@property(nonatomic, assign)long sunrise;
+
+
+-(instancetype)initWithJSON:(NSDictionary *)dict;
 
 @end
 

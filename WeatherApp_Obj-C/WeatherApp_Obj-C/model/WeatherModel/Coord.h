@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign)double lon;
 @property(nonatomic, assign)double lat;
 
+-(instancetype) initWithJSON:(NSDictionary *)dict;
+
 @end
 
 NS_ASSUME_NONNULL_END

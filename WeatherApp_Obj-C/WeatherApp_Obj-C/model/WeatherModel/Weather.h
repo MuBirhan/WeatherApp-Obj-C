@@ -12,9 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Weather : NSObject
 @property(nonatomic, assign)int id;
-@property(nonatomic, copy)NSString* main;
-@property(nonatomic, copy)NSString* weatherDescription;
-@property(nonatomic, copy)NSString* icon;
+@property(nonatomic, strong)NSString* main;
+@property(nonatomic, strong)NSString* weatherDescription;
+@property(nonatomic, strong)NSString* icon;
+
+-(instancetype)initWithJSON:(NSDictionary *)dict;
 @end
 
 NS_ASSUME_NONNULL_END

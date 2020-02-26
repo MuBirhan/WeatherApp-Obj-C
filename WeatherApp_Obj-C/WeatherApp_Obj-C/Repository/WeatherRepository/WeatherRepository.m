@@ -8,26 +8,24 @@
 
 #import "WeatherRepository.h"
 @import AFNetworking;
-#import "AFNetworking.h"
-#import "WeatherAPIModel.h"
 
 @implementation WeatherRepository
-- (void)fetchWeatherFromProvider:(void (^)(WeatherAPIModel * _Nullable))success error:(void (^)(NSString * _Nullable))errorHandler {
-    NSString *api = [NSString stringWithFormat:@"api.openweathermap.org/data/2.5/forecast?lat={%d}&lon={%d}&appid={%@}", 46, 23, @"f3bf3b86b05011e1636707c720e30545"];
-    NSURL *url = [NSURL URLWithString:api];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nullable responseObject) {
-        success(responseObject);
-//        WeatherAPIModel* model = responseObject;
-//        NSLog(@"%@", model.city.country);
-        
-    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+
+- (void)fetchWeatherWithLat:(double)lat andLon:(double)lon success:(void (^)(WeatherAPIModel * _Nullable))success error:(void (^)(NSString * _Nullable))errorHandler {
+    NSNumber *latitude = [NSNumber numberWithDouble:lat];
+    NSNumber *longitude = [NSNumber numberWithDouble:lon];
+    NSString *api = @"f3bf3b86b05011e1636707c720e30545";
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSDictionary *params = @{
+        @"lat" : latitude,
+        @"lon" : longitude,
+        @"appid" : api
+    };
+    [manager GET:@"http://api.openweathermap.org/data/2.5/forecast?units=metric" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success([[WeatherAPIModel alloc] initWithJSON:responseObject]);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         errorHandler(error.localizedDescription);
     }];
-    [operation start];
 }
 
 @end

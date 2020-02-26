@@ -10,16 +10,20 @@
 #import "Main.h"
 #import "Weather.h"
 #import "Wind.h"
+#import "Clouds.h"
+#import "Rain.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Forecast : NSObject
 @property(nonatomic, assign)long dt;
-@property(nonatomic, copy)Main* main;
+@property(nonatomic, strong)Main* main;
 @property(nonatomic, strong)NSArray<Weather *> *weather;
-@property(nonatomic, copy)NSString* clounds;
-@property(nonatomic, copy)Wind* wind;
-@property(nonatomic, copy)NSString* rain;
+@property(nonatomic, strong)Clouds* clounds;
+@property(nonatomic, strong)Wind* wind;
+@property(nonatomic, strong)Rain* rain;
+
+-(instancetype)initWithJSON:(NSDictionary *)dict;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -634,8 +634,8 @@
                         <viewLayoutGuide key="safeArea" id="cvp-NT-vp1"/>
                     </view>
                     <navigationItem key="navigationItem" id="Tth-qV-w66">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="back_arrow" id="Gft-nS-HkJ">
-                            <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="map_back_arrow" id="Gft-nS-HkJ">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="back:" destination="nZI-Vc-vu7" id="5dU-4F-ne8"/>
                             </connections>
@@ -766,6 +766,7 @@
         <image name="back_arrow" width="16" height="16"/>
         <image name="home_icon" width="22" height="21"/>
         <image name="leaf_pointer" width="31" height="30"/>
+        <image name="map_back_arrow" width="12" height="20"/>
         <image name="porfile_icon" width="21.333333969116211" height="21.333333969116211"/>
         <image name="support_icon" width="21.666666030883789" height="21.666666030883789"/>
     </resources>

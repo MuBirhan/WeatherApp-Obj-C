@@ -10,4 +10,13 @@
 
 @implementation Coord
 
+- (instancetype)initWithJSON:(NSDictionary *)dict {
+    self = [super init];
+    if (self) {
+        self.lon = [[dict valueForKey:@"lon"] longValue];
+        self.lat = [[dict valueForKey:@"lat"] longValue];
+    }
+    return self;
+}
+
 @end

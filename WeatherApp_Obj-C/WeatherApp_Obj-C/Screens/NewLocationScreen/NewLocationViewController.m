@@ -83,11 +83,10 @@
 
 - (IBAction)addLocation:(id)sender {
     CLLocationCoordinate2D location = [self.mapView convertPoint:CGPointMake(self.mapPointer.frame.size.width/2, self.mapPointer.frame.size.height/2) toCoordinateFromView:self.mapPointer];
-    NSLog(@"Location Lat:%f", location.latitude);
-    NSLog(@"Location Lon%f", location.longitude);
-    
-    [[WeatherRepository new] fetchWeatherFromProvider:^(WeatherAPIModel * _Nullable success) {
-        NSLog(@"%@", success.city.country);
+    [[WeatherRepository new] fetchWeatherWithLat:location.latitude
+                                          andLon:location.longitude
+                                         success:^(WeatherAPIModel * _Nullable success) {
+        NSLog(@"%@", success.city.name);
     } error:^(NSString * _Nullable error) {
         NSLog(@"%@", error);
     }];

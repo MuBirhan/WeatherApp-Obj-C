@@ -46,6 +46,7 @@
         bottom.active = YES;
         left.active = YES;
         right.active = YES;
+        [self.navigationController.view layoutIfNeeded];
     } else {
         [indicator startLoading];
         [self.view addSubview:indicator];

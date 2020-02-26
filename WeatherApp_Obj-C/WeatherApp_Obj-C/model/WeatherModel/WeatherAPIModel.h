@@ -15,9 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WeatherAPIModel : NSObject
 @property(nonatomic, assign)double cod;
 @property(nonatomic, assign)double message;
-@property(nonatomic, copy)City* city;
+@property(nonatomic, strong)City* city;
 @property(nonatomic, assign)double cnt;
-@property(nonatomic, copy)NSArray<Forecast*>*forecast;
+@property(nonatomic, strong)NSArray<Forecast*>*list;
+
+-(instancetype)initWithJSON:(NSDictionary *)dict;
 
 @end
 

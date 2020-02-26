@@ -10,4 +10,15 @@
 
 @implementation Weather
 
+- (instancetype)initWithJSON:(NSDictionary *)dict {
+    self = [super init];
+      if (self) {
+          self.id = [[dict valueForKey:@"id"] intValue];
+          self.main = [dict valueForKey:@"main"];
+          self.weatherDescription = [dict valueForKey:@"weatherDescription"];
+          self.icon = [dict valueForKey:@"icon"];
+
+      }
+      return self;
+}
 @end

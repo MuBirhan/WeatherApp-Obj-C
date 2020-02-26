@@ -11,14 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WeatherModel : NSObject
-@property(nonatomic, copy)NSString* name;
-@property(nonatomic, copy)NSString* city;
-@property(nonatomic, copy)NSString* region;
+@property(nonatomic, strong)NSString* name;
+@property(nonatomic, strong)NSString* city;
+@property(nonatomic, strong)NSString* region;
 @property(nonatomic, assign)double temperature;
-@property(nonatomic, copy)NSString* rain;
-@property(nonatomic, copy)NSString* wind;
-@property(nonatomic, copy)NSString* mainEvent;
-@property(nonatomic, copy)NSString* imgUrl;
+@property(nonatomic, strong)NSString* rain;
+@property(nonatomic, strong)NSString* wind;
+@property(nonatomic, strong)NSString* mainEvent;
+@property(nonatomic, strong)NSString* imgUrl;
 @property(nonatomic, assign)long time;
 
 @end

@@ -46,6 +46,9 @@
 		8E9960842403F0450088549E /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9960832403F0450088549E /* Weather.m */; };
 		8E9960872403F26E0088549E /* WeatherResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9960862403F26E0088549E /* WeatherResponse.m */; };
 		8E99608A240540C00088549E /* WeatherAPIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E996089240540C00088549E /* WeatherAPIModel.m */; };
+		8E99608D2406A2290088549E /* WeatherModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E99608B2406A2290088549E /* WeatherModel.xcdatamodeld */; };
+		8E9960902406C37F0088549E /* Clouds.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99608F2406C37F0088549E /* Clouds.m */; };
+		8E9960932406C4150088549E /* Rain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9960922406C4150088549E /* Rain.m */; };
 		8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */; };
 		8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB52B2F23FD255F004B45C0 /* LoadingView.m */; };
 /* End PBXBuildFile section */
@@ -152,6 +155,11 @@
 		8E9960862403F26E0088549E /* WeatherResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherResponse.m; sourceTree = "<group>"; };
 		8E996088240540C00088549E /* WeatherAPIModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherAPIModel.h; sourceTree = "<group>"; };
 		8E996089240540C00088549E /* WeatherAPIModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherAPIModel.m; sourceTree = "<group>"; };
+		8E99608C2406A2290088549E /* WeatherModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherModel.xcdatamodel; sourceTree = "<group>"; };
+		8E99608E2406C37F0088549E /* Clouds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Clouds.h; sourceTree = "<group>"; };
+		8E99608F2406C37F0088549E /* Clouds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Clouds.m; sourceTree = "<group>"; };
+		8E9960912406C4150088549E /* Rain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rain.h; sourceTree = "<group>"; };
+		8E9960922406C4150088549E /* Rain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rain.m; sourceTree = "<group>"; };
 		8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		8EB52B2E23FD255F004B45C0 /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		8EB52B2F23FD255F004B45C0 /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
@@ -381,6 +389,7 @@
 				8E2A83B323FC07110080821C /* Screens */,
 				8E702F3023FBEB6F0051CF1C /* utils */,
 				8E702EC523F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodeld */,
+				8E99608B2406A2290088549E /* WeatherModel.xcdatamodeld */,
 			);
 			path = "WeatherApp_Obj-C";
 			sourceTree = "<group>";
@@ -473,6 +482,10 @@
 				8E9960862403F26E0088549E /* WeatherResponse.m */,
 				8E996088240540C00088549E /* WeatherAPIModel.h */,
 				8E996089240540C00088549E /* WeatherAPIModel.m */,
+				8E99608E2406C37F0088549E /* Clouds.h */,
+				8E99608F2406C37F0088549E /* Clouds.m */,
+				8E9960912406C4150088549E /* Rain.h */,
+				8E9960922406C4150088549E /* Rain.m */,
 			);
 			path = WeatherModel;
 			sourceTree = "<group>";
@@ -744,6 +757,8 @@
 				8E702F2723FADD890051CF1C /* UIColor+CustomColors.m in Sources */,
 				8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */,
 				8E99607B2403EF400088549E /* Coord.m in Sources */,
+				8E9960902406C37F0088549E /* Clouds.m in Sources */,
+				8E99608D2406A2290088549E /* WeatherModel.xcdatamodeld in Sources */,
 				8E99608A240540C00088549E /* WeatherAPIModel.m in Sources */,
 				8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */,
 				8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */,
@@ -754,6 +769,7 @@
 				8E9960782403EEEE0088549E /* Sys.m in Sources */,
 				8E26E0C723FEC762009B9B60 /* ProfileViewController.m in Sources */,
 				8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */,
+				8E9960932406C4150088549E /* Rain.m in Sources */,
 				8E702F2423FA79590051CF1C /* CustomInputView.m in Sources */,
 				8E702EC723F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodeld in Sources */,
 				8E26E0BE23FE95A3009B9B60 /* HomeScreenViewController.m in Sources */,
@@ -1090,6 +1106,16 @@
 			);
 			currentVersion = 8E702EC623F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodel */;
 			path = WeatherApp_Obj_C.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		8E99608B2406A2290088549E /* WeatherModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8E99608C2406A2290088549E /* WeatherModel.xcdatamodel */,
+			);
+			currentVersion = 8E99608C2406A2290088549E /* WeatherModel.xcdatamodel */;
+			path = WeatherModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

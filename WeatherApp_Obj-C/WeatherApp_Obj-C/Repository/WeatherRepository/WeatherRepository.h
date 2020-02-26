@@ -10,6 +10,8 @@
 #import "WeatherAPIModel.h"
 
 @interface WeatherRepository : NSObject
--(void)fetchWeatherFromProvider:(void(^_Nullable)(WeatherAPIModel* _Nullable))success
-                          error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
+-(void)fetchWeatherWithLat:(double)lat
+                    andLon:(double)lon
+                   success:(void(^_Nullable)(WeatherAPIModel* _Nullable))success
+                     error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 @end

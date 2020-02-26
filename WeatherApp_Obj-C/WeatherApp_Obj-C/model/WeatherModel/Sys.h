@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Sys : NSObject
-@property(nonatomic, copy)NSString* country;
+@property(nonatomic, strong)NSString* country;
 @property(nonatomic, assign)long sunrise;
 @property(nonatomic, assign)long sunset;
 
