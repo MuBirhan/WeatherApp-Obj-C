@@ -10,8 +10,6 @@
 #import "City.h"
 #import "Forecast.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface WeatherAPIModel : NSObject
 @property(nonatomic, assign)double cod;
 @property(nonatomic, assign)double message;
@@ -22,5 +20,3 @@ NS_ASSUME_NONNULL_BEGIN
 -(instancetype)initWithJSON:(NSDictionary *)dict;
 
 @end
-
-NS_ASSUME_NONNULL_END
