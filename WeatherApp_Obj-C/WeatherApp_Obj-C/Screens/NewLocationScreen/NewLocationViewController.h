@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @import MapKit;
+#import "BaseViewController.h"
 
 
-@interface NewLocationViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface NewLocationViewController : BaseViewController <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *locationNameInput;
 @property (weak, nonatomic) IBOutlet UIButton *addbutton;
 @property (weak, nonatomic) IBOutlet UIButton *useMyLocationButton;

@@ -13,9 +13,17 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIColor (CustomColors)
 +(UIColor *)greenButton;
 +(UIColor *)blueButton;
++(UIColor *)blueBackgroundColor;
++(UIColor *)darkGrayBackgroundColor;
++(UIColor *)lightGrayBackgroundColor;
 +(UIColor *)greenShadow;
 +(UIColor *)blueShadow;
 +(UIColor *)greyShadow;
++(UIColor *)rainyBackgroundColor;
++(UIColor *)cloudyBackgroundColor;
++(UIColor *)sunnyBackgroundColor;
++(UIColor *)otherBackgroundColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

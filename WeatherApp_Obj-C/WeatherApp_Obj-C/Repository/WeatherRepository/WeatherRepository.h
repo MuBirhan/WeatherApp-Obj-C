@@ -11,7 +11,9 @@
 
 @interface WeatherRepository : NSObject
 -(void)fetchWeatherWithLat:(double)lat
-                    andLon:(double)lon
-                   success:(void(^_Nullable)(WeatherAPIModel* _Nullable))success
+                       lon:(double)lon
+                   andName:(NSString *_Nullable)name
+                   success:(void(^_Nullable)(BOOL))success
                      error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
+
 @end

@@ -19,7 +19,7 @@
           self.wind = [[Wind alloc] initWithJSON:[dict valueForKey:@"wind"]];
           self.main = [[Main alloc] initWithJSON:[dict valueForKey:@"main"]];
           NSMutableArray<Weather*>* list = [NSMutableArray new];
-          for (NSDictionary *i in [dict valueForKey:@"list"]) {
+          for (NSDictionary *i in [dict valueForKey:@"weather"]) {
               [list addObject:[[Weather alloc] initWithJSON:i]];
           }
           self.weather = list;

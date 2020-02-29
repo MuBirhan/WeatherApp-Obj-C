@@ -15,7 +15,7 @@
       if (self) {
           self.id = [[dict valueForKey:@"id"] intValue];
           self.main = [dict valueForKey:@"main"];
-          self.weatherDescription = [dict valueForKey:@"weatherDescription"];
+          self.weatherDescription = [dict valueForKey:@"description"];
           self.icon = [dict valueForKey:@"icon"];
 
       }

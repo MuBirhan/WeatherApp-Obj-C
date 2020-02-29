@@ -10,10 +10,11 @@
 #import "BaseViewController.h"
 #import "UserRepository.h"
 
-@interface HomeScreenViewController : BaseViewController
+@interface HomeScreenViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
 @property (weak, nonatomic) IBOutlet UILabel *sunnyCounter;
 @property (weak, nonatomic) IBOutlet UILabel *cloudyCounter;
 @property (weak, nonatomic) IBOutlet UILabel *rainingCounter;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

@@ -15,6 +15,9 @@
 		8E26E0C723FEC762009B9B60 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E26E0C623FEC762009B9B60 /* ProfileViewController.m */; };
 		8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83A723FBF0980080821C /* ErrorHandler.m */; };
 		8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83B923FC1D790080821C /* BaseViewController.m */; };
+		8E48CB612407D651002EB54C /* HomeScreenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E48CB602407D651002EB54C /* HomeScreenCell.m */; };
+		8E48CB6824080F54002EB54C /* HomeScreenCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 8E48CB5F2407D651002EB54C /* HomeScreenCell.h */; };
+		8E48CB6B24096A73002EB54C /* MappingModelv1Tov2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8E48CB6A24096A73002EB54C /* MappingModelv1Tov2.xcmappingmodel */; };
 		8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EBA23F59E020051CF1C /* AppDelegate.m */; };
 		8E702EBE23F59E020051CF1C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EBD23F59E020051CF1C /* SceneDelegate.m */; };
 		8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EC023F59E020051CF1C /* SplashViewController.m */; };
@@ -47,6 +50,7 @@
 		8E99608D2406A2290088549E /* WeatherModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E99608B2406A2290088549E /* WeatherModel.xcdatamodeld */; };
 		8E9960902406C37F0088549E /* Clouds.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99608F2406C37F0088549E /* Clouds.m */; };
 		8E9960932406C4150088549E /* Rain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9960922406C4150088549E /* Rain.m */; };
+		8E9960A22406D4AA0088549E /* HomeScreenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9960A12406D4AA0088549E /* HomeScreenCell.xib */; };
 		8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */; };
 		8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB52B2F23FD255F004B45C0 /* LoadingView.m */; };
 /* End PBXBuildFile section */
@@ -86,6 +90,10 @@
 		8E2A83A723FBF0980080821C /* ErrorHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorHandler.m; sourceTree = "<group>"; };
 		8E2A83B823FC1D790080821C /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8E2A83B923FC1D790080821C /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8E48CB5F2407D651002EB54C /* HomeScreenCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScreenCell.h; sourceTree = "<group>"; };
+		8E48CB602407D651002EB54C /* HomeScreenCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScreenCell.m; sourceTree = "<group>"; };
+		8E48CB6924096882002EB54C /* WeatherApp_Obj_C v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "WeatherApp_Obj_C v2.xcdatamodel"; sourceTree = "<group>"; };
+		8E48CB6A24096A73002EB54C /* MappingModelv1Tov2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModelv1Tov2.xcmappingmodel; sourceTree = "<group>"; };
 		8E702EB623F59E020051CF1C /* WeatherApp_Obj-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherApp_Obj-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E702EB923F59E020051CF1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E702EBA23F59E020051CF1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +162,7 @@
 		8E99608F2406C37F0088549E /* Clouds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Clouds.m; sourceTree = "<group>"; };
 		8E9960912406C4150088549E /* Rain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rain.h; sourceTree = "<group>"; };
 		8E9960922406C4150088549E /* Rain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rain.m; sourceTree = "<group>"; };
+		8E9960A12406D4AA0088549E /* HomeScreenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenCell.xib; sourceTree = "<group>"; };
 		8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		8EB52B2E23FD255F004B45C0 /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		8EB52B2F23FD255F004B45C0 /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
@@ -383,6 +392,7 @@
 				8E2A83B323FC07110080821C /* Screens */,
 				8E702F3023FBEB6F0051CF1C /* utils */,
 				8E702EC523F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodeld */,
+				8E48CB6A24096A73002EB54C /* MappingModelv1Tov2.xcmappingmodel */,
 				8E99608B2406A2290088549E /* WeatherModel.xcdatamodeld */,
 			);
 			path = "WeatherApp_Obj-C";
@@ -424,6 +434,7 @@
 		8E702F3023FBEB6F0051CF1C /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				8E99609D2406D4620088549E /* HomeScreenCell */,
 				8E2A83B423FC07430080821C /* LoadingView */,
 				8E702F2523FADD890051CF1C /* UIColor+CustomColors.h */,
 				8E702F2623FADD890051CF1C /* UIColor+CustomColors.m */,
@@ -552,6 +563,16 @@
 			path = WeatherAPIModel;
 			sourceTree = "<group>";
 		};
+		8E99609D2406D4620088549E /* HomeScreenCell */ = {
+			isa = PBXGroup;
+			children = (
+				8E9960A12406D4AA0088549E /* HomeScreenCell.xib */,
+				8E48CB5F2407D651002EB54C /* HomeScreenCell.h */,
+				8E48CB602407D651002EB54C /* HomeScreenCell.m */,
+			);
+			path = HomeScreenCell;
+			sourceTree = "<group>";
+		};
 		F4467394D29AEAFFB1DFC650 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,6 +699,7 @@
 				8E702F2C23FBE4AF0051CF1C /* GoogleService-Info.plist in Resources */,
 				8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */,
 				8E702F2123FA791D0051CF1C /* CustomInputView.xib in Resources */,
+				8E9960A22406D4AA0088549E /* HomeScreenCell.xib in Resources */,
 				8E702EC423F59E020051CF1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -806,7 +828,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E48CB6824080F54002EB54C /* HomeScreenCell.h in Sources */,
 				8E99607E2403EF7B0088549E /* City.m in Sources */,
+				8E48CB6B24096A73002EB54C /* MappingModelv1Tov2.xcmappingmodel in Sources */,
 				8E702F1C23F6CFC20051CF1C /* SignInViewController.m in Sources */,
 				8E9960722403EE170088549E /* Wind.m in Sources */,
 				8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */,
@@ -826,6 +850,7 @@
 				8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */,
 				8E702EF323F6A5EC0051CF1C /* SecondScreenViewController.m in Sources */,
 				8E9960842403F0450088549E /* Weather.m in Sources */,
+				8E48CB612407D651002EB54C /* HomeScreenCell.m in Sources */,
 				8E99606E2403DFFA0088549E /* WeatherModel.m in Sources */,
 				8E26E0C723FEC762009B9B60 /* ProfileViewController.m in Sources */,
 				8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */,
@@ -1162,12 +1187,14 @@
 		8E702EC523F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				8E48CB6924096882002EB54C /* WeatherApp_Obj_C v2.xcdatamodel */,
 				8E702EC623F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodel */,
 			);
-			currentVersion = 8E702EC623F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodel */;
+			currentVersion = 8E48CB6924096882002EB54C /* WeatherApp_Obj_C v2.xcdatamodel */;
 			path = WeatherApp_Obj_C.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
+			wrapsLines = 1;
 		};
 		8E99608B2406A2290088549E /* WeatherModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
