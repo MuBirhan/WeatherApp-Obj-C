@@ -55,16 +55,16 @@
  
 - (BOOL)validateFields {
     BOOL isValid = YES;
-    if ([self.emailInput.userInput.text  isEqual: @""]) {
+    if ([self.emailInput.userInput.text length] == 0) {
         self.emailInput.errorMessage.text = NSLocalizedString(@"Field cannot be empty", @"");
         isValid = NO;
-    } else if ([self.passwordInput.userInput.text  isEqual: @""]) {
+    } else if ([self.passwordInput.userInput.text length] == 0) {
         self.passwordInput.errorMessage.text = NSLocalizedString(@"Field cannot be empty", @"");
         isValid = NO;
-    } else if ([self.confirmPasswordInput.userInput.text isEqual: @""]) {
+    } else if ([self.confirmPasswordInput.userInput.text length] == 0) {
         self.confirmPasswordInput.errorMessage.text = NSLocalizedString(@"Field cannot be empty", @"");
         isValid = NO;
-    } else if (![self.passwordInput.userInput.text  isEqual: self.confirmPasswordInput.userInput.text]) {
+    } else if (![self.passwordInput.userInput.text isEqualToString: self.confirmPasswordInput.userInput.text]) {
         self.confirmPasswordInput.errorMessage.text = NSLocalizedString(@"Passwords must match", @"");
         isValid = NO;
     }

@@ -13,16 +13,16 @@
 - (instancetype)initWithJSON:(NSDictionary *)dict {
     self = [super init];
       if (self) {
-          self.dt = [[dict valueForKey:@"dt"] longValue];
-          self.clounds = [[Clouds alloc] initWithJSON:[dict valueForKey:@"clounds"]];
-          self.rain = [[Rain alloc] initWithJSON:[dict valueForKey:@"rain"]];
-          self.wind = [[Wind alloc] initWithJSON:[dict valueForKey:@"wind"]];
-          self.main = [[Main alloc] initWithJSON:[dict valueForKey:@"main"]];
+          self.dt = [[dict objectForKey:@"dt"] longValue];
+          self.clounds = [[Clouds alloc] initWithJSON:[dict objectForKey:@"clounds"]];
+          self.rain = [[Rain alloc] initWithJSON:[dict objectForKey:@"rain"]];
+          self.wind = [[Wind alloc] initWithJSON:[dict objectForKey:@"wind"]];
+          self.main = [[Main alloc] initWithJSON:[dict objectForKey:@"main"]];
           NSMutableArray<Weather*>* list = [NSMutableArray new];
-          for (NSDictionary *i in [dict valueForKey:@"weather"]) {
+          for (NSDictionary *i in [dict objectForKey:@"weather"]) {
               [list addObject:[[Weather alloc] initWithJSON:i]];
           }
-          self.weather = list;
+          self.weather = [list copy];
       }
       return self;
 }

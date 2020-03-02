@@ -13,7 +13,7 @@
 - (instancetype)initWithJSON:(NSDictionary *)dict {
     self = [super init];
       if (self) {
-          self.h3 = [[dict valueForKey:@"3h"] doubleValue];
+          self.h3 = [[dict objectForKey:@"3h"] doubleValue];
       }
       return self;
 }

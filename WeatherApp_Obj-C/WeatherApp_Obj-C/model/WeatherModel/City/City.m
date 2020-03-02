@@ -14,14 +14,14 @@
 - (instancetype)initWithJSON:(NSDictionary *)dict {
     self = [super init];
     if (self) {
-        self.sunset = [[dict valueForKey:@"sunset"] longValue];
-        self.country = [dict valueForKey:@"country"];
-        self.id = [[dict valueForKey:@"id"] intValue];
-        self.coord = [[Coord alloc] initWithJSON:[dict valueForKey:@"coord"]];
-        self.population = [[dict valueForKey:@"population"] intValue];
-        self.timezone = [[dict valueForKey:@"timezone"] intValue];
-        self.sunrise = [[dict valueForKey:@"sunrise"] longValue];
-        self.name = [dict valueForKey:@"name"];
+        self.sunset = [[dict objectForKey:@"sunset"] longValue];
+        self.country = [dict objectForKey:@"country"];
+        self.id = [[dict objectForKey:@"id"] intValue];
+        self.coord = [[Coord alloc] initWithJSON:[dict objectForKey:@"coord"]];
+        self.population = [[dict objectForKey:@"population"] intValue];
+        self.timezone = [[dict objectForKey:@"timezone"] intValue];
+        self.sunrise = [[dict objectForKey:@"sunrise"] longValue];
+        self.name = [dict objectForKey:@"name"];
     }
     return self;
 }

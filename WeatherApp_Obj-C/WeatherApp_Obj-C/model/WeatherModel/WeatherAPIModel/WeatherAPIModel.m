@@ -15,15 +15,15 @@
 - (instancetype)initWithJSON:(NSDictionary *)dict {
     self = [super init];
     if (self) {
-        self.message = [[dict valueForKey:@"message"] doubleValue];
-        self.cnt = [[dict valueForKey:@"cnt"] doubleValue];
-        self.cod = [[dict valueForKey:@"cod"] doubleValue];
+        self.message = [[dict objectForKey:@"message"] doubleValue];
+        self.cnt = [[dict objectForKey:@"cnt"] doubleValue];
+        self.cod = [[dict objectForKey:@"cod"] doubleValue];
         NSMutableArray<Forecast*>* list = [NSMutableArray new];
-        for (NSDictionary *i in [dict valueForKey:@"list"]) {
+        for (NSDictionary *i in [dict objectForKey:@"list"]) {
             [list addObject:[[Forecast alloc] initWithJSON:i]];
         }
-        self.list = list;
-        self.city = [[City alloc] initWithJSON:[dict valueForKey:@"city"]];
+        self.list = [list copy];
+        self.city = [[City alloc] initWithJSON:[dict objectForKey:@"city"]];
     }
     return self;
 }

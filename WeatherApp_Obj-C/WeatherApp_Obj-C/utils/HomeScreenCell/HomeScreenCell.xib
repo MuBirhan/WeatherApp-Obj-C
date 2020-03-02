@@ -27,10 +27,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_background_image" translatesAutoresizingMaskIntoConstraints="NO" id="vdE-gq-hFC">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="180"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.76000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tuh-ty-Noc">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="185"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -93,12 +93,12 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vdE-gq-hFC" firstAttribute="top" secondItem="BbF-P6-i3g" secondAttribute="top" id="1fv-DE-Sbb"/>
                             <constraint firstItem="UCS-J2-Vp4" firstAttribute="centerY" secondItem="pmY-W8-rAd" secondAttribute="centerY" id="2Za-Z4-VvN"/>
                             <constraint firstItem="obr-TJ-fYP" firstAttribute="leading" secondItem="BbF-P6-i3g" secondAttribute="leading" constant="19" id="38Y-TC-KJu"/>
-                            <constraint firstAttribute="bottom" secondItem="Tuh-ty-Noc" secondAttribute="bottom" id="7Bd-S9-R6D"/>
+                            <constraint firstAttribute="bottom" secondItem="Tuh-ty-Noc" secondAttribute="bottom" constant="15" id="7Bd-S9-R6D"/>
                             <constraint firstItem="obr-TJ-fYP" firstAttribute="top" secondItem="rEU-UR-nCW" secondAttribute="bottom" constant="10" id="7mZ-Wo-9UT"/>
                             <constraint firstItem="kUX-go-zUi" firstAttribute="leading" secondItem="BbF-P6-i3g" secondAttribute="leading" constant="19" id="8Rm-oK-qfv"/>
                             <constraint firstItem="C6C-uq-qZz" firstAttribute="leading" secondItem="BbF-P6-i3g" secondAttribute="leading" constant="19" id="8vC-iy-SQF"/>
@@ -107,7 +107,7 @@
                             <constraint firstItem="vdE-gq-hFC" firstAttribute="leading" secondItem="BbF-P6-i3g" secondAttribute="leading" id="K1u-GM-yMo"/>
                             <constraint firstAttribute="trailing" secondItem="Tuh-ty-Noc" secondAttribute="trailing" id="MPv-hn-2HN"/>
                             <constraint firstItem="pmY-W8-rAd" firstAttribute="centerY" secondItem="zwI-PA-glL" secondAttribute="centerY" id="Owg-9Y-CbA"/>
-                            <constraint firstAttribute="bottom" secondItem="vdE-gq-hFC" secondAttribute="bottom" id="RgM-8o-rYj"/>
+                            <constraint firstAttribute="bottom" secondItem="vdE-gq-hFC" secondAttribute="bottom" constant="20" id="RgM-8o-rYj"/>
                             <constraint firstItem="qpt-Um-Ny4" firstAttribute="centerY" secondItem="UCS-J2-Vp4" secondAttribute="centerY" id="RuW-Qc-o1n"/>
                             <constraint firstItem="rEU-UR-nCW" firstAttribute="top" secondItem="kUX-go-zUi" secondAttribute="bottom" constant="21" id="TA2-Gx-sYU"/>
                             <constraint firstItem="rEU-UR-nCW" firstAttribute="leading" secondItem="BbF-P6-i3g" secondAttribute="leading" constant="19" id="TvF-63-Pkz"/>
@@ -133,6 +133,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="backgroundImage" destination="vdE-gq-hFC" id="gMf-o5-NYh"/>
                 <outlet property="cellName" destination="C6C-uq-qZz" id="E2d-js-UjW"/>
                 <outlet property="colorBackground" destination="Tuh-ty-Noc" id="o8Z-ay-eAT"/>
                 <outlet property="rain" destination="pmY-W8-rAd" id="26P-gw-ePl"/>
@@ -142,7 +143,7 @@
                 <outlet property="weatherImage" destination="LSg-24-8hf" id="zbI-Dx-RXU"/>
                 <outlet property="wind" destination="qpt-Um-Ny4" id="2Cq-gx-sce"/>
             </connections>
-            <point key="canvasLocation" x="568" y="653"/>
+            <point key="canvasLocation" x="567.39130434782612" y="652.90178571428567"/>
         </tableViewCell>
     </objects>
     <resources>

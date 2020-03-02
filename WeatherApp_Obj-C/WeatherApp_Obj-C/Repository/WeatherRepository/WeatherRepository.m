@@ -70,4 +70,14 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
     [appDelegate saveContext];
 }
 
+-(NSMutableArray *)fetchCDData {
+    NSFetchRequest *requestExamLocation = [NSFetchRequest fetchRequestWithEntityName:@"WeatherEntity"];
+    NSArray *results = [context executeFetchRequest:requestExamLocation error:nil];
+    NSMutableArray<WeatherModel *> *items = [[NSMutableArray alloc] init];
+    for (NSDictionary *cdObject in results) {
+        [items addObject:[[WeatherModel alloc] initWithCDResponse:cdObject]];
+    }
+    return items;
+}
+
 @end

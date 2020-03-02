@@ -15,6 +15,5 @@
 @property (weak, nonatomic) IBOutlet CustomInputView *passwordInput;
 @property (weak, nonatomic) IBOutlet CustomInputView *confirmPasswordInput;
 @property (weak, nonatomic) IBOutlet UIButton *nextStepButton;
-- (IBAction)signUpButtonClicked:(id)sender;
 
 @end

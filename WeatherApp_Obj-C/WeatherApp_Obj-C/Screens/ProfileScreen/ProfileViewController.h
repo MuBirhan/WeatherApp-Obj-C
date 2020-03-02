@@ -12,7 +12,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ProfileViewController : BaseViewController
-- (IBAction)logoutButtonPressed:(id)sender;
 
 @end
 

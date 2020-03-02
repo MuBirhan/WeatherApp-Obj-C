@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeSinceAdded;
 @property (weak, nonatomic) IBOutlet UIImageView *weatherImage;
 @property (weak, nonatomic) IBOutlet UIImageView *colorBackground;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 + (instancetype)loadFromNib;
 

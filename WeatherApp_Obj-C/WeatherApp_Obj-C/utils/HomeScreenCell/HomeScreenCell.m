@@ -7,20 +7,14 @@
 //
 
 #import "HomeScreenCell.h"
+#import "AppCustomDimens.h"
 
 @implementation HomeScreenCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.layer.cornerRadius = 10;
+    self.backgroundImage.layer.cornerRadius = cellCornerRadius;
+    self.colorBackground.layer.cornerRadius = cellCornerRadius;
 }
 
 + (instancetype)loadFromNib {
@@ -29,8 +23,6 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end

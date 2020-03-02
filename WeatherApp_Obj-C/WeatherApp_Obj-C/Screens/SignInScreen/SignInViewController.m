@@ -8,6 +8,7 @@
 
 #import "SignInViewController.h"
 #import "UIColor+CustomColors.h"
+#import "UserRepository.h"
 
 @interface SignInViewController ()
 
@@ -49,10 +50,10 @@
 
 - (BOOL)validateFields {
     BOOL isValid = YES;
-    if ([self.emailInput.userInput.text isEqual:@""]) {
+    if ([self.emailInput.userInput.text length] == 0) {
         self.emailInput.errorMessage.text = NSLocalizedString(@"Field cannot be empty", @"");
         isValid = NO;
-    } else if ([self.passwordInput.userInput.text isEqual:@""]) {
+    } else if ([self.passwordInput.userInput.text length] == 0) {
         self.passwordInput.errorMessage.text = NSLocalizedString(@"Field cannot be empty", @"");
         isValid = NO;
     }

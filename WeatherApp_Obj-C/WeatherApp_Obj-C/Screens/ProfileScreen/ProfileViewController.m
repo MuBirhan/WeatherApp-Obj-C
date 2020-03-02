@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)logoutButtonPressed:(id)sender {
+- (IBAction)logoutButtonPressed:(id)sender {
     [[UserRepository new] logOutUser:^(BOOL loggedOut) {
         if(loggedOut) {
             UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondScreen"];

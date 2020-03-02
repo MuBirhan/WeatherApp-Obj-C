@@ -53,6 +53,7 @@
 		8E9960A22406D4AA0088549E /* HomeScreenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9960A12406D4AA0088549E /* HomeScreenCell.xib */; };
 		8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */; };
 		8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB52B2F23FD255F004B45C0 /* LoadingView.m */; };
+		8EF76917240D273E00415A8F /* AppCustomDimens.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF76916240D273E00415A8F /* AppCustomDimens.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,8 @@
 		8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		8EB52B2E23FD255F004B45C0 /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		8EB52B2F23FD255F004B45C0 /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		8EF76915240D273E00415A8F /* AppCustomDimens.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCustomDimens.h; sourceTree = "<group>"; };
+		8EF76916240D273E00415A8F /* AppCustomDimens.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCustomDimens.m; sourceTree = "<group>"; };
 		CEDDF18AE5280A5DB8AA0856 /* Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests/Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3EDC177A5131761C32C9FB9 /* Pods-WeatherApp_Obj-CTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_Obj-CTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp_Obj-CTests/Pods-WeatherApp_Obj-CTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -442,6 +445,8 @@
 				8E2A83AB23FC05040080821C /* CustomInputView */,
 				8E2A83A623FBF0980080821C /* ErrorHandler.h */,
 				8E2A83A723FBF0980080821C /* ErrorHandler.m */,
+				8EF76915240D273E00415A8F /* AppCustomDimens.h */,
+				8EF76916240D273E00415A8F /* AppCustomDimens.m */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -859,6 +864,7 @@
 				8E702EC723F59E020051CF1C /* WeatherApp_Obj_C.xcdatamodeld in Sources */,
 				8E26E0BE23FE95A3009B9B60 /* HomeScreenViewController.m in Sources */,
 				8E26E0C323FEB770009B9B60 /* TabBarController.m in Sources */,
+				8EF76917240D273E00415A8F /* AppCustomDimens.m in Sources */,
 				8E9960812403F0020088549E /* Forecast.m in Sources */,
 				8E702F1F23F6CFD80051CF1C /* SignUpViewController.m in Sources */,
 				8E702EBE23F59E020051CF1C /* SceneDelegate.m in Sources */,

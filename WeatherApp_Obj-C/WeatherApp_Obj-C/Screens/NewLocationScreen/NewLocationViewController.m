@@ -9,6 +9,7 @@
 #import "NewLocationViewController.h"
 #import "UIColor+CustomColors.h"
 #import "WeatherRepository.h"
+#import "AppCustomDimens.h"
 @import MapKit;
 
 
@@ -20,14 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[self mapView] setDelegate:self];
     [self setupAddButton];
     [self setupInput];
     [self setupBlueButton];
     [self setupModalView];
-    
-    UIPanGestureRecognizer* panRec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didDragMap:)];
-    [panRec setDelegate:self];
-    [self.mapView addGestureRecognizer:panRec];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -40,7 +38,7 @@
 
 -(void) setupAddButton {
     self.addbutton.backgroundColor = [UIColor greenButton];
-    self.addbutton.layer.cornerRadius = 25;
+    self.addbutton.layer.cornerRadius = bigButtonCornerRadius;
     self.addbutton.layer.shadowColor = [[UIColor greenShadow] CGColor];
     self.addbutton.layer.shadowOpacity = 1.0f;
     self.addbutton.layer.shadowOffset = CGSizeZero;
@@ -50,7 +48,7 @@
 
 -(void) setupBlueButton {
     self.useMyLocationButton.backgroundColor = [UIColor blueButton];
-    self.useMyLocationButton.layer.cornerRadius = 25;
+    self.useMyLocationButton.layer.cornerRadius = bigButtonCornerRadius;
     self.useMyLocationButton.layer.shadowColor = [[UIColor blueShadow] CGColor];
     self.useMyLocationButton.layer.shadowOpacity = 1.0f;
     self.useMyLocationButton.layer.shadowOffset = CGSizeZero;
@@ -59,7 +57,7 @@
 }
 
 -(void) setupModalView {
-    self.modalView.layer.cornerRadius = 15;
+    self.modalView.layer.cornerRadius = cellCornerRadius;
     self.modalView.layer.shadowColor = [[UIColor greyShadow] CGColor];
     self.modalView.layer.shadowOpacity = 1.0f;
     self.modalView.layer.shadowOffset = CGSizeZero;
@@ -72,7 +70,7 @@
     self.locationNameInput.layer.borderWidth = 0.5;
     self.locationNameInput.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.locationNameInput.layer.masksToBounds = YES;
-    self.locationNameInput.layer.cornerRadius = 25;
+    self.locationNameInput.layer.cornerRadius = bigButtonCornerRadius;
 }
 
 - (IBAction)centerToCurrentLocation:(id)sender {
@@ -86,7 +84,7 @@
     [self showLoading];
     [[WeatherRepository new] fetchWeatherWithLat:location.latitude lon:location.longitude andName:self.locationNameInput.text success:^(BOOL success) {
         [self hideLoading];
-        NSLog(@"success");
+        [self.navigationController popViewControllerAnimated:YES];
     } error:^(NSString * _Nullable error) {
         [self hideLoading];
         [self showError:error];
@@ -107,7 +105,7 @@
             NSString *name = @"";
             NSString *locality = @"";
             NSString *country = @"";
-
+            
             if (placemark.name) {
                 name = [NSString stringWithFormat:@"%@, ", placemark.name];
             }
@@ -122,12 +120,12 @@
     }];
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    return YES;
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    [self showLocation];
 }
 
-- (void)didDragMap:(UIGestureRecognizer*)gestureRecognizer {
-    if (gestureRecognizer.state == UIGestureRecognizerStateEnded){
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
+    if (newState == MKAnnotationViewDragStateEnding) {
         [self showLocation];
     }
 }

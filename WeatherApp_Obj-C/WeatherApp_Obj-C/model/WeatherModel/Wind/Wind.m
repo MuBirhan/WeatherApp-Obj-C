@@ -13,8 +13,8 @@
 - (instancetype)initWithJSON:(NSDictionary *)dict {
     self = [super init];
       if (self) {
-          self.speed = [[dict valueForKey:@"speed"] doubleValue];
-          self.deg = [[dict valueForKey:@"deg"] doubleValue];
+          self.speed = [[dict objectForKey:@"speed"] doubleValue];
+          self.deg = [[dict objectForKey:@"deg"] doubleValue];
       }
       return self;
 }

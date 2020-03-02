@@ -13,11 +13,11 @@
 - (instancetype)initWithJSON:(NSDictionary *)dict {
     self = [super init];
       if (self) {
-          self.temp = [[dict valueForKey:@"temp"] doubleValue];
-          self.humidity = [[dict valueForKey:@"humidity"] doubleValue];
-          self.pressure = [[dict valueForKey:@"pressure"] doubleValue];
-          self.temp_min = [[dict valueForKey:@"temp_min"] doubleValue];
-          self.temp_max = [[dict valueForKey:@"temp_max"] doubleValue];
+          self.temp = [[dict objectForKey:@"temp"] doubleValue];
+          self.humidity = [[dict objectForKey:@"humidity"] doubleValue];
+          self.pressure = [[dict objectForKey:@"pressure"] doubleValue];
+          self.temp_min = [[dict objectForKey:@"temp_min"] doubleValue];
+          self.temp_max = [[dict objectForKey:@"temp_max"] doubleValue];
       }
       return self;
 }

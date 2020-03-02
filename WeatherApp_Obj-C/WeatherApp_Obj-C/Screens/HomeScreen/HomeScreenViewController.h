@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import "UserRepository.h"
 
 @interface HomeScreenViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
