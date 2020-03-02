@@ -7,6 +7,7 @@
 //
 
 #import "WeatherModel.h"
+#import "WeatherEntity+CoreDataProperties.h"
 
 NSString *const preUrl = @"http://openweathermap.org/img/wn/";
 NSString *const postUrl = @"@2x.png";
@@ -30,20 +31,21 @@ NSString *const postUrl = @"@2x.png";
     return self;
 }
 
-- (instancetype)initWithCDResponse:(NSDictionary *)response {
+- (instancetype)initWithWeatherEntity:(WeatherEntity *)response {
     self = [super init];
       if (self) {
-          self.city = [response objectForKey:@"city"];
-          self.region = [response objectForKey:@"region"];
-          self.temperature = [[response objectForKey:@"temperature"] doubleValue];
-          self.rain = [[response objectForKey:@"rain"] doubleValue];
-          self.wind = [[response objectForKey:@"wind"] doubleValue];
-          self.mainEvent = [response objectForKey:@"mainEvent"];
-          self.imgUrl = [response objectForKey:@"imgUrl"];
-          self.lon = [[response objectForKey:@"lon"] doubleValue];
-          self.lat = [[response objectForKey:@"lat"] doubleValue];
-          self.time = [[response objectForKey:@"time"] intValue];
-          self.name = [response objectForKey:@"name"];
+          NSLog(@"%@ %lf",response.city, response.wind);
+          self.city = response.city;
+          self.region = response.region;
+          self.temperature = response.temperature;
+          self.rain = response.rain;
+          self.wind = response.wind;
+          self.mainEvent = response.mainEvent;
+          self.imgUrl = response.imgUrl;
+          self.lon = response.lon;
+          self.lat = response.lat;
+          self.time = response.time;
+          self.name = response.name;
       }
       return self;
 }

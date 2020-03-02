@@ -54,6 +54,8 @@
 		8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */; };
 		8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB52B2F23FD255F004B45C0 /* LoadingView.m */; };
 		8EF76917240D273E00415A8F /* AppCustomDimens.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF76916240D273E00415A8F /* AppCustomDimens.m */; };
+		8EF76926240D546500415A8F /* WeatherEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF76925240D546500415A8F /* WeatherEntity+CoreDataProperties.m */; };
+		8EF76929240D546E00415A8F /* WeatherEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF76927240D546E00415A8F /* WeatherEntity+CoreDataClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +171,10 @@
 		8EB52B2F23FD255F004B45C0 /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		8EF76915240D273E00415A8F /* AppCustomDimens.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCustomDimens.h; sourceTree = "<group>"; };
 		8EF76916240D273E00415A8F /* AppCustomDimens.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCustomDimens.m; sourceTree = "<group>"; };
+		8EF76924240D546500415A8F /* WeatherEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeatherEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8EF76925240D546500415A8F /* WeatherEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WeatherEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8EF76927240D546E00415A8F /* WeatherEntity+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WeatherEntity+CoreDataClass.m"; sourceTree = "<group>"; };
+		8EF76928240D546E00415A8F /* WeatherEntity+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeatherEntity+CoreDataClass.h"; sourceTree = "<group>"; };
 		CEDDF18AE5280A5DB8AA0856 /* Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests/Pods-WeatherApp_Obj-C-WeatherApp_Obj-CUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3EDC177A5131761C32C9FB9 /* Pods-WeatherApp_Obj-CTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp_Obj-CTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp_Obj-CTests/Pods-WeatherApp_Obj-CTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +247,10 @@
 		8E2A83AA23FBF5900080821C /* model */ = {
 			isa = PBXGroup;
 			children = (
+				8EF76928240D546E00415A8F /* WeatherEntity+CoreDataClass.h */,
+				8EF76927240D546E00415A8F /* WeatherEntity+CoreDataClass.m */,
+				8EF76924240D546500415A8F /* WeatherEntity+CoreDataProperties.h */,
+				8EF76925240D546500415A8F /* WeatherEntity+CoreDataProperties.m */,
 				8E99606F2403ECDF0088549E /* WeatherModel */,
 			);
 			path = model;
@@ -847,6 +857,7 @@
 				8E99606B240024D80088549E /* WeatherRepository.m in Sources */,
 				8E702F2723FADD890051CF1C /* UIColor+CustomColors.m in Sources */,
 				8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */,
+				8EF76929240D546E00415A8F /* WeatherEntity+CoreDataClass.m in Sources */,
 				8E99607B2403EF400088549E /* Coord.m in Sources */,
 				8E9960902406C37F0088549E /* Clouds.m in Sources */,
 				8E99608D2406A2290088549E /* WeatherModel.xcdatamodeld in Sources */,
@@ -854,6 +865,7 @@
 				8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */,
 				8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */,
 				8E702EF323F6A5EC0051CF1C /* SecondScreenViewController.m in Sources */,
+				8EF76926240D546500415A8F /* WeatherEntity+CoreDataProperties.m in Sources */,
 				8E9960842403F0450088549E /* Weather.m in Sources */,
 				8E48CB612407D651002EB54C /* HomeScreenCell.m in Sources */,
 				8E99606E2403DFFA0088549E /* WeatherModel.m in Sources */,

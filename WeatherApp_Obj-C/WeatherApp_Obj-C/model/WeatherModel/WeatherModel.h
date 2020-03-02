@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "WeatherAPIModel.h"
+#import "WeatherEntity+CoreDataProperties.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype)initWithAPIResponse:(WeatherAPIModel*) model;
 
--(instancetype)initWithCDResponse:(NSDictionary *)response;
+-(instancetype)initWithWeatherEntity:(WeatherEntity *)response;
 
 @end
 

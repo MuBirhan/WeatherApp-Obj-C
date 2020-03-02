@@ -9,6 +9,7 @@
 #import "WeatherRepository.h"
 #import "AppDelegate.h"
 #import "WeatherModel.h"
+#import "WeatherEntity+CoreDataClass.h"
 
 @import AFNetworking;
 
@@ -54,7 +55,7 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
 }
 
 - (void)saveWeatherInCD:(WeatherAPIModel*)model withName:(NSString *)name {
-    NSManagedObject *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"WeatherEntity" inManagedObjectContext:context];
+    WeatherEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"WeatherEntity" inManagedObjectContext:context];
     WeatherModel *weatherModel = [[WeatherModel alloc] initWithAPIResponse:model];
     [entityObject setValue:weatherModel.city forKey:@"city"];
     [entityObject setValue:weatherModel.imgUrl forKey:@"imgUrl"];
@@ -64,18 +65,21 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
     [entityObject setValue:name forKey:@"name"];
     [entityObject setValue:@(weatherModel.rain) forKey:@"rain"];
     [entityObject setValue:weatherModel.region forKey:@"region"];
-    [entityObject setValue:@(weatherModel.temperature) forKey:@"temperature"];
+    entityObject.temperature = weatherModel.temperature;
     [entityObject setValue:@(weatherModel.time) forKey:@"time"];
-    [entityObject setValue:@(weatherModel.wind) forKey:@"wind"];
+    entityObject.wind = weatherModel.wind;
     [appDelegate saveContext];
 }
 
 -(NSMutableArray *)fetchCDData {
-    NSFetchRequest *requestExamLocation = [NSFetchRequest fetchRequestWithEntityName:@"WeatherEntity"];
+//    NSFetchRequest *requestExamLocation = [NSFetchRequest fetchRequestWithEntityName:@"WeatherEntity"];
+    NSFetchRequest *requestExamLocation = [WeatherEntity fetchRequest];
+    [requestExamLocation setIncludesPendingChanges:YES];
+    [requestExamLocation setIncludesPropertyValues:YES];
     NSArray *results = [context executeFetchRequest:requestExamLocation error:nil];
     NSMutableArray<WeatherModel *> *items = [[NSMutableArray alloc] init];
-    for (NSDictionary *cdObject in results) {
-        [items addObject:[[WeatherModel alloc] initWithCDResponse:cdObject]];
+    for (WeatherEntity *cdObject in results) {
+        [items addObject:[[WeatherModel alloc] initWithWeatherEntity:cdObject]];
     }
     return items;
 }
