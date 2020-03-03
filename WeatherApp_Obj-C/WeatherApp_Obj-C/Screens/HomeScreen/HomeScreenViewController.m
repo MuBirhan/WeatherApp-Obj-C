@@ -63,6 +63,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self fetchData];
+    [self setupWeatherCounter];
 }
 
 -(void)setupTableView {
@@ -72,7 +73,8 @@
 }
 
 -(void)setupWeatherCounter {
-    for (int i = 0; i <= items.count; i++) {
+    [self resetWeatherCounter];
+    for (int i = 0; i < items.count; i++) {
         NSString *main = items[i].mainEvent;
         if ([main containsString:@"rain"] || [main containsString:@"thunderstorm"] || [main containsString:@"drizzle"]) {
             raining++;
@@ -85,7 +87,12 @@
         self.rainingCounter.text = [NSString stringWithFormat:@"%d", raining];
         self.cloudyCounter.text = [NSString stringWithFormat:@"%d", cloudy];
     }
-    
+}
+
+-(void)resetWeatherCounter {
+    sunny = 0;
+    cloudy = 0;
+    raining = 0;
 }
 
 #pragma TableView delegate methods
