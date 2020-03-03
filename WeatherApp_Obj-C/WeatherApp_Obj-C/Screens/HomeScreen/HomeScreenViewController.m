@@ -36,7 +36,6 @@
         [self hideLoading];
         [self showError:error];
     }];
-    [self fetchData];
     self.locationButton.backgroundColor = [UIColor greenButton];
     self.locationButton.layer.cornerRadius = smallButtonCornerRadius;
     [self setupTableView];
