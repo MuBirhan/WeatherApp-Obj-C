@@ -131,10 +131,10 @@
 -(NSString *)calculateTime:(long)time {
     long timeSince = (long)(NSTimeInterval)(long)(NSTimeInterval)[[NSDate date] timeIntervalSince1970];
     timeSince -= time;
-    long minutes = timeSince/60;
-    long hours = minutes/60;
-    long days = hours/24;
-    return [NSString stringWithFormat:@"%li : %li : %li : %li", days, hours, minutes, timeSince];
+    long minutes = timeSince / 60 % 60;
+    long hours = minutes / 60 / 60 % 24;
+    long days = hours / 60 / 60 / 24 % 30;
+    return [NSString stringWithFormat:@"%li : %li : %li : %li", days, hours, minutes, timeSince % 60];
 }
 
 @end
