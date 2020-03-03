@@ -133,7 +133,7 @@
     timeSince -= time;
     long minutes = timeSince / 60 % 60;
     long hours = minutes / 60 / 60 % 24;
-    long days = hours / 60 / 60 / 24 % 30;
+    long days = hours / 60 / 60 / 24;
     return [NSString stringWithFormat:@"%li : %li : %li : %li", days, hours, minutes, timeSince % 60];
 }
 
