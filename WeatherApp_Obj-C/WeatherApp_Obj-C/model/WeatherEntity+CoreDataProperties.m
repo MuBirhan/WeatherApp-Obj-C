@@ -2,7 +2,7 @@
 //  WeatherEntity+CoreDataProperties.m
 //  
 //
-//  Created by Muradasil Birhan on 02/03/2020.
+//  Created by Muradasil Birhan on 03/03/2020.
 //
 //
 

@@ -10,7 +10,6 @@
 #import "AppDelegate.h"
 #import "WeatherModel.h"
 #import "WeatherEntity+CoreDataClass.h"
-
 @import AFNetworking;
 
 NSString *const api = @"f3bf3b86b05011e1636707c720e30545";
@@ -57,26 +56,25 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
 - (void)saveWeatherInCD:(WeatherAPIModel*)model withName:(NSString *)name {
     WeatherEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"WeatherEntity" inManagedObjectContext:context];
     WeatherModel *weatherModel = [[WeatherModel alloc] initWithAPIResponse:model];
-    [entityObject setValue:weatherModel.city forKey:@"city"];
-    [entityObject setValue:weatherModel.imgUrl forKey:@"imgUrl"];
-    [entityObject setValue:@(weatherModel.lat) forKey:@"lat"];
-    [entityObject setValue:@(weatherModel.lon) forKey:@"lon"];
-    [entityObject setValue:weatherModel.mainEvent forKey:@"mainEvent"];
-    [entityObject setValue:name forKey:@"name"];
-    [entityObject setValue:@(weatherModel.rain) forKey:@"rain"];
-    [entityObject setValue:weatherModel.region forKey:@"region"];
+    entityObject.city = weatherModel.city;
+    entityObject.imgUrl = weatherModel.imgUrl;
+    entityObject.lat = weatherModel.lat;
+    entityObject.lon = weatherModel.lon;
+    entityObject.mainEvent = weatherModel.mainEvent;
+    entityObject.name = name;
+    entityObject.rain = weatherModel.rain;
+    entityObject.region = weatherModel.region;
     entityObject.temperature = weatherModel.temperature;
-    [entityObject setValue:@(weatherModel.time) forKey:@"time"];
+    entityObject.time = (int)weatherModel.time;
     entityObject.wind = weatherModel.wind;
     [appDelegate saveContext];
 }
 
 -(NSMutableArray *)fetchCDData {
-//    NSFetchRequest *requestExamLocation = [NSFetchRequest fetchRequestWithEntityName:@"WeatherEntity"];
-    NSFetchRequest *requestExamLocation = [WeatherEntity fetchRequest];
-    [requestExamLocation setIncludesPendingChanges:YES];
-    [requestExamLocation setIncludesPropertyValues:YES];
-    NSArray *results = [context executeFetchRequest:requestExamLocation error:nil];
+    NSFetchRequest *fetchRequest = [WeatherEntity fetchRequest];
+    [fetchRequest setIncludesPendingChanges:YES];
+    [fetchRequest setIncludesPropertyValues:YES];
+    NSArray *results = [context executeFetchRequest:fetchRequest error:nil];
     NSMutableArray<WeatherModel *> *items = [[NSMutableArray alloc] init];
     for (WeatherEntity *cdObject in results) {
         [items addObject:[[WeatherModel alloc] initWithWeatherEntity:cdObject]];

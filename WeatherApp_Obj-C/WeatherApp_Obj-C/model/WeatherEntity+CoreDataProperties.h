@@ -2,7 +2,7 @@
 //  WeatherEntity+CoreDataProperties.h
 //  
 //
-//  Created by Muradasil Birhan on 02/03/2020.
+//  Created by Muradasil Birhan on 03/03/2020.
 //
 //
 
@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) double rain;
 @property (nullable, nonatomic, copy) NSString *region;
 @property (nonatomic) double temperature;
-@property (nonatomic) int64_t time;
+@property (nonatomic) int32_t time;
 @property (nonatomic) double wind;
 
 @end

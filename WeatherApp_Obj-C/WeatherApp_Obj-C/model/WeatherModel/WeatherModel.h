@@ -10,7 +10,6 @@
 #import "WeatherAPIModel.h"
 #import "WeatherEntity+CoreDataProperties.h"
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WeatherModel : NSObject

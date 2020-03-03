@@ -7,6 +7,7 @@
 //
 
 #import "WeatherModel.h"
+#import "WeatherAPIModel.h"
 #import "WeatherEntity+CoreDataProperties.h"
 
 NSString *const preUrl = @"http://openweathermap.org/img/wn/";
@@ -34,7 +35,6 @@ NSString *const postUrl = @"@2x.png";
 - (instancetype)initWithWeatherEntity:(WeatherEntity *)response {
     self = [super init];
       if (self) {
-          NSLog(@"%@ %lf",response.city, response.wind);
           self.city = response.city;
           self.region = response.region;
           self.temperature = response.temperature;
