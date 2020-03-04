@@ -11,8 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ProfileViewController : BaseViewController
-
+@interface ProfileViewController : BaseViewController<UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *tableViewContent;
 @end
 
 NS_ASSUME_NONNULL_END
