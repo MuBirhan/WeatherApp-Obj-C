@@ -166,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVL-kT-d9N">
-                                <rect key="frame" x="16" y="74" width="67.333333333333329" height="25.666666666666671"/>
+                                <rect key="frame" x="16" y="74" width="73.333333333333329" height="25.666666666666671"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Black" family="SF UI Display" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -212,13 +212,13 @@
                                 <rect key="frame" x="30" y="434.66666666666669" width="353" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I do not have an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqL-8w-keP">
-                                        <rect key="frame" x="0.0" y="0.0" width="155.66666666666666" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="17"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I forgot password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odB-u5-ktf">
-                                        <rect key="frame" x="243.33333333333329" y="0.0" width="109.66666666666666" height="17"/>
+                                        <rect key="frame" x="245.33333333333329" y="0.0" width="107.66666666666666" height="17"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -285,7 +285,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1u-dw-sWW">
-                                <rect key="frame" x="16" y="74" width="152.66666666666666" height="25.666666666666671"/>
+                                <rect key="frame" x="16" y="74" width="172" height="25.666666666666671"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Black" family="SF UI Display" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -763,7 +763,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nF7-DS-XjJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5753.6231884057979" y="219.64285714285714"/>
+            <point key="canvasLocation" x="5754" y="175"/>
         </scene>
         <!--Profile Table Content View Controller-->
         <scene sceneID="N4T-r7-HRN">
@@ -813,7 +813,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set new password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgV-RF-HlR">
-                                                    <rect key="frame" x="20" y="24.666666666666671" width="116" height="17"/>
+                                                    <rect key="frame" x="20" y="24.666666666666671" width="114" height="17"/>
                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -870,13 +870,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5m-5E-aRB">
-                                                    <rect key="frame" x="376.33333333333331" y="22.666666666666671" width="17.666666666666686" height="21"/>
+                                                    <rect key="frame" x="377.66666666666669" y="22.666666666666671" width="16.333333333333314" height="21"/>
                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBz-Nk-m2a">
-                                                    <rect key="frame" x="347" y="22.666666666666671" width="20.333333333333314" height="21"/>
+                                                    <rect key="frame" x="349.66666666666669" y="22.666666666666671" width="19" height="21"/>
                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
                                                     <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -921,7 +921,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9B6-u5-sOr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6663.7681159420299" y="208.59375"/>
+            <point key="canvasLocation" x="6857" y="175"/>
         </scene>
         <!--Change Password Modal View Controller-->
         <scene sceneID="vK4-ZZ-G81">
@@ -935,7 +935,7 @@
                                 <rect key="frame" x="16" y="131.66666666666663" width="383" height="352"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set new password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaN-fs-Y9C">
-                                        <rect key="frame" x="14" y="22" width="149" height="21"/>
+                                        <rect key="frame" x="14" y="22" width="153.66666666666666" height="21"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1009,7 +1009,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Md-PD-hfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7596" y="220"/>
+            <point key="canvasLocation" x="7929" y="174"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eqn-IM-9aM">
