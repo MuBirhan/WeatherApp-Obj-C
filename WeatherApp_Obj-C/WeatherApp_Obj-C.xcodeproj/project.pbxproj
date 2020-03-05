@@ -13,6 +13,7 @@
 		8E26E0C723FEC762009B9B60 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E26E0C623FEC762009B9B60 /* ProfileViewController.m */; };
 		8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83A723FBF0980080821C /* ErrorHandler.m */; };
 		8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83B923FC1D790080821C /* BaseViewController.m */; };
+		8E451852240FF2710058343D /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E451851240FF2710058343D /* UserModel.m */; };
 		8E48CB612407D651002EB54C /* HomeScreenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E48CB602407D651002EB54C /* HomeScreenCell.m */; };
 		8E48CB6824080F54002EB54C /* HomeScreenCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 8E48CB5F2407D651002EB54C /* HomeScreenCell.h */; };
 		8E56EE0C240F95C500D7834E /* ProfileTableContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E56EE0B240F95C500D7834E /* ProfileTableContentViewController.m */; };
@@ -92,6 +93,8 @@
 		8E2A83A723FBF0980080821C /* ErrorHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorHandler.m; sourceTree = "<group>"; };
 		8E2A83B823FC1D790080821C /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8E2A83B923FC1D790080821C /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8E451850240FF2710058343D /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		8E451851240FF2710058343D /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		8E48CB5F2407D651002EB54C /* HomeScreenCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScreenCell.h; sourceTree = "<group>"; };
 		8E48CB602407D651002EB54C /* HomeScreenCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScreenCell.m; sourceTree = "<group>"; };
 		8E56EE0A240F95C500D7834E /* ProfileTableContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileTableContentViewController.h; sourceTree = "<group>"; };
@@ -251,6 +254,7 @@
 		8E2A83AA23FBF5900080821C /* model */ = {
 			isa = PBXGroup;
 			children = (
+				8E451853240FF2750058343D /* UserModel */,
 				8EF76947240E5CD100415A8F /* WeatherEntity+CoreDataProperties.h */,
 				8EF76948240E5CD100415A8F /* WeatherEntity+CoreDataClass.h */,
 				8EF76946240E5CD100415A8F /* WeatherEntity+CoreDataClass.m */,
@@ -366,6 +370,15 @@
 				8E2A83B923FC1D790080821C /* BaseViewController.m */,
 			);
 			path = BaseScreen;
+			sourceTree = "<group>";
+		};
+		8E451853240FF2750058343D /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E451850240FF2710058343D /* UserModel.h */,
+				8E451851240FF2710058343D /* UserModel.m */,
+			);
+			path = UserModel;
 			sourceTree = "<group>";
 		};
 		8E56EE0D240FAC3F00D7834E /* ChangePasswordModal */ = {
@@ -881,6 +894,7 @@
 				8E9960842403F0450088549E /* Weather.m in Sources */,
 				8E48CB612407D651002EB54C /* HomeScreenCell.m in Sources */,
 				8E99606E2403DFFA0088549E /* WeatherModel.m in Sources */,
+				8E451852240FF2710058343D /* UserModel.m in Sources */,
 				8E26E0C723FEC762009B9B60 /* ProfileViewController.m in Sources */,
 				8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */,
 				8E9960932406C4150088549E /* Rain.m in Sources */,

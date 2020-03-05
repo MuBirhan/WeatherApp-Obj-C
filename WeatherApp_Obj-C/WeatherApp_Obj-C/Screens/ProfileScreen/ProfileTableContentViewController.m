@@ -8,6 +8,7 @@
 
 #import "ProfileTableContentViewController.h"
 #import "UserRepository.h"
+#import "UserModel.h"
 
 @interface ProfileTableContentViewController ()
 
@@ -22,6 +23,9 @@
     } error:^(NSString * _Nullable error) {
         
     }];
+    UserModel *user = [[UserModel alloc] init];
+    user.degreePreference = 1;
+    NSLog(@"%ld", (long)user.degreePreference);
 }
 
 #pragma mark - Table view data source
