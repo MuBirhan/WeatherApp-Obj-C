@@ -13,7 +13,9 @@
 @import MapKit;
 
 
-@interface NewLocationViewController ()
+@interface NewLocationViewController () {
+    CLLocationManager *locationManager;
+}
 
 @end
 
@@ -74,8 +76,7 @@
 }
 
 - (IBAction)centerToCurrentLocation:(id)sender {
-    
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.coordinate, 1000, 1000);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.coordinate, 100, 100);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
 }
 
