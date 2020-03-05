@@ -8,7 +8,7 @@
 
 #import "ProfileTableContentViewController.h"
 #import "UserRepository.h"
-#import "UserModel.h"
+#import "AppCustomDimens.h"
 
 @interface ProfileTableContentViewController ()
 
@@ -23,15 +23,12 @@
     } error:^(NSString * _Nullable error) {
         
     }];
-    UserModel *user = [[UserModel alloc] init];
-    user.degreePreference = 1;
-    NSLog(@"%ld", (long)user.degreePreference);
 }
 
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 10;
+    return spaceBetweenProfileSections;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -58,7 +55,7 @@
             [self.navigationController setViewControllers:@[controller] animated:YES];
         }
     } error:^(NSString * _Nullable error) {
-        NSLog(@"%@", error);
+        
     }];
 }
 @end

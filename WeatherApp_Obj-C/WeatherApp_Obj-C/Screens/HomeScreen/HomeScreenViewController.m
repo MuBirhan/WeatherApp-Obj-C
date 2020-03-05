@@ -34,7 +34,6 @@
         [self hideLoading];
     } error:^(NSString * _Nullable error) {
         [self hideLoading];
-        [self showError:error];
     }];
     self.locationButton.backgroundColor = [UIColor greenButton];
     self.locationButton.layer.cornerRadius = smallButtonCornerRadius;

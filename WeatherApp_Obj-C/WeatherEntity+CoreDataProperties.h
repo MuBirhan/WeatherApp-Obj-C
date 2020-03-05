@@ -1,8 +1,9 @@
 //
 //  WeatherEntity+CoreDataProperties.h
-//  
+//  WeatherApp_Obj-C
 //
-//  Created by Muradasil Birhan on 03/03/2020.
+//  Created by Muradasil Birhan on 05/03/2020.
+//  Copyright © 2020 RodeApps. All rights reserved.
 //
 //
 
@@ -26,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) double temperature;
 @property (nonatomic) int32_t time;
 @property (nonatomic) double wind;
+@property (nullable, nonatomic, retain) UserEntity *user;
 
 @end
 

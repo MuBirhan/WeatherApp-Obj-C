@@ -9,6 +9,7 @@
 #import "SecondScreenViewController.h"
 #import "UIColor+CustomColors.h"
 #import "AppCustomDimens.h"
+#import "UserRepository.h"
 
 @interface SecondScreenViewController ()
 
@@ -28,6 +29,9 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+}
+- (IBAction)maybeLaterButtonPressed:(id)sender {
+    
 }
 
 @end

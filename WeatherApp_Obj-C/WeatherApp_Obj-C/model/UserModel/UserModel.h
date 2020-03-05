@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserEntity+CoreDataClass.h"
 
 typedef NS_ENUM(NSInteger, DegreePreference) {
     Celsius = 0,
@@ -18,6 +19,9 @@ typedef NS_ENUM(NSInteger, DegreePreference) {
 @property(nonatomic, strong)NSString* userId;
 @property(nonatomic, strong)NSString* userEmail;
 @property(nonatomic, assign)DegreePreference degreePreference;
+
+-(instancetype)initWithId:(NSString *)id andEmail:(NSString *)email;
+-(instancetype)initWithUserEntity:(UserEntity *)response;
 
 @end
 

@@ -7,8 +7,28 @@
 //
 
 #import "UserRepository.h"
+#import "AppDelegate.h"
+#import "UserModel.h"
+#import "UserEntity+CoreDataClass.h"
 
-@implementation UserRepository
+@implementation UserRepository {
+    AppDelegate *appDelegate;
+    NSManagedObjectContext *context;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self getContext];
+    }
+    return self;
+}
+
+-(void)getContext {
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    context = appDelegate.persistentContainer.viewContext;
+}
 
 - (void) registerUser:(NSString *_Nullable) userEmail
          withPassword:(NSString *_Nullable) password
@@ -31,6 +51,8 @@
         if (error) {
             errorHandler(error.localizedDescription);
         } else {
+            [self deleteData];
+            [self saveUserInCD:[[UserModel alloc] initWithId:authResult.user.uid andEmail:authResult.user.email]];
             success();
         }
     }];
@@ -53,6 +75,7 @@
     if (!status) {
         errorHandler(@"Cannot sign out user");
     } else {
+        [self deleteData];
         success(YES);
     }
 }
@@ -67,7 +90,47 @@
             success();
         }
     }];
+}
 
+-(void)saveUserInCD:(UserModel *)model {
+    UserEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"UserEntity" inManagedObjectContext:context];
+    entityObject.userId = model.userId;
+    entityObject.email = model.userEmail;
+    entityObject.degreePreference = model.degreePreference;
+    [appDelegate saveContext];
+}
+
+-(UserEntity *)fetchUser {
+    NSFetchRequest *fetchRequest = [UserEntity fetchRequest];
+    [fetchRequest setIncludesPendingChanges:YES];
+    [fetchRequest setIncludesPropertyValues:YES];
+    NSArray *results = [context executeFetchRequest:fetchRequest error:nil];
+    NSMutableArray<UserEntity *> *items = [[NSMutableArray alloc] init];
+    for (UserEntity *cdObject in results) {
+        [items addObject:cdObject];
+    }
+    return items[0];
+}
+
+-(void)deleteData {
+    NSFetchRequest *allUsers = [[NSFetchRequest alloc] init];
+    [allUsers setEntity:[NSEntityDescription entityForName:@"UserEntity" inManagedObjectContext:context]];
+    [allUsers setIncludesPropertyValues:NO];
+    NSError *error = nil;
+    NSArray *users = [context executeFetchRequest:allUsers error:&error];
+    for (NSManagedObject *user in users) {
+      [context deleteObject:user];
+    }
+    NSError *saveError = nil;
+    [context save:&saveError];
+}
+
+-(void)createTempUser{
+    UserEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"UserEntity" inManagedObjectContext:context];
+    entityObject.userId = @"Temp user";
+    entityObject.email = @"Tem email";
+    entityObject.degreePreference = Celsius;
+    [appDelegate saveContext];
 }
 
 @end

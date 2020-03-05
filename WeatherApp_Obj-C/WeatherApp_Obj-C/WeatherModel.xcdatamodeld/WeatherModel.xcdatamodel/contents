@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES">
         <attribute name="degreePreference" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="userEmail" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="userId" optional="YES" attributeType="String"/>
+        <relationship name="weather" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="WeatherEntity" inverseName="user" inverseEntity="WeatherEntity"/>
     </entity>
     <entity name="WeatherEntity" representedClassName="WeatherEntity" syncable="YES">
         <attribute name="city" optional="YES" attributeType="String"/>
@@ -17,10 +18,10 @@
         <attribute name="temperature" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="wind" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="userId" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="UserEntity" inverseName="weather" inverseEntity="UserEntity"/>
     </entity>
     <elements>
-        <element name="UserEntity" positionX="-45" positionY="81" width="128" height="88"/>
-        <element name="WeatherEntity" positionX="-45" positionY="0" width="128" height="223"/>
+        <element name="WeatherEntity" positionX="-357.8203125" positionY="-198.03125" width="128" height="223"/>
+        <element name="UserEntity" positionX="-360" positionY="-108" width="128" height="103"/>
     </elements>
 </model>
