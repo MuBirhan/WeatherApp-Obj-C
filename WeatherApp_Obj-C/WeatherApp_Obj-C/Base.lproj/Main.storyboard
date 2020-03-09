@@ -215,27 +215,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vbi-Qm-Cwu">
                                 <rect key="frame" x="30" y="434.66666666666669" width="353" height="31"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I do not have an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqL-8w-keP">
-                                        <rect key="frame" x="0.0" y="0.0" width="152" height="17"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P8-ug-XEP">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="29"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I forgot password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odB-u5-ktf">
-                                        <rect key="frame" x="245.33333333333329" y="0.0" width="107.66666666666666" height="17"/>
+                                        <state key="normal" title="I do not have an account">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9t-Z4-9yU">
+                                        <rect key="frame" x="245" y="0.0" width="108" height="29"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="I forgot password">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="u66-jL-IE1" kind="show" id="Ibs-hx-H97"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="27W-wO-u53"/>
-                                    <constraint firstItem="QqL-8w-keP" firstAttribute="leading" secondItem="Vbi-Qm-Cwu" secondAttribute="leading" id="CeP-nW-SKj"/>
-                                    <constraint firstItem="QqL-8w-keP" firstAttribute="top" secondItem="Vbi-Qm-Cwu" secondAttribute="top" id="K1g-LC-SI1"/>
-                                    <constraint firstItem="odB-u5-ktf" firstAttribute="top" secondItem="Vbi-Qm-Cwu" secondAttribute="top" id="QgJ-BL-Sxh"/>
-                                    <constraint firstAttribute="trailing" secondItem="odB-u5-ktf" secondAttribute="trailing" id="Vae-r9-ogc"/>
-                                    <constraint firstItem="odB-u5-ktf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QqL-8w-keP" secondAttribute="trailing" constant="8" symbolic="YES" id="mnD-C5-SVD"/>
+                                    <constraint firstItem="8P8-ug-XEP" firstAttribute="top" secondItem="Vbi-Qm-Cwu" secondAttribute="top" id="7p8-ZQ-D66"/>
+                                    <constraint firstItem="d9t-Z4-9yU" firstAttribute="top" secondItem="Vbi-Qm-Cwu" secondAttribute="top" id="R4R-wI-n8R"/>
+                                    <constraint firstAttribute="trailing" secondItem="d9t-Z4-9yU" secondAttribute="trailing" id="UUu-sf-kFh"/>
+                                    <constraint firstItem="8P8-ug-XEP" firstAttribute="leading" secondItem="Vbi-Qm-Cwu" secondAttribute="leading" id="Xwh-lc-6xd"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -279,6 +283,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6H-sV-tUy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3197" y="-598"/>
+        </scene>
+        <!--Password Reset View Controller-->
+        <scene sceneID="VxX-PR-BD9">
+            <objects>
+                <viewController id="u66-jL-IE1" customClass="PasswordResetViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cLm-m4-mlU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password reset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVu-KG-Yor">
+                                <rect key="frame" x="16" y="74" width="170" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Black" family="SF UI Display" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riS-in-hPN" customClass="CustomInputView">
+                                <rect key="frame" x="16" y="136.33333333333334" width="383" height="84"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="1xW-fZ-kzU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Email for reset"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="inputPlaceholder" value="Email"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27h-dR-ZVp">
+                                <rect key="frame" x="16" y="247.33333333333337" width="383" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="1oi-OY-G64"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Reset password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPasswordButtonPressed:" destination="u66-jL-IE1" eventType="touchUpInside" id="KCq-9N-rcU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="27h-dR-ZVp" firstAttribute="top" secondItem="riS-in-hPN" secondAttribute="bottom" constant="27" id="4F0-WB-SkG"/>
+                            <constraint firstItem="riS-in-hPN" firstAttribute="top" secondItem="TVu-KG-Yor" secondAttribute="bottom" constant="36" id="AAj-Z5-nNS"/>
+                            <constraint firstItem="TVu-KG-Yor" firstAttribute="top" secondItem="eU8-Kg-0Ba" secondAttribute="top" constant="30" id="Q81-Qp-8C8"/>
+                            <constraint firstItem="TVu-KG-Yor" firstAttribute="leading" secondItem="eU8-Kg-0Ba" secondAttribute="leading" constant="16" id="WOU-fL-o6g"/>
+                            <constraint firstItem="27h-dR-ZVp" firstAttribute="leading" secondItem="eU8-Kg-0Ba" secondAttribute="leading" constant="16" id="bLA-vr-Osc"/>
+                            <constraint firstItem="eU8-Kg-0Ba" firstAttribute="trailing" secondItem="riS-in-hPN" secondAttribute="trailing" constant="15" id="fBv-YO-llV"/>
+                            <constraint firstItem="riS-in-hPN" firstAttribute="leading" secondItem="eU8-Kg-0Ba" secondAttribute="leading" constant="16" id="fbx-Ph-ofB"/>
+                            <constraint firstItem="eU8-Kg-0Ba" firstAttribute="trailing" secondItem="27h-dR-ZVp" secondAttribute="trailing" constant="15" id="kRU-bC-ie7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eU8-Kg-0Ba"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YKD-4j-e94">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="back_arrow" id="evS-0e-ox1">
+                            <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="back:" destination="u66-jL-IE1" id="1oU-9v-sNe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailInputView" destination="riS-in-hPN" id="i3P-hS-C9Q"/>
+                        <outlet property="resetButton" destination="27h-dR-ZVp" id="FjX-kn-WlA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewh-xn-7VG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4461" y="-607"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="n3w-I5-xBO">
@@ -1068,6 +1142,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="egI-M8-Hc3"/>
-        <segue reference="59h-bv-Ou4"/>
+        <segue reference="4qe-iu-KMb"/>
     </inferredMetricsTieBreakers>
 </document>

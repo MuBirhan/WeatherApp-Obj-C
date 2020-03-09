@@ -35,6 +35,7 @@
 		8E702F2723FADD890051CF1C /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2623FADD890051CF1C /* UIColor+CustomColors.m */; };
 		8E702F2A23FBC8120051CF1C /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2923FBC8120051CF1C /* CustomTextField.m */; };
 		8E702F2F23FBE8A70051CF1C /* UserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2E23FBE8A70051CF1C /* UserRepository.m */; };
+		8E7DE62624163E9400152988 /* PasswordResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7DE62524163E9400152988 /* PasswordResetViewController.m */; };
 		8E99606723FFF6710088549E /* NewLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99606623FFF6710088549E /* NewLocationViewController.m */; };
 		8E99606B240024D80088549E /* WeatherRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99606A240024D80088549E /* WeatherRepository.m */; };
 		8E99606E2403DFFA0088549E /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99606D2403DFFA0088549E /* WeatherModel.m */; };
@@ -145,6 +146,8 @@
 		8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E702F2D23FBE8A70051CF1C /* UserRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRepository.h; sourceTree = "<group>"; };
 		8E702F2E23FBE8A70051CF1C /* UserRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRepository.m; sourceTree = "<group>"; };
+		8E7DE62424163E9400152988 /* PasswordResetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordResetViewController.h; sourceTree = "<group>"; };
+		8E7DE62524163E9400152988 /* PasswordResetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordResetViewController.m; sourceTree = "<group>"; };
 		8E99606523FFF6710088549E /* NewLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewLocationViewController.h; sourceTree = "<group>"; };
 		8E99606623FFF6710088549E /* NewLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewLocationViewController.m; sourceTree = "<group>"; };
 		8E996069240024D80088549E /* WeatherRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherRepository.h; sourceTree = "<group>"; };
@@ -350,6 +353,7 @@
 		8E2A83B323FC07110080821C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8E7DE62724163E9B00152988 /* PasswordResetScreen */,
 				8E99606423FFF6370088549E /* NewLocationScreen */,
 				8E26E0C423FEC746009B9B60 /* ProfileScreen */,
 				8E26E0C023FEB74D009B9B60 /* TabBarController */,
@@ -493,6 +497,15 @@
 				8EF76916240D273E00415A8F /* AppCustomDimens.m */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		8E7DE62724163E9B00152988 /* PasswordResetScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E7DE62424163E9400152988 /* PasswordResetViewController.h */,
+				8E7DE62524163E9400152988 /* PasswordResetViewController.m */,
+			);
+			path = PasswordResetScreen;
 			sourceTree = "<group>";
 		};
 		8E99606423FFF6370088549E /* NewLocationScreen */ = {
@@ -899,6 +912,7 @@
 				8E9960902406C37F0088549E /* Clouds.m in Sources */,
 				8E99608A240540C00088549E /* WeatherAPIModel.m in Sources */,
 				8EA385212411368F004BEB68 /* UserEntity+CoreDataClass.m in Sources */,
+				8E7DE62624163E9400152988 /* PasswordResetViewController.m in Sources */,
 				8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */,
 				8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */,
 				8E56EE10240FAC8800D7834E /* ChangePasswordModalViewController.m in Sources */,

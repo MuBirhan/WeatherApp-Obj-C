@@ -14,25 +14,38 @@
 @interface UserRepository : NSObject
 @property (weak, nonatomic) FIRAuth * _Nullable firebaseAuth;
 
-- (void) registerUser:(NSString *_Nullable) userEmail
+-(void)registerUser:(NSString *_Nullable) userEmail
          withPassword:(NSString *_Nullable) password
               success:(void(^_Nullable)(void))success
                 error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 
-- (void) loginUser:(NSString *_Nullable) userEmail
+-(void)loginUser:(NSString *_Nullable) userEmail
       withPassword:(NSString *_Nullable) password
            success:(void(^_Nullable)(void))success
              error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 
-- (void) getCurrentUser:(void(^_Nullable)(FIRUser *_Nullable))success
+-(void)getCurrentUser:(void(^_Nullable)(FIRUser *_Nullable))success
                   error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 
-- (void) logOutUser:(void(^_Nullable)(BOOL))success
+-(void)logOutUser:(void(^_Nullable)(BOOL))success
               error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 
--(void) changePassword:(NSString *_Nullable) newPassword
+-(void)changePassword:(NSString *_Nullable) newPassword
                success:(void(^_Nullable)(void))success
                  error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
+
+-(void)vrifyPasswordResetCode:(NSString *_Nullable) code
+                        success:(void(^_Nullable)(void))success
+                          error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
+
+-(void)confirmResetCode:(NSString *_Nullable) code
+              forPassword:(NSString *_Nullable) password
+                  success:(void(^_Nullable)(void))success
+                    error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
+
+-(void)forgotPasswordForEmail:(NSString *_Nullable) email
+                        success:(void(^_Nullable)(void))success
+                          error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 
 -(UserEntity *_Nullable)fetchUser;
 -(void)createTempUser;

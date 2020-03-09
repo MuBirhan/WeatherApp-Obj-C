@@ -92,6 +92,36 @@
     }];
 }
 
+-(void)vrifyPasswordResetCode:(NSString *)code success:(void (^)(void))success error:(void (^)(NSString * _Nullable))errorHandler {
+    [[FIRAuth auth] verifyPasswordResetCode:code completion:^(NSString * _Nullable email, NSError * _Nullable error) {
+        if(error) {
+            errorHandler(error.localizedDescription);
+        } else {
+            success();
+        }
+    }];
+}
+
+-(void)confirmResetCode:(NSString *)code forPassword:(NSString *)password success:(void (^)(void))success error:(void (^)(NSString * _Nullable))errorHandler {
+    [[FIRAuth auth] confirmPasswordResetWithCode:code newPassword:password completion:^(NSError * _Nullable error) {
+        if(error) {
+            errorHandler(error.localizedDescription);
+        } else {
+            success();
+        }
+    }];
+}
+
+-(void)forgotPasswordForEmail:(NSString *)email success:(void (^)(void))success error:(void (^)(NSString * _Nullable))errorHandler {
+    [[FIRAuth auth] sendPasswordResetWithEmail:email completion:^(NSError * _Nullable error) {
+        if(error) {
+            errorHandler(error.localizedDescription);
+        } else {
+            success();
+        }
+    }];
+}
+
 -(void)saveUserInCD:(UserModel *)model {
     UserEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"UserEntity" inManagedObjectContext:context];
     entityObject.userId = model.userId;
@@ -119,7 +149,7 @@
     NSError *error = nil;
     NSArray *users = [context executeFetchRequest:allUsers error:&error];
     for (NSManagedObject *user in users) {
-      [context deleteObject:user];
+        [context deleteObject:user];
     }
     NSError *saveError = nil;
     [context save:&saveError];
