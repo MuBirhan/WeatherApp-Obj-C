@@ -15,6 +15,7 @@
 
 @interface NewLocationViewController () {
     CLLocationManager *locationManager;
+    CLLocationCoordinate2D userLocationCoordinates;
 }
 
 @end
@@ -23,11 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[self mapView] setDelegate:self];
+    self.mapView.delegate = self;
     [self setupAddButton];
     [self setupInput];
     [self setupBlueButton];
     [self setupModalView];
+    self.mapView.showsUserLocation = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -76,7 +78,7 @@
 }
 
 - (IBAction)centerToCurrentLocation:(id)sender {
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.coordinate, 100, 100);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocationCoordinates, 100, 100);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
 }
 
@@ -130,4 +132,9 @@
         [self showLocation];
     }
 }
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    userLocationCoordinates = userLocation.location.coordinate;
+}
+
 @end
