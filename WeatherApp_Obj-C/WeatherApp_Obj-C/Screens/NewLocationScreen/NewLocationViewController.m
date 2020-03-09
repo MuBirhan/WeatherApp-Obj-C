@@ -78,7 +78,10 @@
 }
 
 - (IBAction)centerToCurrentLocation:(id)sender {
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocationCoordinates, 100, 100);
+    CGPoint point = [self.mapView convertCoordinate:userLocationCoordinates toPointToView:self.mapView];
+    point.y += self.mapPointer.center.y;
+    CLLocationCoordinate2D center = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(center, 100, 100);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
 }
 
@@ -123,6 +126,8 @@
     }];
 }
 
+
+#pragma mark - Map view methods
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
     [self showLocation];
 }
