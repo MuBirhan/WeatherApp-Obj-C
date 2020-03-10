@@ -673,6 +673,7 @@
                         <outlet property="mapView" destination="toq-Lc-dyX" id="ugc-aB-qIn"/>
                         <outlet property="modalView" destination="dwt-qu-DqO" id="C6p-9L-UEC"/>
                         <outlet property="useMyLocationButton" destination="s0n-JW-tjc" id="7pY-7o-BwK"/>
+                        <outlet property="visibleMapContainer" destination="bdk-AO-7Mv" id="f6q-XS-CkV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZG-TY-gWB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

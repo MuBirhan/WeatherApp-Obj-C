@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *modalView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIImageView *mapPointer;
+@property (weak, nonatomic) IBOutlet UIView *visibleMapContainer;
 @property (weak, nonatomic) IBOutlet UILabel *locationInfo;
 
 @end

@@ -29,7 +29,11 @@
     [self setupInput];
     [self setupBlueButton];
     [self setupModalView];
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager requestWhenInUseAuthorization];
+    [locationManager startUpdatingLocation];
     self.mapView.showsUserLocation = YES;
+    userLocationCoordinates = self.mapView.userLocation.coordinate;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,10 +82,7 @@
 }
 
 - (IBAction)centerToCurrentLocation:(id)sender {
-    CGPoint point = [self.mapView convertCoordinate:userLocationCoordinates toPointToView:self.mapView];
-    point.y += self.mapPointer.center.y;
-    CLLocationCoordinate2D center = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(center, 100, 100);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.coordinate, 1000, 1000);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
 }
 
@@ -125,7 +126,6 @@
         }
     }];
 }
-
 
 #pragma mark - Map view methods
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
