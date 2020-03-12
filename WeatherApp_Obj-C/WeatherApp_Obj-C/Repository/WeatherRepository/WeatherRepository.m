@@ -48,14 +48,20 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
     };
     [manager GET:apiCallLink parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         WeatherAPIModel *model = [[WeatherAPIModel alloc] initWithJSON:responseObject];
-        [self saveWeatherInCD:model withName:name];
-        success(YES);
+        [self saveWeatherInCD:model withName:name success:^ {
+            success(YES);
+        } error:^(NSString * _Nullable error) {
+            errorHandler(error);
+        }];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         errorHandler(error.localizedDescription);
     }];
 }
 
-- (void)saveWeatherInCD:(WeatherAPIModel*)model withName:(NSString *)name {
+- (void)saveWeatherInCD:(WeatherAPIModel*)model
+               withName:(NSString *)name
+                success:(void (^)(void))success
+                  error:(void (^)(NSString * _Nullable))errorHandler{
     WeatherEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"WeatherEntity" inManagedObjectContext:context];
     UserEntity *user = [[UserRepository new] fetchUser];
     WeatherModel *weatherModel = [[WeatherModel alloc] initWithAPIResponse:model];
@@ -72,6 +78,13 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
     entityObject.wind = weatherModel.wind;
     [user addWeatherObject:entityObject];
     [appDelegate saveContext];
+    NSError *error;
+    if (![context save:&error]) {
+        [context rollback];
+        errorHandler(error.localizedDescription);
+    } else {
+        success();
+    }
 }
 
 -(NSMutableArray *)fetchCDData {
