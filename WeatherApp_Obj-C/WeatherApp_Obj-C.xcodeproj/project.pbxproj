@@ -36,6 +36,8 @@
 		8E702F2A23FBC8120051CF1C /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2923FBC8120051CF1C /* CustomTextField.m */; };
 		8E702F2F23FBE8A70051CF1C /* UserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702F2E23FBE8A70051CF1C /* UserRepository.m */; };
 		8E7DE62624163E9400152988 /* PasswordResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7DE62524163E9400152988 /* PasswordResetViewController.m */; };
+		8E7DE66E2419222200152988 /* apple-app-site-association.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E7DE66D2419222200152988 /* apple-app-site-association.json */; };
+		8E7DE67024193A7E00152988 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E7DE66F24193A7E00152988 /* GoogleService-Info.plist */; };
 		8E99606723FFF6710088549E /* NewLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99606623FFF6710088549E /* NewLocationViewController.m */; };
 		8E99606B240024D80088549E /* WeatherRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99606A240024D80088549E /* WeatherRepository.m */; };
 		8E99606E2403DFFA0088549E /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99606D2403DFFA0088549E /* WeatherModel.m */; };
@@ -56,7 +58,6 @@
 		8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB52B2923FD1CB9004B45C0 /* LoadingView.xib */; };
 		8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB52B2F23FD255F004B45C0 /* LoadingView.m */; };
 		8EF76917240D273E00415A8F /* AppCustomDimens.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF76916240D273E00415A8F /* AppCustomDimens.m */; };
-		8EF7693D240E546D00415A8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */; };
 		8EF7693E240E556200415A8F /* WeatherModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 8EF7692E240D6B6B00415A8F /* WeatherModel.xcdatamodeld */; };
 		DB398BC0DDF8FEFB069268EA /* Pods_WeatherApp_Obj_CTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53209C411A80B5CDF3D57396 /* Pods_WeatherApp_Obj_CTests.framework */; };
 		EFBD4A5D7C622B39D99A6155 /* Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2497E96712CFD30EB821F00D /* Pods_WeatherApp_Obj_C_WeatherApp_Obj_CUITests.framework */; };
@@ -143,11 +144,13 @@
 		8E702F2623FADD890051CF1C /* UIColor+CustomColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		8E702F2823FBC8120051CF1C /* CustomTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
 		8E702F2923FBC8120051CF1C /* CustomTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
-		8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E702F2D23FBE8A70051CF1C /* UserRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRepository.h; sourceTree = "<group>"; };
 		8E702F2E23FBE8A70051CF1C /* UserRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRepository.m; sourceTree = "<group>"; };
 		8E7DE62424163E9400152988 /* PasswordResetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordResetViewController.h; sourceTree = "<group>"; };
 		8E7DE62524163E9400152988 /* PasswordResetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordResetViewController.m; sourceTree = "<group>"; };
+		8E7DE66C2419109B00152988 /* WeatherApp_Obj-C.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WeatherApp_Obj-C.entitlements"; sourceTree = "<group>"; };
+		8E7DE66D2419222200152988 /* apple-app-site-association.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "apple-app-site-association.json"; sourceTree = "<group>"; };
+		8E7DE66F24193A7E00152988 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E99606523FFF6710088549E /* NewLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewLocationViewController.h; sourceTree = "<group>"; };
 		8E99606623FFF6710088549E /* NewLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewLocationViewController.m; sourceTree = "<group>"; };
 		8E996069240024D80088549E /* WeatherRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherRepository.h; sourceTree = "<group>"; };
@@ -429,11 +432,12 @@
 		8E702EB823F59E020051CF1C /* WeatherApp_Obj-C */ = {
 			isa = PBXGroup;
 			children = (
+				8E7DE66F24193A7E00152988 /* GoogleService-Info.plist */,
+				8E7DE66C2419109B00152988 /* WeatherApp_Obj-C.entitlements */,
 				8E702EB923F59E020051CF1C /* AppDelegate.h */,
 				8E702EBA23F59E020051CF1C /* AppDelegate.m */,
 				8E702EC823F59E050051CF1C /* Assets.xcassets */,
 				8E702F1023F6BFD80051CF1C /* fonts */,
-				8E702F2B23FBE4AF0051CF1C /* GoogleService-Info.plist */,
 				8E702ECD23F59E050051CF1C /* Info.plist */,
 				8E702ECA23F59E050051CF1C /* LaunchScreen.storyboard */,
 				8E702ECE23F59E050051CF1C /* main.m */,
@@ -445,6 +449,7 @@
 				8E2A83B323FC07110080821C /* Screens */,
 				8E702F3023FBEB6F0051CF1C /* utils */,
 				8EF7692E240D6B6B00415A8F /* WeatherModel.xcdatamodeld */,
+				8E7DE66D2419222200152988 /* apple-app-site-association.json */,
 			);
 			path = "WeatherApp_Obj-C";
 			sourceTree = "<group>";
@@ -757,11 +762,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EF7693E240E556200415A8F /* WeatherModel.xcdatamodeld in Resources */,
-				8EF7693D240E546D00415A8F /* GoogleService-Info.plist in Resources */,
 				8E702ECC23F59E050051CF1C /* LaunchScreen.storyboard in Resources */,
 				8E702EC923F59E050051CF1C /* Assets.xcassets in Resources */,
 				8EB52B2A23FD1CB9004B45C0 /* LoadingView.xib in Resources */,
 				8E702F2123FA791D0051CF1C /* CustomInputView.xib in Resources */,
+				8E7DE66E2419222200152988 /* apple-app-site-association.json in Resources */,
+				8E7DE67024193A7E00152988 /* GoogleService-Info.plist in Resources */,
 				8E9960A22406D4AA0088549E /* HomeScreenCell.xib in Resources */,
 				8E702EC423F59E020051CF1C /* Main.storyboard in Resources */,
 			);
@@ -1100,14 +1106,16 @@
 			baseConfigurationReference = 930130251C9F6BD633DB9767 /* Pods-WeatherApp_Obj-C.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "WeatherApp_Obj-C/WeatherApp_Obj-C.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3M9SG56J46;
+				DEVELOPMENT_TEAM = M4SB657XD7;
 				INFOPLIST_FILE = "WeatherApp_Obj-C/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rodeapps.WeatherApp-Obj-C";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rodeapps.WeatherApp-Obj-Cv2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1118,14 +1126,16 @@
 			baseConfigurationReference = 3F483CDDD140D125E4BC140C /* Pods-WeatherApp_Obj-C.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "WeatherApp_Obj-C/WeatherApp_Obj-C.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3M9SG56J46;
+				DEVELOPMENT_TEAM = M4SB657XD7;
 				INFOPLIST_FILE = "WeatherApp_Obj-C/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rodeapps.WeatherApp-Obj-C";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rodeapps.WeatherApp-Obj-Cv2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

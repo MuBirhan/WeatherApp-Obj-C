@@ -8,6 +8,7 @@ target 'WeatherApp_Obj-C' do
   # Pods for WeatherApp_Obj-C
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
+  pod 'Firebase/DynamicLinks'
   pod 'AFNetworking', '~> 3.0'
   pod 'OneSignal', '>= 2.11.2', '< 3.0'
   pod 'MaterialTextField', '~> 1.0'
