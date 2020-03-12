@@ -7,6 +7,9 @@
 //
 
 #import "SplashViewController.h"
+#import "UserRepository.h"
+#import "TabBarController.h"
+#import "HomeScreenViewController.h"
 
 @interface SplashViewController ()
 
@@ -24,7 +27,14 @@
     [UIView animateWithDuration:1.0f animations:^{
         self.splashImage.alpha = 1.0f;
     } completion:^(BOOL finished) {
-        [self performSegueWithIdentifier:@"GoToSecondScreen" sender:nil];
+        [[UserRepository new] getCurrentUser:^(FIRUser * _Nullable user) {
+            if(user) {
+                UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarViewController"];
+                [self.navigationController setViewControllers:@[controller] animated:YES];
+            }
+        } error:^(NSString * _Nullable error) {
+            [self performSegueWithIdentifier:@"GoToSecondScreen" sender:nil];
+        }];
     }];
     
 }

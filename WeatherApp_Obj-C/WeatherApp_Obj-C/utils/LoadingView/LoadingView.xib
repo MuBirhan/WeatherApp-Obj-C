@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.5" contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2D-ay-oCX">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadingCircle" translatesAutoresizingMaskIntoConstraints="NO" id="ALP-X7-mhu">
+                            <rect key="frame" x="167" y="366.66666666666669" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="F1O-8n-yNi"/>
+                                <constraint firstAttribute="height" constant="80" id="ol0-3a-LDj"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="ALP-X7-mhu" firstAttribute="centerX" secondItem="t2D-ay-oCX" secondAttribute="centerX" id="JgR-80-DD5"/>
+                        <constraint firstItem="ALP-X7-mhu" firstAttribute="centerY" secondItem="t2D-ay-oCX" secondAttribute="centerY" id="nY1-EK-Ul2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="t2D-ay-oCX" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Ozc-NB-7Sg"/>
+                <constraint firstItem="t2D-ay-oCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="T5h-IC-kI0"/>
+                <constraint firstItem="t2D-ay-oCX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fWZ-T7-Qup"/>
+                <constraint firstItem="t2D-ay-oCX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qEO-Hn-bGW"/>
+                <constraint firstItem="t2D-ay-oCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xYA-yV-gfm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="loadingIndicator" destination="ALP-X7-mhu" id="9qA-xH-Gj0"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="157.70089285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LoadingCircle" width="80.666664123535156" height="80.666664123535156"/>
+    </resources>
+</document>
