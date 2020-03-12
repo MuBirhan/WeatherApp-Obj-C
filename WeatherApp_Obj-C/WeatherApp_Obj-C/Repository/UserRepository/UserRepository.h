@@ -34,4 +34,7 @@
                success:(void(^_Nullable)(void))success
                  error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 
+-(UserEntity * _Nullable)fetchUser;
+-(void)deleteUserData;
+-(void)createTempUser;
 @end

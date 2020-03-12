@@ -14,14 +14,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CoreDataOperations : NSObject
-
-- (void)saveWeatherInCD:(WeatherAPIModel*)model withName:(NSString *)name;
--(NSMutableArray *)fetchWeatherData;
--(void)saveUserInCD:(UserModel *)model;
--(UserEntity *)fetchUser;
--(void)deleteUserData;
--(void)createTempUser;
-
+@property (readonly, strong) NSPersistentContainer *persistentContainer;
+- (void)saveContext;
+-(NSManagedObjectContext*) getChildContext;
 @end
 
 NS_ASSUME_NONNULL_END

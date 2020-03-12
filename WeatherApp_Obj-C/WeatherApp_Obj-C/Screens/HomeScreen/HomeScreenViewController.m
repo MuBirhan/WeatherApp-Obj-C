@@ -14,7 +14,7 @@
 #import "WeatherRepository.h"
 #import "UserRepository.h"
 #import "AppCustomDimens.h"
-#import "CoreDataOperations.h"
+#import "WeatherRepository.h"
 
 @interface HomeScreenViewController () {
     AppDelegate *appDelegate;
@@ -54,7 +54,7 @@
 }
 
 -(void)fetchData {
-    items = [[CoreDataOperations new] fetchWeatherData];
+    items = [[WeatherRepository new] fetchWeatherData];
     [self.tableView reloadData];
 }
 

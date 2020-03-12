@@ -8,7 +8,7 @@
 
 #import "TabBarController.h"
 #import "UserRepository.h"
-#import "CoreDataOperations.h"
+#import "UserRepository.h"
 
 @interface TabBarController ()
 
@@ -24,7 +24,7 @@
         
     } error:^(NSString * _Nullable error) {
         if (error) {
-            [[CoreDataOperations new] createTempUser];
+            [[UserRepository new] createTempUser];
         }
     }];
 }

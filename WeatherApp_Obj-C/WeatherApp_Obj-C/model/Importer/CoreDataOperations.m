@@ -17,7 +17,6 @@
 #import "CoreDataOperations.h"
 
 @implementation CoreDataOperations {
-    AppDelegate *appDelegate;
     NSManagedObjectContext *context;
 }
 
@@ -30,81 +29,57 @@
     return self;
 }
 
-- (void)getContext {
-    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    context = appDelegate.persistentContainer.viewContext;
-}
+@synthesize persistentContainer = _persistentContainer;
 
-- (void)saveWeatherInCD:(WeatherAPIModel*)model withName:(NSString *)name {
-    WeatherEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"WeatherEntity" inManagedObjectContext:context];
-    UserEntity *user = [[CoreDataOperations new] fetchUser];
-    WeatherModel *weatherModel = [[WeatherModel alloc] initWithAPIResponse:model];
-    entityObject.city = weatherModel.city;
-    entityObject.imgUrl = weatherModel.imgUrl;
-    entityObject.lat = weatherModel.lat;
-    entityObject.lon = weatherModel.lon;
-    entityObject.mainEvent = weatherModel.mainEvent;
-    entityObject.name = name;
-    entityObject.rain = weatherModel.rain;
-    entityObject.region = weatherModel.region;
-    entityObject.temperature = weatherModel.temperature;
-    entityObject.time = (int)weatherModel.time;
-    entityObject.wind = weatherModel.wind;
-    [user addWeatherObject:entityObject];
-    [appDelegate saveContext];
-}
-
--(NSMutableArray *)fetchWeatherData {
-    NSFetchRequest *fetchRequest = [WeatherEntity fetchRequest];
-    [fetchRequest setIncludesPendingChanges:YES];
-    [fetchRequest setIncludesPropertyValues:YES];
-    NSArray *results = [context executeFetchRequest:fetchRequest error:nil];
-    NSMutableArray<WeatherModel *> *items = [[NSMutableArray alloc] init];
-    for (WeatherEntity *cdObject in results) {
-        [items addObject:[[WeatherModel alloc] initWithWeatherEntity:cdObject]];
+- (NSPersistentContainer *)persistentContainer {
+    // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
+    @synchronized (self) {
+        if (_persistentContainer == nil) {
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"WeatherModel"];
+            [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
+                if (error != nil) {
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    
+                    /*
+                     Typical reasons for an error here include:
+                     * The parent directory does not exist, cannot be created, or disallows writing.
+                     * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+                     * The device is out of space.
+                     * The store could not be migrated to the current model version.
+                     Check the error message to determine what the actual problem was.
+                    */
+                    NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+                    abort();
+                }
+            }];
+        }
     }
-    return items;
+    
+    return _persistentContainer;
 }
 
--(void)saveUserInCD:(UserModel *)model {
-    UserEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"UserEntity" inManagedObjectContext:context];
-    entityObject.userId = model.userId;
-    entityObject.email = model.userEmail;
-    entityObject.degreePreference = model.degreePreference;
-    [appDelegate saveContext];
-}
+#pragma mark - Core Data Saving support
 
--(UserEntity *)fetchUser {
-    NSFetchRequest *fetchRequest = [UserEntity fetchRequest];
-    [fetchRequest setIncludesPendingChanges:YES];
-    [fetchRequest setIncludesPropertyValues:YES];
-    NSArray *results = [context executeFetchRequest:fetchRequest error:nil];
-    NSMutableArray<UserEntity *> *items = [[NSMutableArray alloc] init];
-    for (UserEntity *cdObject in results) {
-        [items addObject:cdObject];
-    }
-    return items[0];
-}
-
--(void)deleteUserData {
-    NSFetchRequest *allUsers = [[NSFetchRequest alloc] init];
-    [allUsers setEntity:[NSEntityDescription entityForName:@"UserEntity" inManagedObjectContext:context]];
-    [allUsers setIncludesPropertyValues:NO];
+- (void)saveContext {
+    NSManagedObjectContext *context = self.persistentContainer.viewContext;
     NSError *error = nil;
-    NSArray *users = [context executeFetchRequest:allUsers error:&error];
-    for (NSManagedObject *user in users) {
-      [context deleteObject:user];
+    if ([context hasChanges] && ![context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+        abort();
     }
-    NSError *saveError = nil;
-    [context save:&saveError];
 }
 
--(void)createTempUser{
-    UserEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"UserEntity" inManagedObjectContext:context];
-    entityObject.userId = @"Temp user";
-    entityObject.email = @"Tem email";
-    entityObject.degreePreference = Celsius;
-    [appDelegate saveContext];
+- (void)getContext {
+    context = self.persistentContainer.viewContext;
+}
+
+-(NSManagedObjectContext*) getChildContext {
+    NSManagedObjectContext *child = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    child.parentContext = context;
+    return child;
 }
 
 @end
