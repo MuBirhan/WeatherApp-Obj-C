@@ -39,6 +39,47 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
     }];
 }
 
+- (void)saveWeatherInCD:(WeatherAPIModel*)model
+               withName:(NSString *)name
+                success:(void (^)(void))success
+                  error:(void (^)(NSString * _Nullable))errorHandler{
+    WeatherEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"WeatherEntity" inManagedObjectContext:context];
+    UserEntity *user = [[UserRepository new] fetchUser];
+    WeatherModel *weatherModel = [[WeatherModel alloc] initWithAPIResponse:model];
+    entityObject.city = weatherModel.city;
+    entityObject.imgUrl = weatherModel.imgUrl;
+    entityObject.lat = weatherModel.lat;
+    entityObject.lon = weatherModel.lon;
+    entityObject.mainEvent = weatherModel.mainEvent;
+    entityObject.name = name;
+    entityObject.rain = weatherModel.rain;
+    entityObject.region = weatherModel.region;
+    entityObject.temperature = weatherModel.temperature;
+    entityObject.time = (int)weatherModel.time;
+    entityObject.wind = weatherModel.wind;
+    [user addWeatherObject:entityObject];
+    [appDelegate saveContext];
+    NSError *error;
+    if (![context save:&error]) {
+        [context rollback];
+        errorHandler(error.localizedDescription);
+    } else {
+        success();
+    }
+}
+
+-(NSMutableArray *)fetchCDData {
+    NSFetchRequest *fetchRequest = [WeatherEntity fetchRequest];
+    [fetchRequest setIncludesPendingChanges:YES];
+    [fetchRequest setIncludesPropertyValues:YES];
+    NSArray *results = [context executeFetchRequest:fetchRequest error:nil];
+    NSMutableArray<WeatherModel *> *items = [[NSMutableArray alloc] init];
+    for (WeatherEntity *cdObject in results) {
+        [items addObject:[[WeatherModel alloc] initWithWeatherEntity:cdObject]];
+    }
+    return items;
+}
+
 
 
 @end

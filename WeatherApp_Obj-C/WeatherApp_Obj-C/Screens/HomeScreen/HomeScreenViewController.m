@@ -82,10 +82,10 @@
         } else if ([main containsString:@"clear"]) {
             sunny++;
         }
-        self.sunnyCounter.text = [NSString stringWithFormat:@"%d", sunny];
-        self.rainingCounter.text = [NSString stringWithFormat:@"%d", raining];
-        self.cloudyCounter.text = [NSString stringWithFormat:@"%d", cloudy];
     }
+    self.sunnyCounter.text = [NSString stringWithFormat:@"%d", sunny];
+    self.rainingCounter.text = [NSString stringWithFormat:@"%d", raining];
+    self.cloudyCounter.text = [NSString stringWithFormat:@"%d", cloudy];
 }
 
 -(void)resetWeatherCounter {
