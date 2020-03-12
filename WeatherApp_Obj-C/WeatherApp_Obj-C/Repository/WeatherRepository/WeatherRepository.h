@@ -15,5 +15,4 @@
                    andName:(NSString *_Nullable)name
                    success:(void(^_Nullable)(BOOL))success
                      error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
--(NSMutableArray *_Nullable)fetchCDData;
 @end
