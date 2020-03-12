@@ -62,6 +62,7 @@
         [[CoreDataOperations new] deleteUserData];
         success(YES);
     }
+    
 }
 
 - (void)changePassword:(NSString *)newPassword
