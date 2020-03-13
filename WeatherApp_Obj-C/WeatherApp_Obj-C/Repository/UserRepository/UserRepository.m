@@ -50,7 +50,7 @@
     [[FIRAuth auth] signInWithEmail:userEmail password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
         if (error && errorHandler) {
             errorHandler(error.localizedDescription);
-        } else {
+        } else if (success){
             [self deleteData];
             [self saveUserInCD:[[UserModel alloc] initWithId:authResult.user.uid andEmail:authResult.user.email]];
             success();
@@ -73,8 +73,8 @@
     NSError *signOutError;
     BOOL status = [[FIRAuth auth] signOut: &signOutError];
     if (!status && errorHandler) {
-        errorHandler(@"Cannot sign out user");
-    } else {
+        errorHandler(signOutError.localizedDescription);
+    } else if (success){
         [self deleteData];
         success(YES);
     }
@@ -105,11 +105,7 @@
     [fetchRequest setIncludesPendingChanges:YES];
     [fetchRequest setIncludesPropertyValues:YES];
     NSArray *results = [context executeFetchRequest:fetchRequest error:nil];
-    NSMutableArray<UserEntity *> *items = [[NSMutableArray alloc] init];
-    for (UserEntity *cdObject in results) {
-        [items addObject:cdObject];
-    }
-    return items[0];
+    return (UserEntity *)[results firstObject];
 }
 
 -(void)deleteData {
