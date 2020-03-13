@@ -47,12 +47,18 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
     [manager GET:apiCallLink parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         WeatherAPIModel *model = [[WeatherAPIModel alloc] initWithJSON:responseObject];
         [self saveWeatherInCD:model withName:name success:^ {
-            success(YES);
+            if (success) {
+                success(YES);
+            }
         } error:^(NSString * _Nullable error) {
-            errorHandler(error);
+            if (errorHandler) {
+                errorHandler(error);
+            }
         }];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        errorHandler(error.localizedDescription);
+        if (errorHandler) {
+            errorHandler(error.localizedDescription);
+        }
     }];
 }
 
@@ -75,10 +81,10 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
     entityObject.wind = weatherModel.wind;
     [appDelegate saveContext];
     NSError *error;
-    if (![context save:&error]) {
+    if (![context save:&error] && errorHandler) {
         [context rollback];
         errorHandler(error.localizedDescription);
-    } else {
+    } else if (success){
         success();
     }
 }
