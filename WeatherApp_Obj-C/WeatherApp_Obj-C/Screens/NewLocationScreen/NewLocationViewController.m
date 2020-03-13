@@ -76,7 +76,7 @@
 - (IBAction)centerToCurrentLocation:(id)sender {
     
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.coordinate, 1000, 1000);
-    [self.mapView setRegion:region animated:YES];
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
 }
 
 - (IBAction)addLocation:(id)sender {

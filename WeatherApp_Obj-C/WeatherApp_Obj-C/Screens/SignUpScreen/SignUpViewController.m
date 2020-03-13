@@ -18,8 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -31,8 +29,6 @@
     self.nextStepButton.backgroundColor = [UIColor greenButton];
     self.nextStepButton.layer.cornerRadius = 25;
     [self.emailInput layoutIfNeeded];
-    
-    
 }
 
 - (IBAction)back:(id)sender {

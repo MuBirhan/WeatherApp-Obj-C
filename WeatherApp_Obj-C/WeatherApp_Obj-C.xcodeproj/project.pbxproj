@@ -15,6 +15,8 @@
 		8E2A83BA23FC1D790080821C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A83B923FC1D790080821C /* BaseViewController.m */; };
 		8E48CB612407D651002EB54C /* HomeScreenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E48CB602407D651002EB54C /* HomeScreenCell.m */; };
 		8E48CB6824080F54002EB54C /* HomeScreenCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 8E48CB5F2407D651002EB54C /* HomeScreenCell.h */; };
+		8E56EE0C240F95C500D7834E /* ProfileTableContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E56EE0B240F95C500D7834E /* ProfileTableContentViewController.m */; };
+		8E56EE10240FAC8800D7834E /* ChangePasswordModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E56EE0F240FAC8800D7834E /* ChangePasswordModalViewController.m */; };
 		8E702EBB23F59E020051CF1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EBA23F59E020051CF1C /* AppDelegate.m */; };
 		8E702EBE23F59E020051CF1C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EBD23F59E020051CF1C /* SceneDelegate.m */; };
 		8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E702EC023F59E020051CF1C /* SplashViewController.m */; };
@@ -92,6 +94,10 @@
 		8E2A83B923FC1D790080821C /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8E48CB5F2407D651002EB54C /* HomeScreenCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScreenCell.h; sourceTree = "<group>"; };
 		8E48CB602407D651002EB54C /* HomeScreenCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScreenCell.m; sourceTree = "<group>"; };
+		8E56EE0A240F95C500D7834E /* ProfileTableContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileTableContentViewController.h; sourceTree = "<group>"; };
+		8E56EE0B240F95C500D7834E /* ProfileTableContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileTableContentViewController.m; sourceTree = "<group>"; };
+		8E56EE0E240FAC8800D7834E /* ChangePasswordModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePasswordModalViewController.h; sourceTree = "<group>"; };
+		8E56EE0F240FAC8800D7834E /* ChangePasswordModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordModalViewController.m; sourceTree = "<group>"; };
 		8E702EB623F59E020051CF1C /* WeatherApp_Obj-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherApp_Obj-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E702EB923F59E020051CF1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E702EBA23F59E020051CF1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -233,8 +239,11 @@
 		8E26E0C423FEC746009B9B60 /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8E56EE0D240FAC3F00D7834E /* ChangePasswordModal */,
 				8E26E0C523FEC762009B9B60 /* ProfileViewController.h */,
 				8E26E0C623FEC762009B9B60 /* ProfileViewController.m */,
+				8E56EE0A240F95C500D7834E /* ProfileTableContentViewController.h */,
+				8E56EE0B240F95C500D7834E /* ProfileTableContentViewController.m */,
 			);
 			path = ProfileScreen;
 			sourceTree = "<group>";
@@ -357,6 +366,15 @@
 				8E2A83B923FC1D790080821C /* BaseViewController.m */,
 			);
 			path = BaseScreen;
+			sourceTree = "<group>";
+		};
+		8E56EE0D240FAC3F00D7834E /* ChangePasswordModal */ = {
+			isa = PBXGroup;
+			children = (
+				8E56EE0E240FAC8800D7834E /* ChangePasswordModalViewController.h */,
+				8E56EE0F240FAC8800D7834E /* ChangePasswordModalViewController.m */,
+			);
+			path = ChangePasswordModal;
 			sourceTree = "<group>";
 		};
 		8E702EAD23F59E020051CF1C = {
@@ -840,6 +858,7 @@
 				8E48CB6824080F54002EB54C /* HomeScreenCell.h in Sources */,
 				8E99607E2403EF7B0088549E /* City.m in Sources */,
 				8E702F1C23F6CFC20051CF1C /* SignInViewController.m in Sources */,
+				8E56EE0C240F95C500D7834E /* ProfileTableContentViewController.m in Sources */,
 				8E9960722403EE170088549E /* Wind.m in Sources */,
 				8EB52B3023FD255F004B45C0 /* LoadingView.m in Sources */,
 				8E702ECF23F59E050051CF1C /* main.m in Sources */,
@@ -855,6 +874,7 @@
 				8E99608A240540C00088549E /* WeatherAPIModel.m in Sources */,
 				8E2A83A823FBF0980080821C /* ErrorHandler.m in Sources */,
 				8E702EC123F59E020051CF1C /* SplashViewController.m in Sources */,
+				8E56EE10240FAC8800D7834E /* ChangePasswordModalViewController.m in Sources */,
 				8EF76949240E5CD100415A8F /* WeatherEntity+CoreDataProperties.m in Sources */,
 				8EF7694A240E5CD100415A8F /* WeatherEntity+CoreDataClass.m in Sources */,
 				8E702EF323F6A5EC0051CF1C /* SecondScreenViewController.m in Sources */,

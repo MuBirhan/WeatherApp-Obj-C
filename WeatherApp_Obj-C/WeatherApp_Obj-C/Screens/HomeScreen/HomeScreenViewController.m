@@ -82,10 +82,10 @@
         } else if ([main containsString:@"clear"]) {
             sunny++;
         }
-        self.sunnyCounter.text = [NSString stringWithFormat:@"%d", sunny];
-        self.rainingCounter.text = [NSString stringWithFormat:@"%d", raining];
-        self.cloudyCounter.text = [NSString stringWithFormat:@"%d", cloudy];
     }
+    self.sunnyCounter.text = [NSString stringWithFormat:@"%d", sunny];
+    self.rainingCounter.text = [NSString stringWithFormat:@"%d", raining];
+    self.cloudyCounter.text = [NSString stringWithFormat:@"%d", cloudy];
 }
 
 -(void)resetWeatherCounter {
@@ -132,8 +132,8 @@
     long timeSince = (long)(NSTimeInterval)(long)(NSTimeInterval)[[NSDate date] timeIntervalSince1970];
     timeSince -= time;
     long minutes = timeSince / 60 % 60;
-    long hours = minutes / 60 / 60 % 24;
-    long days = hours / 60 / 60 / 24;
+    long hours = timeSince / 60 / 60 % 24;
+    long days = timeSince / 60 / 60 / 24;
     return [NSString stringWithFormat:@"%li : %li : %li : %li", days, hours, minutes, timeSince % 60];
 }
 

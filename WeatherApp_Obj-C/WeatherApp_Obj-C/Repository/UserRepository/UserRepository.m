@@ -56,4 +56,18 @@
         success(YES);
     }
 }
+
+- (void)changePassword:(NSString *)newPassword
+               success:(void (^)(void))success
+                 error:(void (^)(NSString * _Nullable))errorHandler {
+    [[FIRAuth auth].currentUser updatePassword:newPassword completion:^(NSError * _Nullable error) {
+        if(error && errorHandler) {
+            errorHandler(error.localizedDescription);
+        } else if (success){
+            success();
+        }
+    }];
+
+}
+
 @end

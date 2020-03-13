@@ -391,7 +391,7 @@
                                 <rect key="frame" x="16" y="44" width="382" height="42"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz5-wq-dDt">
-                                        <rect key="frame" x="293" y="0.0" width="89" height="40"/>
+                                        <rect key="frame" x="291.66666666666669" y="0.0" width="90.333333333333314" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="UTS-ft-i4g"/>
                                         </constraints>
@@ -418,7 +418,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLD-ZQ-Jqj">
-                                        <rect key="frame" x="10" y="30" width="7" height="12"/>
+                                        <rect key="frame" x="10" y="30" width="5.6666666666666679" height="12"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -437,7 +437,7 @@
                                             <constraint firstAttribute="width" constant="5" id="jWk-Mr-I6Y"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvk-lA-5Me">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvk-lA-5Me">
                                         <rect key="frame" x="74" y="30" width="7" height="12"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="10"/>
                                         <nil key="textColor"/>
@@ -450,13 +450,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgb-SS-shq">
-                                        <rect key="frame" x="142" y="30" width="7" height="12"/>
+                                        <rect key="frame" x="142" y="30" width="5.6666666666666572" height="12"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="raining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ato-On-0t9">
-                                        <rect key="frame" x="154" y="30" width="30" height="12"/>
+                                        <rect key="frame" x="152.66666666666666" y="30" width="30" height="12"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -601,7 +601,7 @@
                                             <action selector="centerToCurrentLocation:" destination="nZI-Vc-vu7" eventType="touchUpInside" id="hvf-I8-H1w"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdd-YO-IJn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="                " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdd-YO-IJn">
                                         <rect key="frame" x="169" y="121.66666666666661" width="44.333333333333343" height="14.333333333333329"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="12"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -711,37 +711,305 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voQ-tn-xy9">
-                                <rect key="frame" x="182.66666666666666" y="437.33333333333331" width="49" height="21.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXD-Yv-SoX">
-                                <rect key="frame" x="185" y="511" width="48" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBs-Ij-v65">
+                                <rect key="frame" x="0.0" y="44" width="414" height="97"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="porfile_icon" translatesAutoresizingMaskIntoConstraints="NO" id="rkZ-C8-BqU">
+                                        <rect key="frame" x="17" y="35" width="27" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="27" id="Box-b3-lgM"/>
+                                            <constraint firstAttribute="height" constant="29" id="zQj-fj-iAB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuF-ip-hhL">
+                                        <rect key="frame" x="54.000000000000007" y="39.666666666666671" width="74.666666666666686" height="20"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="9gV-4O-ihV"/>
+                                    <constraint firstItem="SuF-ip-hhL" firstAttribute="centerY" secondItem="rkZ-C8-BqU" secondAttribute="centerY" id="1Zi-se-0vP"/>
+                                    <constraint firstItem="SuF-ip-hhL" firstAttribute="leading" secondItem="rkZ-C8-BqU" secondAttribute="trailing" constant="10" id="1tZ-oc-kkK"/>
+                                    <constraint firstItem="rkZ-C8-BqU" firstAttribute="top" secondItem="MBs-Ij-v65" secondAttribute="top" constant="35" id="5So-ET-BIW"/>
+                                    <constraint firstItem="rkZ-C8-BqU" firstAttribute="leading" secondItem="MBs-Ij-v65" secondAttribute="leading" constant="17" id="Jvf-X6-3QO"/>
+                                    <constraint firstAttribute="height" constant="97" id="a0X-jc-wOn"/>
                                 </constraints>
-                                <state key="normal" title="Logout"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bt-aX-AIi">
+                                <rect key="frame" x="0.0" y="149" width="414" height="615"/>
                                 <connections>
-                                    <action selector="logoutButtonPressed:" destination="pLg-7X-8Ql" eventType="touchUpInside" id="Jdq-X4-dyb"/>
+                                    <segue destination="0is-4z-Gvo" kind="embed" id="w2g-Jx-LZe"/>
                                 </connections>
-                            </button>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="voQ-tn-xy9" firstAttribute="centerX" secondItem="OZD-Uv-FdX" secondAttribute="centerX" id="0eA-Cr-lbC"/>
-                            <constraint firstItem="oXD-Yv-SoX" firstAttribute="leading" secondItem="Oqr-oS-mcu" secondAttribute="leading" constant="185" id="Gtr-ZO-3xx"/>
-                            <constraint firstItem="voQ-tn-xy9" firstAttribute="centerY" secondItem="OZD-Uv-FdX" secondAttribute="centerY" id="Jpb-By-XAS"/>
-                            <constraint firstItem="Oqr-oS-mcu" firstAttribute="bottom" secondItem="oXD-Yv-SoX" secondAttribute="bottom" constant="223" id="xmA-3S-Qow"/>
+                            <constraint firstItem="MBs-Ij-v65" firstAttribute="top" secondItem="Oqr-oS-mcu" secondAttribute="top" id="7pN-tj-VKu"/>
+                            <constraint firstItem="5bt-aX-AIi" firstAttribute="leading" secondItem="Oqr-oS-mcu" secondAttribute="leading" id="EJN-qu-22R"/>
+                            <constraint firstItem="Oqr-oS-mcu" firstAttribute="trailing" secondItem="5bt-aX-AIi" secondAttribute="trailing" id="XtI-H6-NM6"/>
+                            <constraint firstItem="Oqr-oS-mcu" firstAttribute="trailing" secondItem="MBs-Ij-v65" secondAttribute="trailing" id="i3g-Aa-bRA"/>
+                            <constraint firstItem="5bt-aX-AIi" firstAttribute="top" secondItem="MBs-Ij-v65" secondAttribute="bottom" constant="8" symbolic="YES" id="quO-Q8-e2E"/>
+                            <constraint firstItem="MBs-Ij-v65" firstAttribute="leading" secondItem="Oqr-oS-mcu" secondAttribute="leading" id="to7-Ib-anc"/>
+                            <constraint firstItem="Oqr-oS-mcu" firstAttribute="bottom" secondItem="5bt-aX-AIi" secondAttribute="bottom" id="zaJ-UD-8SF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oqr-oS-mcu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="porfile_icon" id="0ov-ZN-9z3"/>
+                    <connections>
+                        <outlet property="tableViewContent" destination="5bt-aX-AIi" id="o28-3o-Cc7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nF7-DS-XjJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5754" y="220"/>
+            <point key="canvasLocation" x="5754" y="175"/>
+        </scene>
+        <!--Profile Table Content View Controller-->
+        <scene sceneID="N4T-r7-HRN">
+            <objects>
+                <tableViewController id="0is-4z-Gvo" customClass="ProfileTableContentViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="66" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wj3-HT-kEI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="615"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection headerTitle="" id="VfO-Qa-WIT">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="DlZ-QY-KI1" detailTextLabel="nYH-k1-nQj" style="IBUITableViewCellStyleValue1" id="zAQ-Vu-9dQ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zAQ-Vu-9dQ" id="0oK-qg-3qy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DlZ-QY-KI1">
+                                                    <rect key="frame" x="19.999999999999996" y="14" width="33.666666666666664" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="(current email)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nYH-k1-nQj">
+                                                    <rect key="frame" x="298.66666666666669" y="14" width="95.333333333333329" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="koJ-Ex-SA7">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="lht-dT-yUe">
+                                        <rect key="frame" x="0.0" y="127.66666793823242" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lht-dT-yUe" id="cTy-uV-WEy">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set new password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgV-RF-HlR">
+                                                    <rect key="frame" x="20" y="24.666666666666671" width="114" height="17"/>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QgV-RF-HlR" firstAttribute="centerY" secondItem="cTy-uV-WEy" secondAttribute="centerY" id="E2u-8z-2T1"/>
+                                                <constraint firstItem="QgV-RF-HlR" firstAttribute="leading" secondItem="cTy-uV-WEy" secondAttribute="leadingMargin" id="hlX-68-Iq6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="guH-71-cVq" kind="presentation" id="vOP-AE-96V"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="g9b-rb-K4U">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="BC5-Aj-tk2">
+                                        <rect key="frame" x="0.0" y="227.33333587646484" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BC5-Aj-tk2" id="1Cx-iZ-Wkl">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dN-9D-3Sc">
+                                                    <rect key="frame" x="19.999999999999996" y="24.666666666666671" width="43.666666666666657" height="17"/>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9dN-9D-3Sc" firstAttribute="centerY" secondItem="1Cx-iZ-Wkl" secondAttribute="centerY" id="9dn-0e-QCy"/>
+                                                <constraint firstItem="9dN-9D-3Sc" firstAttribute="leading" secondItem="1Cx-iZ-Wkl" secondAttribute="leadingMargin" id="eNL-Br-eWP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="XxN-gs-TFw">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wwu-uE-VvO">
+                                        <rect key="frame" x="0.0" y="327.00000381469727" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wwu-uE-VvO" id="0xI-Ho-SNC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL6-ep-8Kd">
+                                                    <rect key="frame" x="19.999999999999993" y="24.666666666666671" width="105.33333333333331" height="17"/>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5m-5E-aRB">
+                                                    <rect key="frame" x="377.66666666666669" y="22.666666666666671" width="16.333333333333314" height="21"/>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBz-Nk-m2a">
+                                                    <rect key="frame" x="349.66666666666669" y="22.666666666666671" width="19" height="21"/>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
+                                                    <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="M5m-5E-aRB" secondAttribute="trailing" constant="20" symbolic="YES" id="04B-W0-BFP"/>
+                                                <constraint firstItem="M5m-5E-aRB" firstAttribute="leading" secondItem="tBz-Nk-m2a" secondAttribute="trailing" constant="9" id="NlO-e4-BTW"/>
+                                                <constraint firstItem="tBz-Nk-m2a" firstAttribute="centerY" secondItem="0xI-Ho-SNC" secondAttribute="centerY" id="Pze-NY-AVB"/>
+                                                <constraint firstItem="iL6-ep-8Kd" firstAttribute="centerY" secondItem="0xI-Ho-SNC" secondAttribute="centerY" id="WpX-3I-4Bt"/>
+                                                <constraint firstItem="M5m-5E-aRB" firstAttribute="centerY" secondItem="0xI-Ho-SNC" secondAttribute="centerY" id="c6y-uo-pUY"/>
+                                                <constraint firstItem="iL6-ep-8Kd" firstAttribute="leading" secondItem="0xI-Ho-SNC" secondAttribute="leadingMargin" id="cze-t1-Xk7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="Kho-Ah-Ap9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="369" id="uvr-QI-9dc">
+                                        <rect key="frame" x="0.0" y="426.66667175292969" width="414" height="369"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uvr-QI-9dc" id="ZRA-wm-48J">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="369"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="0is-4z-Gvo" id="Vxf-6q-pcy"/>
+                            <outlet property="delegate" destination="0is-4z-Gvo" id="mO4-1c-BCI"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="celsiusIcon" destination="tBz-Nk-m2a" id="ek4-ci-Sor"/>
+                        <outlet property="emailLabel" destination="nYH-k1-nQj" id="ZmY-Ni-5VI"/>
+                        <outlet property="fahrenheitIcon" destination="M5m-5E-aRB" id="l0j-nH-tsU"/>
+                        <outlet property="tableView" destination="Wj3-HT-kEI" id="cEx-3c-MCu"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9B6-u5-sOr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6857" y="175"/>
+        </scene>
+        <!--Change Password Modal View Controller-->
+        <scene sceneID="vK4-ZZ-G81">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="guH-71-cVq" customClass="ChangePasswordModalViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3yN-Wh-Arg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="615"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxO-UT-qVG">
+                                <rect key="frame" x="16" y="131.66666666666663" width="383" height="352"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set new password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaN-fs-Y9C">
+                                        <rect key="frame" x="14" y="22" width="153.66666666666666" height="21"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-dm-GE2" customClass="CustomInputView">
+                                        <rect key="frame" x="15" y="68" width="352" height="84"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="ueF-v0-TaA"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="New password"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="inputPlaceholder" value="Password"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaB-8g-gro" customClass="CustomInputView">
+                                        <rect key="frame" x="15" y="174.00000000000003" width="352" height="83.999999999999972"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="NPf-pb-H6d"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Confirm password"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="inputPlaceholder" value="Password"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bad-Ut-4X6">
+                                        <rect key="frame" x="15" y="278" width="352" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="6Mt-dW-XZy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="16"/>
+                                        <state key="normal" title="Save changes">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="X9U-dm-GE2" firstAttribute="leading" secondItem="jxO-UT-qVG" secondAttribute="leading" constant="15" id="5Id-lM-5nA"/>
+                                    <constraint firstAttribute="trailing" secondItem="bad-Ut-4X6" secondAttribute="trailing" constant="16" id="9uY-Ru-pBg"/>
+                                    <constraint firstItem="bad-Ut-4X6" firstAttribute="leading" secondItem="jxO-UT-qVG" secondAttribute="leading" constant="15" id="AdS-rk-h84"/>
+                                    <constraint firstItem="QaB-8g-gro" firstAttribute="leading" secondItem="jxO-UT-qVG" secondAttribute="leading" constant="15" id="BxF-1m-J5U"/>
+                                    <constraint firstItem="NaN-fs-Y9C" firstAttribute="top" secondItem="jxO-UT-qVG" secondAttribute="top" constant="22" id="GAh-eO-h9l"/>
+                                    <constraint firstItem="X9U-dm-GE2" firstAttribute="top" secondItem="NaN-fs-Y9C" secondAttribute="bottom" constant="25" id="GYm-BX-OvG"/>
+                                    <constraint firstAttribute="height" constant="352" id="JHi-Zn-9Q5"/>
+                                    <constraint firstItem="QaB-8g-gro" firstAttribute="top" secondItem="X9U-dm-GE2" secondAttribute="bottom" constant="22" id="KOX-Me-9pU"/>
+                                    <constraint firstItem="NaN-fs-Y9C" firstAttribute="leading" secondItem="jxO-UT-qVG" secondAttribute="leading" constant="14" id="VpP-qO-l4n"/>
+                                    <constraint firstItem="bad-Ut-4X6" firstAttribute="top" secondItem="QaB-8g-gro" secondAttribute="bottom" constant="20" id="bP7-Z5-L5i"/>
+                                    <constraint firstAttribute="trailing" secondItem="X9U-dm-GE2" secondAttribute="trailing" constant="16" id="paD-A9-Jwb"/>
+                                    <constraint firstAttribute="trailing" secondItem="QaB-8g-gro" secondAttribute="trailing" constant="16" id="xXX-BB-0pm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jxO-UT-qVG" firstAttribute="centerY" secondItem="3yN-Wh-Arg" secondAttribute="centerY" id="KRf-qL-3HF"/>
+                            <constraint firstItem="jxO-UT-qVG" firstAttribute="leading" secondItem="HaX-Pa-owB" secondAttribute="leading" constant="16" id="LK2-CS-dEu"/>
+                            <constraint firstItem="HaX-Pa-owB" firstAttribute="trailing" secondItem="jxO-UT-qVG" secondAttribute="trailing" constant="15" id="tfX-2g-Llc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HaX-Pa-owB"/>
+                    </view>
+                    <connections>
+                        <outlet property="changePasswordButton" destination="bad-Ut-4X6" id="8vX-tV-TRN"/>
+                        <outlet property="confirmPasswordInput" destination="QaB-8g-gro" id="bWL-Os-uMY"/>
+                        <outlet property="modalView" destination="jxO-UT-qVG" id="sX6-3j-6Ys"/>
+                        <outlet property="passwordInput" destination="X9U-dm-GE2" id="MLH-rK-LR0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Md-PD-hfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7929" y="174"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eqn-IM-9aM">

@@ -28,4 +28,8 @@
 
 - (void) logOutUser:(void(^_Nullable)(BOOL))success
               error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
+
+-(void) changePassword:(NSString *_Nullable) newPassword
+               success:(void(^_Nullable)(void))success
+                 error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 @end

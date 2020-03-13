@@ -19,15 +19,4 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
-- (IBAction)logoutButtonPressed:(id)sender {
-    [[UserRepository new] logOutUser:^(BOOL loggedOut) {
-        if(loggedOut) {
-            UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondScreen"];
-            [self.navigationController setViewControllers:@[controller] animated:YES];
-        }
-    } error:^(NSString * _Nullable error) {
-        [self showError:error];
-    }];
-}
 @end
