@@ -61,9 +61,9 @@
                success:(void (^)(void))success
                  error:(void (^)(NSString * _Nullable))errorHandler {
     [[FIRAuth auth].currentUser updatePassword:newPassword completion:^(NSError * _Nullable error) {
-        if(error) {
+        if(error && errorHandler) {
             errorHandler(error.localizedDescription);
-        } else {
+        } else if (success){
             success();
         }
     }];
