@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 extern CGFloat const smallButtonCornerRadius;
 extern CGFloat const cellCornerRadius;
 extern CGFloat const bigButtonCornerRadius;
+extern CGFloat const spaceBetweenProfileSections;
 
 @interface AppCustomDimens : NSObject
 

@@ -11,6 +11,7 @@
 CGFloat const smallButtonCornerRadius = 20;
 CGFloat const cellCornerRadius = 10;
 CGFloat const bigButtonCornerRadius = 25;
+CGFloat const spaceBetweenProfileSections = 10;
 
 @implementation AppCustomDimens
 

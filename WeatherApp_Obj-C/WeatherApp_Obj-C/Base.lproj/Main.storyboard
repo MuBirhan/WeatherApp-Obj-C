@@ -85,6 +85,10 @@
                                 <state key="normal" title="Maybe later">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="maybeLaterButtonPressed:" destination="ADv-rQ-pPu" eventType="touchUpInside" id="cHP-ev-vLv"/>
+                                    <segue destination="mCD-JC-I3y" kind="show" id="sRp-Zh-VX8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM7-7b-AoS">
                                 <rect key="frame" x="16" y="688" width="382" height="55"/>
@@ -274,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6H-sV-tUy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3238" y="-250"/>
+            <point key="canvasLocation" x="3197" y="-598"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="n3w-I5-xBO">
@@ -377,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqA-rr-ijh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3238" y="596"/>
+            <point key="canvasLocation" x="3245" y="822"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="Nft-kU-c0X">
@@ -669,6 +673,7 @@
                         <outlet property="mapView" destination="toq-Lc-dyX" id="ugc-aB-qIn"/>
                         <outlet property="modalView" destination="dwt-qu-DqO" id="C6p-9L-UEC"/>
                         <outlet property="useMyLocationButton" destination="s0n-JW-tjc" id="7pY-7o-BwK"/>
+                        <outlet property="visibleMapContainer" destination="bdk-AO-7Mv" id="f6q-XS-CkV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZG-TY-gWB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -732,6 +737,7 @@
                                 <constraints>
                                     <constraint firstItem="SuF-ip-hhL" firstAttribute="centerY" secondItem="rkZ-C8-BqU" secondAttribute="centerY" id="1Zi-se-0vP"/>
                                     <constraint firstItem="SuF-ip-hhL" firstAttribute="leading" secondItem="rkZ-C8-BqU" secondAttribute="trailing" constant="10" id="1tZ-oc-kkK"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SuF-ip-hhL" secondAttribute="trailing" constant="20" symbolic="YES" id="32B-SR-QaT"/>
                                     <constraint firstItem="rkZ-C8-BqU" firstAttribute="top" secondItem="MBs-Ij-v65" secondAttribute="top" constant="35" id="5So-ET-BIW"/>
                                     <constraint firstItem="rkZ-C8-BqU" firstAttribute="leading" secondItem="MBs-Ij-v65" secondAttribute="leading" constant="17" id="Jvf-X6-3QO"/>
                                     <constraint firstAttribute="height" constant="97" id="a0X-jc-wOn"/>
@@ -973,6 +979,9 @@
                                         <state key="normal" title="Save changes">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changePasswordButtonPressed:" destination="guH-71-cVq" eventType="touchUpInside" id="fke-Sd-D63"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1029,7 +1038,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyi-k5-gBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4409" y="870"/>
+            <point key="canvasLocation" x="4143" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7hU-Ie-k0G">
@@ -1059,6 +1068,7 @@
         <image name="support_icon" width="21.666666030883789" height="21.666666030883789"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="egI-M8-Hc3"/>
         <segue reference="59h-bv-Ou4"/>
     </inferredMetricsTieBreakers>
 </document>

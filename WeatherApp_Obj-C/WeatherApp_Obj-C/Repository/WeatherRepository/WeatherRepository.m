@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "WeatherModel.h"
 #import "WeatherEntity+CoreDataClass.h"
+#import "UserRepository.h"
+#import "UserModel.h"
 @import AFNetworking;
 
 NSString *const api = @"f3bf3b86b05011e1636707c720e30545";
@@ -67,6 +69,7 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
                 success:(void (^)(void))success
                   error:(void (^)(NSString * _Nullable))errorHandler{
     WeatherEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"WeatherEntity" inManagedObjectContext:context];
+    UserEntity *user = [[UserRepository new] fetchUser];
     WeatherModel *weatherModel = [[WeatherModel alloc] initWithAPIResponse:model];
     entityObject.city = weatherModel.city;
     entityObject.imgUrl = weatherModel.imgUrl;
@@ -79,6 +82,7 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
     entityObject.temperature = weatherModel.temperature;
     entityObject.time = (int)weatherModel.time;
     entityObject.wind = weatherModel.wind;
+    [user addWeatherObject:entityObject];
     [appDelegate saveContext];
     NSError *error;
     if (![context save:&error] && errorHandler) {

@@ -7,6 +7,7 @@
 //
 
 #import "TabBarController.h"
+#import "UserRepository.h"
 
 @interface TabBarController ()
 
@@ -18,6 +19,13 @@
     [super viewDidLoad];
     self.selectedIndex = 1;
     [self.navigationController setNavigationBarHidden:YES];
+    [[UserRepository new] getCurrentUser:^(FIRUser * _Nullable success) {
+        
+    } error:^(NSString * _Nullable error) {
+        if (error) {
+            [[UserRepository new] createTempUser];
+        }
+    }];
 }
 
 @end

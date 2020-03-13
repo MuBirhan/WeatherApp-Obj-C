@@ -11,13 +11,14 @@
 #import "BaseViewController.h"
 
 
-@interface NewLocationViewController : BaseViewController <UIGestureRecognizerDelegate, MKMapViewDelegate>
+@interface NewLocationViewController : BaseViewController <UIGestureRecognizerDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *locationNameInput;
 @property (weak, nonatomic) IBOutlet UIButton *addbutton;
 @property (weak, nonatomic) IBOutlet UIButton *useMyLocationButton;
 @property (weak, nonatomic) IBOutlet UIView *modalView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIImageView *mapPointer;
+@property (weak, nonatomic) IBOutlet UIView *visibleMapContainer;
 @property (weak, nonatomic) IBOutlet UILabel *locationInfo;
 
 @end

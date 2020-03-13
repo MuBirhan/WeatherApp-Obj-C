@@ -8,6 +8,7 @@
 
 #import "ProfileTableContentViewController.h"
 #import "UserRepository.h"
+#import "AppCustomDimens.h"
 
 @interface ProfileTableContentViewController ()
 
@@ -27,7 +28,7 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 10;
+    return spaceBetweenProfileSections;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,7 +55,7 @@
             [self.navigationController setViewControllers:@[controller] animated:YES];
         }
     } error:^(NSString * _Nullable error) {
-        NSLog(@"%@", error);
+        
     }];
 }
 @end

@@ -62,7 +62,6 @@
     self.confirmPasswordInput.errorMessage.text = @"";
 }
 
-
 #pragma GestureDetector delegate methods
 -(void)setupGestureDetector {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];

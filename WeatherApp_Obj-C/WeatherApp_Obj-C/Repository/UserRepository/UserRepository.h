@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ErrorHandler.h"
+#import "UserEntity+CoreDataClass.h"
 @import Firebase;
 
 @interface UserRepository : NSObject
@@ -32,4 +33,7 @@
 -(void) changePassword:(NSString *_Nullable) newPassword
                success:(void(^_Nullable)(void))success
                  error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
+
+-(UserEntity *_Nullable)fetchUser;
+-(void)createTempUser;
 @end
