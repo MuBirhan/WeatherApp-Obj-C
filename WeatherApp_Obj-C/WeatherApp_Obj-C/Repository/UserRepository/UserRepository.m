@@ -35,9 +35,9 @@
               success:(void(^_Nullable)(void))success
                 error:(void(^_Nullable)(NSString *_Nullable)) errorHandler {
     [[FIRAuth auth] createUserWithEmail:userEmail password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
-        if (error) {
+        if (error && errorHandler) {
             errorHandler(error.localizedDescription);
-        } else {
+        } else if (success){
             success();
         }
     }];
@@ -48,7 +48,7 @@
            success:(void (^)(void))success
              error:(void (^)(NSString * _Nullable))errorHandler {
     [[FIRAuth auth] signInWithEmail:userEmail password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
-        if (error) {
+        if (error && errorHandler) {
             errorHandler(error.localizedDescription);
         } else {
             [self deleteData];
@@ -61,9 +61,9 @@
 - (void) getCurrentUser:(void(^_Nullable)(FIRUser *_Nullable))success
                   error:(void(^_Nullable)(NSString *_Nullable)) errorHandler {
     FIRUser *user = [[FIRAuth auth] currentUser];
-    if (user) {
+    if (user && success) {
         success(user);
-    } else {
+    } else if (errorHandler){
         errorHandler(@"No user logged in");
     }
 }
@@ -72,7 +72,7 @@
               error:(void(^_Nullable)(NSString *_Nullable)) errorHandler {
     NSError *signOutError;
     BOOL status = [[FIRAuth auth] signOut: &signOutError];
-    if (!status) {
+    if (!status && errorHandler) {
         errorHandler(@"Cannot sign out user");
     } else {
         [self deleteData];
@@ -84,9 +84,9 @@
                success:(void (^)(void))success
                  error:(void (^)(NSString * _Nullable))errorHandler {
     [[FIRAuth auth].currentUser updatePassword:newPassword completion:^(NSError * _Nullable error) {
-        if(error) {
+        if(error && errorHandler) {
             errorHandler(error.localizedDescription);
-        } else {
+        } else if (success){
             success();
         }
     }];
