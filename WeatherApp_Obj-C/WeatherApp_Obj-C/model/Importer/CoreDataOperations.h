@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CoreDataOperations : NSObject
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 - (void)saveContext;
+- (void)getContext;
 -(NSManagedObjectContext*) getChildContext;
 @end
 

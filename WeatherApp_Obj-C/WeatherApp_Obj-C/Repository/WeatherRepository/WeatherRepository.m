@@ -55,21 +55,26 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
 
 - (void)saveWeatherInCD:(WeatherAPIModel*)model withName:(NSString *)name {
     WeatherEntity *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"WeatherEntity" inManagedObjectContext:childContext];
-    UserEntity *user = [[UserRepository new] fetchUser];
-    WeatherModel *weatherModel = [[WeatherModel alloc] initWithAPIResponse:model];
-    entityObject.city = weatherModel.city;
-    entityObject.imgUrl = weatherModel.imgUrl;
-    entityObject.lat = weatherModel.lat;
-    entityObject.lon = weatherModel.lon;
-    entityObject.mainEvent = weatherModel.mainEvent;
-    entityObject.name = name;
-    entityObject.rain = weatherModel.rain;
-    entityObject.region = weatherModel.region;
-    entityObject.temperature = weatherModel.temperature;
-    entityObject.time = (int)weatherModel.time;
-    entityObject.wind = weatherModel.wind;
-    [user addWeatherObject:entityObject];
-    [cdO saveContext];
+    [[UserRepository new] fetchUser:^(UserEntity * _Nullable user) {
+        WeatherModel *weatherModel = [[WeatherModel alloc] initWithAPIResponse:model];
+        entityObject.city = weatherModel.city;
+        entityObject.imgUrl = weatherModel.imgUrl;
+        entityObject.lat = weatherModel.lat;
+        entityObject.lon = weatherModel.lon;
+        entityObject.mainEvent = weatherModel.mainEvent;
+        entityObject.name = name;
+        entityObject.rain = weatherModel.rain;
+        entityObject.region = weatherModel.region;
+        entityObject.temperature = weatherModel.temperature;
+        entityObject.time = (int)weatherModel.time;
+        entityObject.wind = weatherModel.wind;
+        [user addWeatherObject:entityObject];
+        [self->childContext save:nil];
+        [self->childContext.parentContext performBlock:^{
+            [self->cdO saveContext];
+        }];
+    } error:nil];
+    
 }
 
 -(NSMutableArray *)fetchWeatherData {
@@ -77,11 +82,7 @@ NSString *const apiCallLink = @"http://api.openweathermap.org/data/2.5/forecast?
     [fetchRequest setIncludesPendingChanges:YES];
     [fetchRequest setIncludesPropertyValues:YES];
     NSArray *results = [childContext executeFetchRequest:fetchRequest error:nil];
-    NSMutableArray<WeatherModel *> *items = [[NSMutableArray alloc] init];
-    for (WeatherEntity *cdObject in results) {
-        [items addObject:[[WeatherModel alloc] initWithWeatherEntity:cdObject]];
-    }
-    return items;
+    return [results firstObject];
 }
 
 @end

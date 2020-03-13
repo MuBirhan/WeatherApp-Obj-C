@@ -96,19 +96,22 @@
     entityObject.userId = model.userId;
     entityObject.email = model.userEmail;
     entityObject.degreePreference = model.degreePreference;
-    [cdO saveContext];
+    NSError *error = nil;
+    [childContext save:&error];
 }
 
--(UserEntity *)fetchUser {
+- (void)fetchUser:(void (^)(UserEntity*))success
+            error:(void (^)(NSString * _Nullable))errorHandler{
     NSFetchRequest *fetchRequest = [UserEntity fetchRequest];
     [fetchRequest setIncludesPendingChanges:YES];
     [fetchRequest setIncludesPropertyValues:YES];
-    NSArray *results = [[[CoreDataOperations new] getChildContext] executeFetchRequest:fetchRequest error:nil];
-    NSMutableArray<UserEntity *> *items = [[NSMutableArray alloc] init];
-    for (UserEntity *cdObject in results) {
-        [items addObject:cdObject];
+    NSError *error = nil;
+    NSArray *results = [[[CoreDataOperations new] getChildContext] executeFetchRequest:fetchRequest error:&error];
+    if (error && errorHandler) {
+        errorHandler(error.localizedDescription);
+    } else {
+        success((UserEntity *)[results firstObject]);
     }
-    return items[0];
 }
 
 -(void)deleteUserData {
@@ -120,8 +123,10 @@
     for (NSManagedObject *user in users) {
       [childContext deleteObject:user];
     }
-    NSError *saveError = nil;
-    [childContext save:&saveError];
+    [self->childContext save:nil];
+    [self->childContext.parentContext performBlock:^{
+        [self->cdO saveContext];
+    }];
 }
 
 -(void)createTempUser{
