@@ -2,7 +2,7 @@
 //  UserEntity+CoreDataProperties.h
 //  WeatherApp_Obj-C
 //
-//  Created by Muradasil Birhan on 05/03/2020.
+//  Created by Muradasil Birhan on 13/03/2020.
 //  Copyright © 2020 RodeApps. All rights reserved.
 //
 //
@@ -17,8 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<UserEntity *> *)fetchRequest;
 
 @property (nonatomic) int16_t degreePreference;
-@property (nullable, nonatomic, copy) NSString *userId;
 @property (nullable, nonatomic, copy) NSString *email;
+@property (nullable, nonatomic, copy) NSString *userId;
 @property (nullable, nonatomic, retain) NSSet<WeatherEntity *> *weather;
 
 @end

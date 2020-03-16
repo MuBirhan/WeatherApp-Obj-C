@@ -34,18 +34,6 @@
     if( self.navigationController ) {
         [indicator startLoading];
         [self.navigationController.view addSubview:indicator];
-        NSLayoutConstraint *top = [indicator.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor];
-        [self.navigationController.view addConstraint:top];
-        NSLayoutConstraint *bottom = [indicator.bottomAnchor constraintEqualToAnchor:self.navigationController.view.bottomAnchor];
-        [self.navigationController.view addConstraint:bottom];
-        NSLayoutConstraint *left = [indicator.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor];
-        [self.navigationController.view addConstraint:left];
-        NSLayoutConstraint *right = [indicator.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor];
-        [self.navigationController.view addConstraint:right];
-        top.active = YES;
-        bottom.active = YES;
-        left.active = YES;
-        right.active = YES;
         [self.navigationController.view layoutIfNeeded];
     } else {
         [indicator startLoading];

@@ -77,7 +77,7 @@
 }
 
 -(NSManagedObjectContext*) getChildContext {
-    NSManagedObjectContext *child = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    NSManagedObjectContext *child = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     child.parentContext = context;
     return child;
 }

@@ -15,5 +15,6 @@
                    andName:(NSString *_Nullable)name
                    success:(void(^_Nullable)(BOOL))success
                      error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
--(NSMutableArray * _Nullable)fetchWeatherData;
+-(void)fetchWeatherData:(void(^_Nullable)(NSMutableArray *_Nullable))success
+                                        error:(void(^_Nullable)(NSString *_Nullable)) errorHandler;
 @end

@@ -54,8 +54,18 @@
 }
 
 -(void)fetchData {
-    items = [[WeatherRepository new] fetchWeatherData];
-    [self.tableView reloadData];
+    [self showLoading];
+    [[UserRepository new] fetchUser:^(UserEntity * _Nullable user) {
+        NSLog(@"%@", user.email);
+    } error:nil];
+    [[WeatherRepository new] fetchWeatherData:^(NSMutableArray * _Nullable success) {
+        [self hideLoading];
+        self->items = success;
+        [self.tableView reloadData];
+    } error:^(NSString * _Nullable error) {
+        [self hideLoading];
+        [self showError:error];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

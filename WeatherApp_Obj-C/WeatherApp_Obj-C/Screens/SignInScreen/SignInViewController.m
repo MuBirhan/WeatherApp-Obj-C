@@ -20,6 +20,9 @@
     [super viewDidLoad];
     self.signInButton.backgroundColor = [UIColor greenButton];
     self.signInButton.layer.cornerRadius = 25;
+    [[UserRepository new] fetchUser:^(UserEntity * _Nullable user) {
+           NSLog(@"%@", user.weather);
+       } error:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -41,7 +41,6 @@
     rotationAnimation.duration = 3.0f;
     rotationAnimation.cumulative = YES;
     rotationAnimation.repeatCount = HUGE_VALF;
-    
     [self.loadingIndicator.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 }
 
